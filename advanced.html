@@ -1,0 +1,645 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced Pathway - AI Skills Development</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            line-height: 1.6;
+            background-color: #f4f7f6;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 1000px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+        }
+        header {
+            background: linear-gradient(135deg, #e74c3c 0%, #c0392b 100%);
+            color: white;
+            padding: 2rem 1rem;
+            margin: -20px -20px 20px -20px;
+            border-radius: 8px 8px 0 0;
+            text-align: center;
+        }
+        header h1 {
+            color: white;
+            margin: 0;
+            font-size: 2rem;
+        }
+        header p {
+            margin: 10px 0 0 0;
+            opacity: 0.95;
+        }
+        nav {
+            background-color: #ecf0f1;
+            padding: 12px;
+            border-radius: 8px;
+            text-align: center;
+            margin-bottom: 25px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+        }
+        nav a {
+            display: inline-block;
+            padding: 10px 18px;
+            text-decoration: none;
+            color: #2980b9;
+            font-weight: bold;
+            border-radius: 6px;
+            margin: 2px;
+            transition: all 0.2s ease;
+        }
+        nav a:hover {
+            background-color: #3498db;
+            color: #ffffff;
+            transform: translateY(-1px);
+        }
+        nav a.active {
+            background-color: #3498db;
+            color: #ffffff;
+        }
+        h2, h3, h4 {
+            color: #2c3e50;
+        }
+        h2 {
+            border-bottom: 2px solid #e74c3c;
+            padding-bottom: 8px;
+            margin-top: 30px;
+            margin-bottom: 15px;
+        }
+        h3 {
+            margin-top: 25px;
+            margin-bottom: 12px;
+        }
+        ul, ol {
+            padding-left: 25px;
+            margin: 15px 0;
+        }
+        li {
+            margin-bottom: 10px;
+        }
+        .challenge {
+            background-color: #fff5f5;
+            border: 2px solid #e74c3c;
+            border-left: 5px solid #e74c3c;
+            padding: 25px;
+            border-radius: 8px;
+            margin-bottom: 25px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+        }
+        .challenge h3 {
+            margin-top: 0;
+            color: #e74c3c;
+        }
+        .info-box {
+            background-color: #e8f4f8;
+            border-left: 4px solid #3498db;
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 5px;
+        }
+        .warning-box {
+            background-color: #fff3cd;
+            border-left: 4px solid #f39c12;
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 5px;
+        }
+        .success-box {
+            background-color: #d4edda;
+            border-left: 4px solid #28a745;
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 5px;
+        }
+        .task-box {
+            background-color: #fdfdfd;
+            border: 2px solid #e0e0e0;
+            border-left: 5px solid #e74c3c;
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+        pre {
+            background-color: #2c3e50;
+            color: #ecf0f1;
+            padding: 15px;
+            border-radius: 6px;
+            overflow-x: auto;
+        }
+        code {
+            font-family: "Courier New", Courier, monospace;
+            font-size: 0.95em;
+            background-color: #ecf0f1;
+            padding: 2px 6px;
+            border-radius: 3px;
+            color: #c7254e;
+        }
+        pre code {
+            background: none;
+            color: #ecf0f1;
+            padding: 0;
+        }
+        .level-badge {
+            display: inline-block;
+            background: linear-gradient(135deg, #e74c3c 0%, #c0392b 100%);
+            color: white;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: bold;
+            margin: 5px 5px 5px 0;
+        }
+        footer {
+            text-align: center;
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid #ecf0f1;
+            font-size: 0.9em;
+            color: #7f8c8d;
+        }
+        @media (max-width: 768px) {
+            .container {
+                margin: 10px;
+                padding: 15px;
+            }
+            header {
+                margin: -15px -15px 20px -15px;
+                padding: 1.5rem 1rem;
+            }
+            header h1 {
+                font-size: 1.5rem;
+            }
+            nav a {
+                display: block;
+                margin: 5px 0;
+            }
+        }
+        @media print {
+            body {
+                background: white;
+            }
+            .container {
+                box-shadow: none;
+                max-width: 100%;
+            }
+            header {
+                background: #e74c3c;
+                color: white;
+            }
+            nav {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <header>
+            <h1>Advanced Pathway</h1>
+            <p>Levels 4-5: Critical Evaluation &amp; Advanced Application</p>
+        </header>
+
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="foundation.html">Foundation</a>
+            <a href="development.html">Development</a>
+            <a href="advanced.html" class="active">Advanced</a>
+            <a href="expert.html">Expert</a>
+            <a href="resources.html">Resources</a>
+        </nav>
+
+        <main>
+            <article>
+                <div class="info-box">
+                    <h3>📍 You are here: Advanced Pathway</h3>
+                    <p><strong>Who this is for:</strong> Students who are confident with Levels 1-4 and need to develop advanced critical evaluation and collaborative AI skills.</p>
+                    <p><strong>What you will learn:</strong></p>
+                    <ul>
+                        <li>Advanced critical evaluation techniques for AI outputs</li>
+                        <li>Sophisticated research workflows combining multiple AI tools</li>
+                        <li>Beginning collaborative AI approaches (Level 5)</li>
+                        <li>Quality assurance and verification at scale</li>
+                        <li>Discipline-specific AI applications in sport science</li>
+                    </ul>
+                    <p><strong>Prerequisites:</strong> Completed Development Pathway or confident using AI at Levels 1-4</p>
+                </div>
+
+                <h2>Part 1: Core Competency Review (Quick Check)</h2>
+                <p>Before diving into advanced challenges, ensure you are comfortable with the core tools and concepts. Complete these tasks efficiently to establish your baseline.</p>
+
+                <div class="task-box">
+                    <h3>Task 1: Image Generation & Bias Evaluation</h3>
+                    <p><strong>Action:</strong> Use Microsoft Copilot to generate an image relevant to your field (e.g., "a sports psychology consultation", "a biomechanics laboratory", "a nutrition counselling session").</p>
+                    <p><strong>Critical Analysis:</strong></p>
+                    <ul>
+                        <li>What stereotypes (gender, race, age, body type) are embedded in the default outputs?</li>
+                        <li>How many iterations are needed to achieve a professionally appropriate, diverse, UK-contextualised image?</li>
+                        <li>What does this reveal about AI training data and bias?</li>
+                    </ul>
+                    <p><strong>Reflection:</strong> Consider the implications for using AI-generated images in professional practice or educational materials.</p>
+                </div>
+
+                <div class="task-box">
+                    <h3>Task 2: NotebookLM Advanced Analysis</h3>
+                    <p><strong>Action:</strong> Upload 3-4 research articles on the same sport science topic to NotebookLM.</p>
+                    <p><strong>Advanced Prompts:</strong></p>
+                    <ul>
+                        <li>"Compare the methodological approaches across these studies"</li>
+                        <li>"Identify areas of agreement and disagreement between authors"</li>
+                        <li>"What limitations are acknowledged in each study?"</li>
+                        <li>"What research gaps emerge from these sources?"</li>
+                    </ul>
+                    <p><strong>Critical Analysis:</strong></p>
+                    <ul>
+                        <li>How accurate is NotebookLM's synthesis compared to your own reading?</li>
+                        <li>What nuances does it miss?</li>
+                        <li>How reliable are its citations?</li>
+                    </ul>
+                </div>
+
+                <div class="task-box">
+                    <h3>Task 3: Academic Rigour Assistant Evaluation</h3>
+                    <p><strong>Action:</strong> Ask the Academic Rigour Assistant a complex question from your discipline.</p>
+                    <p><strong>Example prompts:</strong></p>
+                    <ul>
+                        <li>"What is the current evidence for mental imagery enhancing motor skill acquisition?"</li>
+                        <li>"How effective is blood flow restriction training for muscle hypertrophy?"</li>
+                        <li>"What are the mechanisms underlying post-activation potentiation?"</li>
+                    </ul>
+                    <p><strong>Critical Task:</strong></p>
+                    <ol>
+                        <li>Note the Academic Rigour Assistant's response</li>
+                        <li>Search SPORTDiscus for recent systematic reviews or meta-analyses on the topic</li>
+                        <li>Compare: Where did the AI accurately represent the evidence? Where did it oversimplify?</li>
+                        <li>Identify any claims requiring correction or nuance</li>
+                    </ol>
+                </div>
+
+                <div class="task-box">
+                    <h3>Task 4: Socratic Tutor Stress Test</h3>
+                    <p><strong>Action:</strong> Use the Socratic Tutor to explore a complex concept, but intentionally provide incorrect statements to see how it responds.</p>
+                    <p><strong>Test scenarios:</strong></p>
+                    <ul>
+                        <li>"I think lactate causes muscle fatigue during exercise" (common misconception)</li>
+                        <li>"Static stretching always improves performance" (oversimplification)</li>
+                        <li>"Carbohydrate loading is only useful for marathons" (too narrow)</li>
+                    </ul>
+                    <p><strong>Critical Analysis:</strong></p>
+                    <ul>
+                        <li>Does the Socratic Tutor effectively correct misconceptions?</li>
+                        <li>Does it guide you to accurate understanding through questioning?</li>
+                        <li>When does the Socratic method become frustrating rather than helpful?</li>
+                        <li>How would you recommend students use this tool effectively?</li>
+                    </ul>
+                </div>
+
+                <h2>Part 2: Advanced Challenges</h2>
+                <p>These challenges require disciplinary expertise, critical thinking, and the ability to evaluate AI tools at a sophisticated level. Choose challenges relevant to your interests and programme requirements.</p>
+
+                <div class="challenge">
+                    <h3>Challenge A: Comprehensive Tool Evaluation</h3>
+                    <p><span class="level-badge">Critical Analysis</span></p>
+                    
+                    <p><strong>Objective:</strong> Systematically compare institutional AI tools with alternatives to inform evidence-based recommendations.</p>
+                    
+                    <p><strong>Task:</strong></p>
+                    <ol>
+                        <li>Select ONE of our institutional tools (NotebookLM or Academic Rigour Assistant)</li>
+                        <li>Identify a comparable alternative:
+                            <ul>
+                                <li>For NotebookLM: ChatGPT with document upload, Claude Projects, or Perplexity</li>
+                                <li>For Academic Rigour Assistant: Standard ChatGPT, Claude, or Gemini</li>
+                            </ul>
+                        </li>
+                        <li>Design test cases specific to sport science (e.g., analysing research on training adaptations)</li>
+                        <li>Compare systematically:
+                            <ul>
+                                <li>Accuracy and completeness of responses</li>
+                                <li>Citation quality and traceability</li>
+                                <li>Handling of conflicting evidence</li>
+                                <li>Recognition of uncertainty and limitations</li>
+                                <li>Ease of use for undergraduate students</li>
+                                <li>Risk of hallucination or bias</li>
+                            </ul>
+                        </li>
+                    </ol>
+                    
+                    <p><strong>Deliverable:</strong> A 2-3 page comparative analysis with specific examples demonstrating strengths and weaknesses of each tool. Include recommendations for:
+                        <ul>
+                            <li>Which tool for which purpose</li>
+                            <li>Specific warnings students must receive</li>
+                            <li>Recommended guardrails or usage policies</li>
+                        </ul>
+                    </p>
+                </div>
+
+                <div class="challenge">
+                    <h3>Challenge B: Design a Discipline-Specific AI Workflow</h3>
+                    <p><span class="level-badge">Applied Design</span></p>
+                    
+                    <p><strong>Objective:</strong> Create a validated AI-assisted workflow for a specific sport science task.</p>
+                    
+                    <p><strong>Choose one scenario:</strong></p>
+                    <ul>
+                        <li><strong>Biomechanics:</strong> Analysing movement patterns from video data</li>
+                        <li><strong>Exercise Physiology:</strong> Designing periodised training programmes</li>
+                        <li><strong>Sports Psychology:</strong> Developing mental skills training interventions</li>
+                        <li><strong>Sports Therapy:</strong> Creating injury rehabilitation protocols</li>
+                        <li><strong>Sport Nutrition:</strong> Planning athlete nutrition strategies</li>
+                    </ul>
+                    
+                    <p><strong>Task:</strong></p>
+                    <ol>
+                        <li>Design a step-by-step workflow showing:
+                            <ul>
+                                <li>Which AI tools to use at each stage</li>
+                                <li>What human expertise is essential (cannot be delegated to AI)</li>
+                                <li>How to verify AI outputs against professional standards</li>
+                                <li>What safety checks are required</li>
+                            </ul>
+                        </li>
+                        <li>Test the workflow with a real case or scenario</li>
+                        <li>Identify failure points:
+                            <ul>
+                                <li>Where did AI perform poorly?</li>
+                                <li>What corrections were necessary?</li>
+                                <li>What additional verification was needed?</li>
+                            </ul>
+                        </li>
+                        <li>Refine the workflow based on testing</li>
+                    </ol>
+                    
+                    <p><strong>Deliverable:</strong> A documented workflow (flowchart or detailed written procedure) with:
+                        <ul>
+                            <li>Step-by-step instructions</li>
+                            <li>Evidence from your testing</li>
+                            <li>Identified limitations and risks</li>
+                            <li>Recommendations for safe implementation</li>
+                        </ul>
+                    </p>
+                </div>
+
+                <div class="challenge">
+                    <h3>Challenge C: Assessment Design with AI Integration</h3>
+                    <p><span class="level-badge">Pedagogical Innovation</span></p>
+                    
+                    <p><strong>Objective:</strong> Design a learning activity that uses AI productively while maintaining academic integrity and assessing genuine learning.</p>
+                    
+                    <p><strong>Task:</strong></p>
+                    <ol>
+                        <li>Choose either NotebookLM or the Socratic Tutor</li>
+                        <li>Design a complete learning activity including:
+                            <ul>
+                                <li><strong>Learning objective:</strong> What specific skill or knowledge will students develop?</li>
+                                <li><strong>Pre-activity briefing:</strong> What do students need to know before starting?</li>
+                                <li><strong>Structured task:</strong> Step-by-step instructions for students</li>
+                                <li><strong>Assessment integration:</strong> How will you verify learning occurred? What evidence will students produce?</li>
+                                <li><strong>AI containment strategy:</strong> How do you prevent passive consumption or plagiarism?</li>
+                            </ul>
+                        </li>
+                        <li>Apply the "Goldilocks principle": The AI should be useful enough to enhance learning but constrained enough that students cannot complete the assessment by copying outputs</li>
+                    </ol>
+                    
+                    <p><strong>Examples to inspire you:</strong></p>
+                    <ul>
+                        <li><strong>NotebookLM activity:</strong> Students upload three conflicting expert sources, use NotebookLM to identify points of disagreement, then <em>without AI</em> write an analysis explaining which expert is most persuasive and why</li>
+                        <li><strong>Socratic Tutor activity:</strong> Students screenshot their dialogue working through a problem, then submit a reflective annotation explaining where the Socratic questioning helped, where it hindered, and what they learned about their own thinking process</li>
+                    </ul>
+                    
+                    <p><strong>Deliverable:</strong> A one-page activity plan suitable for sharing with programme teams, including learning objectives, student instructions, and assessment criteria.</p>
+                </div>
+
+                <div class="challenge">
+                    <h3>Challenge D: Ethical Analysis of AI in Sport Science</h3>
+                    <p><span class="level-badge">Professional Ethics</span></p>
+                    
+                    <p><strong>Objective:</strong> Critically examine the ethical implications of AI use in sport science professional practice.</p>
+                    
+                    <p><strong>Task:</strong></p>
+                    <ol>
+                        <li>Consider a realistic scenario:
+                            <ul>
+                                <li>Using AI to generate training programmes for clients</li>
+                                <li>Using AI to analyse injury risk factors</li>
+                                <li>Using AI to provide nutrition advice</li>
+                                <li>Using AI to develop mental skills interventions</li>
+                            </ul>
+                        </li>
+                        <li>Analyse from multiple ethical perspectives:
+                            <ul>
+                                <li><strong>Professional responsibility:</strong> What duty of care do practitioners owe clients?</li>
+                                <li><strong>Competence:</strong> When does AI use exceed practitioner competence?</li>
+                                <li><strong>Transparency:</strong> Should clients be informed about AI use? How?</li>
+                                <li><strong>Liability:</strong> Who is responsible when AI recommendations cause harm?</li>
+                                <li><strong>Evidence base:</strong> How do practitioners verify AI claims are evidence-based?</li>
+                            </ul>
+                        </li>
+                        <li>Research professional body guidance (e.g., BASES, HCPC, REPS)</li>
+                        <li>Develop ethical guidelines for your scenario</li>
+                    </ol>
+                    
+                    <p><strong>Deliverable:</strong> A 2-3 page ethical analysis including:
+                        <ul>
+                            <li>Identification of key ethical issues</li>
+                            <li>Reference to professional standards</li>
+                            <li>Proposed guidelines for ethical AI use</li>
+                            <li>Recommendations for professional practice</li>
+                        </ul>
+                    </p>
+                </div>
+
+                <div class="challenge">
+                    <h3>Challenge E: AI Limitations Research Project</h3>
+                    <p><span class="level-badge">Empirical Investigation</span></p>
+                    
+                    <p><strong>Objective:</strong> Systematically document where AI tools fail or produce problematic outputs in sport science contexts.</p>
+                    
+                    <p><strong>Task:</strong></p>
+                    <ol>
+                        <li>Select a specific sport science subdomain (e.g., resistance training, sports nutrition, injury prevention)</li>
+                        <li>Design test questions covering:
+                            <ul>
+                                <li>Basic factual knowledge</li>
+                                <li>Complex physiological mechanisms</li>
+                                <li>Applied problem-solving</li>
+                                <li>Current controversies or debates</li>
+                            </ul>
+                        </li>
+                        <li>Test multiple AI tools (at least 3) with identical questions</li>
+                        <li>Evaluate responses against academic literature:
+                            <ul>
+                                <li>Factual accuracy</li>
+                                <li>Completeness</li>
+                                <li>Nuance and qualification</li>
+                                <li>Recognition of uncertainty</li>
+                                <li>Handling of conflicting evidence</li>
+                            </ul>
+                        </li>
+                        <li>Document patterns of failure:
+                            <ul>
+                                <li>Types of questions AI handles poorly</li>
+                                <li>Common errors or misconceptions</li>
+                                <li>Hallucinations or fabricated citations</li>
+                                <li>Oversimplifications of complex topics</li>
+                            </ul>
+                        </li>
+                    </ol>
+                    
+                    <p><strong>Deliverable:</strong> A systematic report (3-5 pages) documenting:
+                        <ul>
+                            <li>Methodology (questions, tools, evaluation criteria)</li>
+                            <li>Results (specific examples of failures with evidence)</li>
+                            <li>Analysis (patterns and implications)</li>
+                            <li>Recommendations (how to mitigate identified risks)</li>
+                        </ul>
+                    </p>
+                </div>
+
+                <h2>Part 3: Advanced Research Workflow</h2>
+                <p>Integrate multiple AI tools into a sophisticated research workflow for Level 4-5 work.</p>
+
+                <div class="task-box">
+                    <h3>Complete Workflow Example: Literature Review Development</h3>
+                    
+                    <p><strong>Stage 1: Initial Orientation (with Academic Rigour Assistant)</strong></p>
+                    <ul>
+                        <li>Ask: "What are the main theoretical frameworks in [your topic]?"</li>
+                        <li>Ask: "What are the current debates or controversies?"</li>
+                        <li>Use responses to guide your search strategy</li>
+                    </ul>
+                    
+                    <p><strong>Stage 2: Systematic Literature Search (You + Databases)</strong></p>
+                    <ul>
+                        <li>Search SPORTDiscus with terms identified in Stage 1</li>
+                        <li>Identify 20-30 relevant sources</li>
+                        <li>Prioritise: systematic reviews, meta-analyses, recent primary studies</li>
+                    </ul>
+                    
+                    <p><strong>Stage 3: Source Analysis (with NotebookLM)</strong></p>
+                    <ul>
+                        <li>Upload 8-10 key sources to NotebookLM</li>
+                        <li>Ask: "What are the main methodological approaches used?"</li>
+                        <li>Ask: "Compare the findings across these studies"</li>
+                        <li>Ask: "What limitations are acknowledged?"</li>
+                        <li>Use to create preliminary themes and structure</li>
+                    </ul>
+                    
+                    <p><strong>Stage 4: Critical Reading (You)</strong></p>
+                    <ul>
+                        <li>Read ALL sources thoroughly</li>
+                        <li>Annotate with critical notes</li>
+                        <li>Identify strengths and weaknesses of each study</li>
+                        <li>Note contradictions and gaps</li>
+                    </ul>
+                    
+                    <p><strong>Stage 5: Synthesis and Writing (You with AI support)</strong></p>
+                    <ul>
+                        <li>Create detailed outline based on your reading</li>
+                        <li>Draft each section using your annotations</li>
+                        <li>Use AI to check logical flow and coherence</li>
+                        <li>Ensure all claims are properly cited</li>
+                    </ul>
+                    
+                    <p><strong>Stage 6: Critical Refinement (with AI feedback)</strong></p>
+                    <ul>
+                        <li>Ask AI: "What are potential weaknesses in this argument?"</li>
+                        <li>Ask: "What alternative interpretations exist?"</li>
+                        <li>Use feedback to strengthen critical analysis</li>
+                        <li>Verify all AI suggestions against literature</li>
+                    </ul>
+                    
+                    <p><strong>Stage 7: Quality Assurance (You)</strong></p>
+                    <ul>
+                        <li>Verify every factual claim against sources</li>
+                        <li>Check all citations are accurate</li>
+                        <li>Ensure critical voice throughout</li>
+                        <li>Confirm substantial personal contribution</li>
+                    </ul>
+                    
+                    <p><strong>Stage 8: Documentation</strong></p>
+                    <ul>
+                        <li>Complete comprehensive AI Evidence Form</li>
+                        <li>Document all AI interactions</li>
+                        <li>Explain evaluation and verification process</li>
+                    </ul>
+                </div>
+
+                <h2>Part 4: Preparing for Expert-Level Work</h2>
+                <p>If you are moving towards dissertation-level work (Levels 5-6), use these advanced skills as foundation.</p>
+
+                <div class="info-box">
+                    <h3>Key Principles for Level 5 Collaboration</h3>
+                    <ul>
+                        <li><strong>Iterative refinement:</strong> Plan for multiple cycles of feedback and improvement</li>
+                        <li><strong>Comprehensive documentation:</strong> Record every significant AI interaction</li>
+                        <li><strong>Rigorous verification:</strong> Verify all claims against primary sources</li>
+                        <li><strong>Intellectual control:</strong> You make all decisions; AI supports your process</li>
+                        <li><strong>Critical reflection:</strong> Continuously evaluate AI's strengths and limitations</li>
+                    </ul>
+                    <p><strong>Next step:</strong> When ready for dissertation work, proceed to the <a href="expert.html">Expert Pathway</a>.</p>
+                </div>
+
+                <h2>Part 5: Final Reflection</h2>
+
+                <div class="warning-box">
+                    <h4>Critical Questions for Group Discussion</h4>
+                    <ul>
+                        <li>As an advanced user, what do you see as the single biggest <strong>opportunity</strong> and single biggest <strong>risk</strong> of embedding AI tools in sport science education?</li>
+                        <li>What is one evidence-based recommendation you would make to your programme team about AI integration?</li>
+                        <li>How should professional bodies (BASES, HCPC, etc.) respond to AI use in sport science practice?</li>
+                        <li>What skills do sport science graduates need to work effectively and ethically with AI in professional practice?</li>
+                    </ul>
+                </div>
+
+                <div class="success-box">
+                    <h4>✓ Advanced Pathway Complete!</h4>
+                    <p>You have completed the Advanced Pathway. You should now be able to:</p>
+                    <ul>
+                        <li>Critically evaluate AI tools with disciplinary expertise</li>
+                        <li>Design sophisticated AI-assisted research workflows</li>
+                        <li>Identify and mitigate AI limitations in sport science contexts</li>
+                        <li>Apply ethical reasoning to AI use in professional practice</li>
+                        <li>Create evidence-based recommendations for AI integration</li>
+                        <li>Prepare for collaborative AI work at Levels 5-6</li>
+                    </ul>
+                    
+                    <p><strong>Next steps:</strong></p>
+                    <ul>
+                        <li>Apply these advanced skills to your current assessments</li>
+                        <li>For dissertation work requiring Levels 5-6, proceed to the <a href="expert.html">Expert Pathway</a></li>
+                        <li>Share insights from challenges with your programme team</li>
+                        <li>Contribute to developing best practices for AI use in sport science</li>
+                    </ul>
+                </div>
+
+                <div class="info-box">
+                    <h3>Additional Resources</h3>
+                    <ul>
+                        <li><a href="framework.html">Complete 6-level framework guide</a></li>
+                        <li><a href="development.html">Development Pathway</a> - Review if needed</li>
+                        <li><a href="expert.html">Expert Pathway</a> - For dissertation-level work</li>
+                        <li><a href="resources.html">All tools and resources</a></li>
+                        <li><a href="faq.html">Frequently asked questions</a></li>
+                        <li><a href="https://tony-myers.github.io/AI-for-students" target="_blank" rel="noopener noreferrer">AI for Students comprehensive website</a></li>
+                    </ul>
+                </div>
+
+            </article>
+        </main>
+
+        <footer>
+            <p>Tony Myers 2025 | Birmingham Newman University | <a href="mailto:tony.myers@newman.ac.uk">tony.myers@newman.ac.uk</a></p>
+        </footer>
+    </div>
+
+</body>
+</html>
