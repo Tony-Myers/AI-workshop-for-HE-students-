@@ -1,0 +1,1015 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expert Pathway - AI Skills Development</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            line-height: 1.6;
+            background-color: #f4f7f6;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 1000px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+        }
+        header {
+            background: linear-gradient(135deg, #8e44ad 0%, #c39bd3 100%);
+            color: white;
+            padding: 2rem 1rem;
+            margin: -20px -20px 20px -20px;
+            border-radius: 8px 8px 0 0;
+            text-align: center;
+        }
+        header h1 {
+            color: white;
+            margin: 0;
+            font-size: 2rem;
+        }
+        header p {
+            margin: 10px 0 0 0;
+            opacity: 0.95;
+        }
+        nav {
+            background-color: #ecf0f1;
+            padding: 12px;
+            border-radius: 8px;
+            text-align: center;
+            margin-bottom: 25px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+        }
+        nav a {
+            display: inline-block;
+            padding: 10px 18px;
+            text-decoration: none;
+            color: #2980b9;
+            font-weight: bold;
+            border-radius: 6px;
+            margin: 2px;
+            transition: all 0.2s ease;
+        }
+        nav a:hover {
+            background-color: #3498db;
+            color: #ffffff;
+            transform: translateY(-1px);
+        }
+        nav a.active {
+            background-color: #3498db;
+            color: #ffffff;
+        }
+        h2, h3, h4 {
+            color: #2c3e50;
+        }
+        h2 {
+            border-bottom: 2px solid #8e44ad;
+            padding-bottom: 8px;
+            margin-top: 30px;
+            margin-bottom: 15px;
+        }
+        h3 {
+            margin-top: 25px;
+            margin-bottom: 12px;
+        }
+        ul, ol {
+            padding-left: 25px;
+            margin: 15px 0;
+        }
+        li {
+            margin-bottom: 10px;
+        }
+        .module {
+            background-color: #fdfdfd;
+            border: 2px solid #e0e0e0;
+            border-left: 5px solid #8e44ad;
+            padding: 25px;
+            border-radius: 8px;
+            margin-bottom: 25px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+        }
+        .module h3 {
+            margin-top: 0;
+            color: #8e44ad;
+        }
+        .progress-tracker {
+            background-color: #f8f9fa;
+            border: 2px solid #8e44ad;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 20px 0;
+        }
+        .progress-item {
+            margin: 10px 0;
+            padding: 10px;
+            background: white;
+            border-radius: 5px;
+        }
+        .progress-item input[type="checkbox"] {
+            margin-right: 10px;
+            transform: scale(1.2);
+        }
+        .info-box {
+            background-color: #e8f4f8;
+            border-left: 4px solid #3498db;
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 5px;
+        }
+        .warning-box {
+            background-color: #fff3cd;
+            border-left: 4px solid #f39c12;
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 5px;
+        }
+        .success-box {
+            background-color: #d4edda;
+            border-left: 4px solid #28a745;
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 5px;
+        }
+        .example-box {
+            background-color: #f9f9f9;
+            border: 2px dashed #bdc3c7;
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 5px;
+        }
+        .example-box h4 {
+            margin-top: 0;
+            color: #7f8c8d;
+        }
+        pre {
+            background-color: #2c3e50;
+            color: #ecf0f1;
+            padding: 15px;
+            border-radius: 6px;
+            overflow-x: auto;
+        }
+        code {
+            font-family: "Courier New", Courier, monospace;
+            font-size: 0.95em;
+            background-color: #ecf0f1;
+            padding: 2px 6px;
+            border-radius: 3px;
+            color: #c7254e;
+        }
+        pre code {
+            background: none;
+            color: #ecf0f1;
+            padding: 0;
+        }
+        .level-badge {
+            display: inline-block;
+            background: linear-gradient(135deg, #8e44ad 0%, #c39bd3 100%);
+            color: white;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: bold;
+            margin: 5px 5px 5px 0;
+        }
+        footer {
+            text-align: center;
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid #ecf0f1;
+            font-size: 0.9em;
+            color: #7f8c8d;
+        }
+        @media (max-width: 768px) {
+            .container {
+                margin: 10px;
+                padding: 15px;
+            }
+            header {
+                margin: -15px -15px 20px -15px;
+                padding: 1.5rem 1rem;
+            }
+            header h1 {
+                font-size: 1.5rem;
+            }
+            nav a {
+                display: block;
+                margin: 5px 0;
+            }
+        }
+        @media print {
+            body {
+                background: white;
+            }
+            .container {
+                box-shadow: none;
+                max-width: 100%;
+            }
+            header {
+                background: #8e44ad;
+                color: white;
+            }
+            nav {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <header>
+            <h1>Expert Pathway</h1>
+            <p>Levels 5-6: AI Collaboration &amp; Comprehensive Documentation</p>
+        </header>
+
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="foundation.html">Foundation</a>
+            <a href="development.html">Development</a>
+            <a href="expert.html" class="active">Expert</a>
+        </nav>
+
+        <main>
+            <article>
+                <div class="info-box">
+                    <h3>📍 You are here: Expert Pathway</h3>
+                    <p><strong>Who this is for:</strong> Final year students and those working on dissertations or major projects requiring Level 5-6 AI use.</p>
+                    <p><strong>What you will learn:</strong></p>
+                    <ul>
+                        <li>How to collaborate effectively with AI as a research partner (Level 5)</li>
+                        <li>Comprehensive documentation strategies for complex AI-assisted work (Level 6)</li>
+                        <li>Iterative refinement techniques for high-quality outputs</li>
+                        <li>Quality assurance and verification protocols</li>
+                        <li>Managing AI use in long-form academic projects</li>
+                    </ul>
+                    <p><strong>Time required:</strong> This is an ongoing development pathway for extended projects</p>
+                </div>
+
+                <div class="progress-tracker">
+                    <h3>Your Progress</h3>
+                    <p>Track your progress through this pathway:</p>
+                    <div class="progress-item">
+                        <input type="checkbox" id="mod1"> <label for="mod1">Module 1: Understanding Levels 5-6</label>
+                    </div>
+                    <div class="progress-item">
+                        <input type="checkbox" id="mod2"> <label for="mod2">Module 2: AI as Research Collaborator</label>
+                    </div>
+                    <div class="progress-item">
+                        <input type="checkbox" id="mod3"> <label for="mod3">Module 3: Iterative Refinement Process</label>
+                    </div>
+                    <div class="progress-item">
+                        <input type="checkbox" id="mod4"> <label for="mod4">Module 4: Comprehensive Documentation</label>
+                    </div>
+                    <div class="progress-item">
+                        <input type="checkbox" id="mod5"> <label for="mod5">Module 5: Quality Assurance Protocols</label>
+                    </div>
+                    <div class="progress-item">
+                        <input type="checkbox" id="mod6"> <label for="mod6">Module 6: Dissertation Applications</label>
+                    </div>
+                </div>
+
+                <div class="warning-box">
+                    <h4>⚠️ Prerequisites</h4>
+                    <p>Before starting this pathway, you should have:</p>
+                    <ul>
+                        <li>Completed the <a href="development.html">Development Pathway</a></li>
+                        <li>Confident using AI at Levels 1-4</li>
+                        <li>Experience with academic research and writing</li>
+                        <li>Understanding of your discipline's research methods</li>
+                    </ul>
+                    <p><strong>Note:</strong> Levels 5-6 are typically used for final year projects and dissertations.</p>
+                </div>
+
+                <div class="module">
+                    <h3>Module 1: Understanding Levels 5-6</h3>
+                    <p><span class="level-badge">Core Knowledge</span></p>
+                    
+                    <p>Levels 5 and 6 represent the most sophisticated use of AI in academic work. Let us understand what they require.</p>
+
+                    <h4>Level 5: AI Collaboration</h4>
+                    <p><strong>What this means:</strong></p>
+                    <ul>
+                        <li>AI is used as a <strong>collaborative research partner</strong> throughout your project</li>
+                        <li>You engage in <strong>iterative refinement</strong> with AI over multiple sessions</li>
+                        <li>AI assists with planning, structuring, drafting, and refining</li>
+                        <li>You maintain <strong>intellectual control</strong> and make all final decisions</li>
+                        <li>The final product reflects <strong>substantial personal contribution</strong></li>
+                    </ul>
+                    
+                    <p><strong>Documentation required:</strong></p>
+                    <ul>
+                        <li>Comprehensive AI Evidence Form documenting the entire collaboration</li>
+                        <li>Evidence of iterative refinement across multiple sessions</li>
+                        <li>Clear explanation of your role versus AI's role</li>
+                        <li>Demonstration of critical evaluation throughout the process</li>
+                    </ul>
+
+                    <div class="example-box">
+                        <h4>Level 5 Example: Dissertation Literature Review</h4>
+                        <p><strong>Collaboration process:</strong></p>
+                        <ol>
+                            <li><strong>Session 1:</strong> Use AI to help structure the review (themes, organisation)</li>
+                            <li><strong>Your work:</strong> Conduct comprehensive literature search in databases</li>
+                            <li><strong>Session 2:</strong> Upload sources to NotebookLM, use AI to identify patterns and gaps</li>
+                            <li><strong>Your work:</strong> Read and critically analyse all sources</li>
+                            <li><strong>Session 3:</strong> Draft sections with AI assistance for structure and flow</li>
+                            <li><strong>Your work:</strong> Rewrite based on primary sources, add critical analysis</li>
+                            <li><strong>Session 4:</strong> Use AI to refine arguments and improve coherence</li>
+                            <li><strong>Your work:</strong> Final critical review and verification of all claims</li>
+                        </ol>
+                        <p><strong>Result:</strong> A literature review where AI supported the process but you controlled the content and analysis.</p>
+                    </div>
+
+                    <h4>Level 6: Mandatory AI Use with Comprehensive Documentation</h4>
+                    <p><strong>What this means:</strong></p>
+                    <ul>
+                        <li>The assignment <strong>requires</strong> you to use AI</li>
+                        <li>The focus is on demonstrating <strong>sophisticated AI literacy</strong></li>
+                        <li>You must show <strong>expert-level documentation</strong> of your AI use</li>
+                        <li>Often involves <strong>reflection on AI capabilities and limitations</strong></li>
+                        <li>May require you to <strong>evaluate the AI's performance</strong></li>
+                    </ul>
+                    
+                    <p><strong>Documentation required:</strong></p>
+                    <ul>
+                        <li>Extremely detailed AI Evidence Form</li>
+                        <li>Full transcript of all interactions (where feasible)</li>
+                        <li>Critical reflection on AI's strengths and weaknesses</li>
+                        <li>Analysis of where AI was helpful versus where it failed</li>
+                        <li>Discussion of ethical implications of your AI use</li>
+                    </ul>
+
+                    <div class="example-box">
+                        <h4>Level 6 Example: Digital Training Resource Project</h4>
+                        <p><strong>Assignment requirement:</strong> Create a digital coaching resource, using AI tools, and evaluate the AI's contribution.</p>
+                        
+                        <p><strong>Documentation includes:</strong></p>
+                        <ul>
+                            <li>Detailed log of all AI interactions</li>
+                            <li>Analysis: "AI was excellent at suggesting exercise progressions but poor at understanding injury contraindications"</li>
+                            <li>Reflection: "I needed to verify all safety information against professional guidelines"</li>
+                            <li>Evidence: Screenshots of iterative refinements</li>
+                            <li>Evaluation: "The AI saved approximately 15 hours but required 8 hours of verification"</li>
+                        </ul>
+                    </div>
+
+                    <h4>Key Differences: Level 4 vs Level 5 vs Level 6</h4>
+                    <table border="1" cellpadding="10" cellspacing="0" style="width:100%; border-collapse: collapse; margin: 20px 0;">
+                        <tr style="background-color: #f8f9fa;">
+                            <th>Aspect</th>
+                            <th>Level 4</th>
+                            <th>Level 5</th>
+                            <th>Level 6</th>
+                        </tr>
+                        <tr>
+                            <td><strong>AI Role</strong></td>
+                            <td>Generate initial content</td>
+                            <td>Ongoing collaborator</td>
+                            <td>Mandated tool</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Your Role</strong></td>
+                            <td>Evaluate and rewrite</td>
+                            <td>Guide and refine throughout</td>
+                            <td>Use, evaluate, and reflect</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Iterations</strong></td>
+                            <td>Usually single session</td>
+                            <td>Multiple sessions over time</td>
+                            <td>Extensive, documented</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Documentation</strong></td>
+                            <td>AI Evidence Form</td>
+                            <td>Comprehensive Evidence Form</td>
+                            <td>Extensive documentation + critical reflection</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Typical Use</strong></td>
+                            <td>Short assignments</td>
+                            <td>Major projects, dissertation</td>
+                            <td>AI-specific assessments</td>
+                        </tr>
+                    </table>
+
+                    <div class="info-box">
+                        <h4>When to Use Levels 5-6</h4>
+                        <p><strong>Level 5 is appropriate when:</strong></p>
+                        <ul>
+                            <li>Working on extended projects (dissertation, major project)</li>
+                            <li>The assignment explicitly allows Level 5 collaboration</li>
+                            <li>You have time for multiple iterations and refinements</li>
+                            <li>The work requires substantial research and analysis</li>
+                        </ul>
+                        <p><strong>Level 6 is required when:</strong></p>
+                        <ul>
+                            <li>The assignment brief specifies mandatory AI use</li>
+                            <li>You are asked to evaluate AI tools</li>
+                            <li>The focus is on demonstrating AI literacy</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="module">
+                    <h3>Module 2: AI as Research Collaborator</h3>
+                    <p><span class="level-badge">Advanced Practice</span></p>
+                    
+                    <p>At Level 5, you work with AI as a research partner. Here is how to collaborate effectively.</p>
+
+                    <h4>The Collaboration Mindset</h4>
+                    <p>Think of AI as a:</p>
+                    <ul>
+                        <li><strong>Research assistant:</strong> Can help find patterns, organise information, suggest structures</li>
+                        <li><strong>Writing coach:</strong> Provides feedback on clarity, coherence, argument strength</li>
+                        <li><strong>Critical friend:</strong> Can challenge your thinking and suggest alternatives</li>
+                        <li><strong>Tool, not expert:</strong> Must be guided by your expertise and judgement</li>
+                    </ul>
+
+                    <h4>Effective Collaboration Strategies</h4>
+                    
+                    <p><strong>1. Start with Planning</strong></p>
+                    <div class="example-box">
+                        <p><strong>Use AI for:</strong></p>
+                        <ul>
+                            <li>Brainstorming potential research questions</li>
+                            <li>Structuring your dissertation or project</li>
+                            <li>Identifying key themes to explore</li>
+                            <li>Creating work timelines</li>
+                        </ul>
+                        <p><strong>Example prompt:</strong> <code>"I am writing a dissertation on mental skills training in elite sport. Help me structure a comprehensive literature review covering: theoretical frameworks, current evidence, methodological approaches, and practical applications."</code></p>
+                    </div>
+
+                    <p><strong>2. Use AI for Research Management</strong></p>
+                    <div class="example-box">
+                        <p><strong>NotebookLM for:</strong></p>
+                        <ul>
+                            <li>Organising and analysing multiple sources</li>
+                            <li>Identifying themes across your literature</li>
+                            <li>Comparing methodologies</li>
+                            <li>Finding research gaps</li>
+                        </ul>
+                        <p><strong>Example workflow:</strong></p>
+                        <ol>
+                            <li>Upload 20-30 key sources to NotebookLM</li>
+                            <li>Ask: "Identify the main theoretical frameworks used across these sources"</li>
+                            <li>Ask: "What are the common methodological limitations mentioned?"</li>
+                            <li>Use responses to guide your critical analysis</li>
+                        </ol>
+                    </div>
+
+                    <p><strong>3. Iterative Drafting</strong></p>
+                    <div class="example-box">
+                        <p><strong>Session 1:</strong> Ask AI to help structure a section outline</p>
+                        <p><strong>You do:</strong> Write first draft based on your research</p>
+                        <p><strong>Session 2:</strong> Ask AI for feedback on argument coherence</p>
+                        <p><strong>You do:</strong> Revise based on feedback and your judgement</p>
+                        <p><strong>Session 3:</strong> Use AI to improve academic style</p>
+                        <p><strong>You do:</strong> Final critical review and verification</p>
+                    </div>
+
+                    <p><strong>4. Critical Dialogue</strong></p>
+                    <div class="example-box">
+                        <p><strong>Use prompts like:</strong></p>
+                        <ul>
+                            <li><code>"What are potential weaknesses in this argument?"</code></li>
+                            <li><code>"What alternative explanations exist for these findings?"</code></li>
+                            <li><code>"How might critics respond to this position?"</code></li>
+                            <li><code>"What evidence would strengthen this claim?"</code></li>
+                        </ul>
+                        <p><strong>Then:</strong> Research those points in academic literature</p>
+                    </div>
+
+                    <h4>Sport Science Collaboration Examples</h4>
+                    
+                    <div class="example-box">
+                        <h4>Example 1: Dissertation Methodology Section</h4>
+                        <p><strong>Collaboration approach:</strong></p>
+                        <ol>
+                            <li><strong>You:</strong> Explain your research design to AI</li>
+                            <li><strong>AI:</strong> Suggests potential limitations and validity threats</li>
+                            <li><strong>You:</strong> Research those specific methodological issues</li>
+                            <li><strong>AI:</strong> Helps structure your justification of design choices</li>
+                            <li><strong>You:</strong> Write section citing actual methodology literature</li>
+                            <li><strong>AI:</strong> Provides feedback on clarity and completeness</li>
+                            <li><strong>You:</strong> Make final revisions and verify all claims</li>
+                        </ol>
+                    </div>
+
+                    <div class="example-box">
+                        <h4>Example 2: Applied Project - Training Programme Design</h4>
+                        <p><strong>Collaboration approach:</strong></p>
+                        <ol>
+                            <li><strong>AI:</strong> Suggests periodisation models for your athlete population</li>
+                            <li><strong>You:</strong> Research evidence for different models</li>
+                            <li><strong>AI:</strong> Helps organise training phases and progressions</li>
+                            <li><strong>You:</strong> Adapt based on sport-specific requirements</li>
+                            <li><strong>AI:</strong> Reviews for safety and progression logic</li>
+                            <li><strong>You:</strong> Verify against professional guidelines and research</li>
+                            <li><strong>AI:</strong> Assists with creating supporting documentation</li>
+                            <li><strong>You:</strong> Final quality assurance and professional review</li>
+                        </ol>
+                    </div>
+
+                    <h4>Maintaining Intellectual Control</h4>
+                    <div class="warning-box">
+                        <p><strong>Essential principles:</strong></p>
+                        <ul>
+                            <li><strong>You decide</strong> the research questions and approach</li>
+                            <li><strong>You conduct</strong> the literature search and reading</li>
+                            <li><strong>You verify</strong> all facts and claims</li>
+                            <li><strong>You write</strong> the critical analysis and conclusions</li>
+                            <li><strong>You take responsibility</strong> for the final work</li>
+                        </ul>
+                        <p><strong>AI supports</strong> organisation, structure, clarity, and idea generation</p>
+                        <p><strong>AI does not replace</strong> your expertise, judgement, and critical thinking</p>
+                    </div>
+                </div>
+
+                <div class="module">
+                    <h3>Module 3: Iterative Refinement Process</h3>
+                    <p><span class="level-badge">Advanced Technique</span></p>
+                    
+                    <p>Level 5 collaboration involves multiple cycles of refinement. Here is how to manage this process.</p>
+
+                    <h4>The Refinement Cycle</h4>
+                    <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='800' height='400'%3E%3Crect width='800' height='400' fill='%23f8f9fa'/%3E%3Ctext x='400' y='200' font-size='20' text-anchor='middle' fill='%23333'%3EIterative Refinement Cycle%3C/text%3E%3Ctext x='400' y='230' font-size='16' text-anchor='middle' fill='%23666'%3EDraft → AI Feedback → Research → Revise → Review → Repeat%3C/text%3E%3C/svg%3E" alt="Refinement cycle diagram" style="width: 100%; max-width: 800px; margin: 20px 0;">
+
+                    <ol>
+                        <li><strong>Draft:</strong> Create initial content based on your research</li>
+                        <li><strong>AI Feedback:</strong> Request specific feedback from AI</li>
+                        <li><strong>Research:</strong> Investigate issues AI identified</li>
+                        <li><strong>Revise:</strong> Make improvements based on feedback and research</li>
+                        <li><strong>Review:</strong> Critically evaluate the revised version</li>
+                        <li><strong>Repeat:</strong> Continue until you reach quality standards</li>
+                    </ol>
+
+                    <h4>Effective Feedback Prompts</h4>
+                    <div class="example-box">
+                        <p><strong>For structure:</strong></p>
+                        <ul>
+                            <li><code>"Analyse the logical flow of this section. Where are there gaps or jumps in reasoning?"</code></li>
+                            <li><code>"Does this section effectively support my thesis? What additional evidence would strengthen it?"</code></li>
+                        </ul>
+                        
+                        <p><strong>For argument:</strong></p>
+                        <ul>
+                            <li><code>"What are the weakest points in this argument?"</code></li>
+                            <li><code>"What counterarguments should I address?"</code></li>
+                        </ul>
+                        
+                        <p><strong>For clarity:</strong></p>
+                        <ul>
+                            <li><code>"Which paragraphs are unclear or confusing? Why?"</code></li>
+                            <li><code>"Where have I used jargon without sufficient explanation?"</code></li>
+                        </ul>
+                        
+                        <p><strong>For completeness:</strong></p>
+                        <ul>
+                            <li><code>"What important aspects of this topic have I not addressed?"</code></li>
+                            <li><code>"What questions might a critical reader have that I have not answered?"</code></li>
+                        </ul>
+                    </div>
+
+                    <h4>Documentation of Iterative Process</h4>
+                    <p>For Level 5, you must document your refinement cycles:</p>
+                    
+                    <div class="example-box">
+                        <h4>Example Documentation Template</h4>
+                        <p><strong>Iteration 1:</strong></p>
+                        <ul>
+                            <li><strong>Date:</strong> 15 January 2025</li>
+                            <li><strong>Task:</strong> Draft introduction section</li>
+                            <li><strong>AI prompt:</strong> "Review this introduction for clarity and logical flow"</li>
+                            <li><strong>AI feedback:</strong> Suggested the research gap was not clearly stated; recommended earlier introduction of key terms</li>
+                            <li><strong>Your action:</strong> Researched how other dissertations present research gaps; added definitions section; revised research gap paragraph</li>
+                            <li><strong>Outcome:</strong> Introduction now clearer but still needs work on transition to aims</li>
+                        </ul>
+                        
+                        <p><strong>Iteration 2:</strong></p>
+                        <ul>
+                            <li><strong>Date:</strong> 18 January 2025</li>
+                            <li><strong>Task:</strong> Improve transition from research gap to aims</li>
+                            <li><strong>AI prompt:</strong> "How can I better connect the identified research gap to my specific research aims?"</li>
+                            <li><strong>AI feedback:</strong> Suggested using a bridging paragraph; provided structure example</li>
+                            <li><strong>Your action:</strong> Wrote bridging paragraph linking gap to aims; verified logic with supervisor</li>
+                            <li><strong>Outcome:</strong> Introduction now complete and coherent</li>
+                        </ul>
+                    </div>
+
+                    <h4>Managing Long-Term Projects</h4>
+                    <p><strong>Tips for dissertation-length collaborations:</strong></p>
+                    <ul>
+                        <li><strong>Keep a log:</strong> Maintain a separate document tracking all AI interactions</li>
+                        <li><strong>Version control:</strong> Save versions after each major iteration</li>
+                        <li><strong>Regular checkpoints:</strong> Review progress with supervisor, not just AI</li>
+                        <li><strong>Balance AI use:</strong> Do not rely solely on AI; seek human feedback too</li>
+                        <li><strong>Ethical reflection:</strong> Regularly consider whether your use is appropriate</li>
+                    </ul>
+
+                    <div class="warning-box">
+                        <h4>⚠️ Common Pitfalls in Iterative Refinement</h4>
+                        <ul>
+                            <li><strong>Over-refinement:</strong> Endless iterations without improvement</li>
+                            <li><strong>Loss of voice:</strong> Making so many AI-suggested changes that your writing no longer sounds like you</li>
+                            <li><strong>Uncritical acceptance:</strong> Implementing AI feedback without evaluation</li>
+                            <li><strong>Documentation lapses:</strong> Forgetting to record middle iterations</li>
+                            <li><strong>Verification failure:</strong> Not checking AI claims against sources</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="module">
+                    <h3>Module 4: Comprehensive Documentation for Levels 5-6</h3>
+                    <p><span class="level-badge">Essential Compliance</span></p>
+                    
+                    <p>Levels 5 and 6 require extensive documentation. Here is what to include.</p>
+
+                    <h4>Level 5 Documentation Requirements</h4>
+                    <p><strong>Your AI Evidence Form must include:</strong></p>
+                    <ol>
+                        <li><strong>Project overview:</strong>
+                            <ul>
+                                <li>Type of assignment (e.g., dissertation literature review)</li>
+                                <li>Dates of AI use (start and end)</li>
+                                <li>AI tools used (specify versions if known)</li>
+                            </ul>
+                        </li>
+                        <li><strong>Detailed process log:</strong>
+                            <ul>
+                                <li>All major prompts used</li>
+                                <li>AI feedback received</li>
+                                <li>Your responses and actions</li>
+                                <li>Research conducted to verify AI claims</li>
+                                <li>Changes made in each iteration</li>
+                            </ul>
+                        </li>
+                        <li><strong>Role clarification:</strong>
+                            <ul>
+                                <li>What AI did versus what you did</li>
+                                <li>Which sections involved AI assistance</li>
+                                <li>Where you departed from AI suggestions</li>
+                            </ul>
+                        </li>
+                        <li><strong>Critical reflection:</strong>
+                            <ul>
+                                <li>Where AI was most helpful</li>
+                                <li>Where AI was least helpful or wrong</li>
+                                <li>What you learned about AI limitations</li>
+                                <li>How collaboration improved your work</li>
+                            </ul>
+                        </li>
+                        <li><strong>Verification evidence:</strong>
+                            <ul>
+                                <li>List of academic sources used to verify AI claims</li>
+                                <li>Examples of where you corrected AI errors</li>
+                                <li>Evidence of supervisor consultations</li>
+                            </ul>
+                        </li>
+                    </ol>
+
+                    <h4>Level 6 Documentation Requirements</h4>
+                    <p><strong>Everything from Level 5, plus:</strong></p>
+                    <ol>
+                        <li><strong>Complete interaction records:</strong>
+                            <ul>
+                                <li>Full transcripts or screenshots of AI conversations</li>
+                                <li>Organised chronologically</li>
+                                <li>Annotated to explain context</li>
+                            </ul>
+                        </li>
+                        <li><strong>Critical evaluation of AI:</strong>
+                            <ul>
+                                <li>Systematic analysis of AI's strengths and weaknesses for your task</li>
+                                <li>Specific examples of successes and failures</li>
+                                <li>Discussion of AI limitations in your discipline</li>
+                            </ul>
+                        </li>
+                        <li><strong>Ethical reflection:</strong>
+                            <ul>
+                                <li>Consideration of ethical implications of your AI use</li>
+                                <li>Discussion of potential biases in AI outputs</li>
+                                <li>Reflection on academic integrity issues</li>
+                            </ul>
+                        </li>
+                        <li><strong>Time analysis:</strong>
+                            <ul>
+                                <li>Estimated time saved by using AI</li>
+                                <li>Time spent on verification and refinement</li>
+                                <li>Overall efficiency assessment</li>
+                            </ul>
+                        </li>
+                        <li><strong>Recommendations:</strong>
+                            <ul>
+                                <li>How future students should use AI for similar tasks</li>
+                                <li>What to avoid</li>
+                                <li>Suggested improvements to AI tools or guidance</li>
+                            </ul>
+                        </li>
+                    </ol>
+
+                    <h4>Documentation Tools and Strategies</h4>
+                    <div class="example-box">
+                        <p><strong>Keep a structured log in a separate document:</strong></p>
+                        <table border="1" cellpadding="8" cellspacing="0" style="width:100%; border-collapse: collapse;">
+                            <tr style="background-color: #f8f9fa;">
+                                <th>Date</th>
+                                <th>Chapter/Section</th>
+                                <th>Prompt Used</th>
+                                <th>AI Response Summary</th>
+                                <th>Action Taken</th>
+                                <th>Outcome</th>
+                            </tr>
+                            <tr>
+                                <td>20 Jan</td>
+                                <td>Lit Review</td>
+                                <td>"Compare methodologies..."</td>
+                                <td>Identified 3 main approaches</td>
+                                <td>Verified in 5 sources</td>
+                                <td>Added comparison table</td>
+                            </tr>
+                        </table>
+                    </div>
+
+                    <h4>Example Reflection: Level 6</h4>
+                    <div class="example-box">
+                        <p><strong>Extract from AI Evidence Form:</strong></p>
+                        <blockquote>
+                            <p>"Throughout this dissertation process, I used Microsoft Copilot (Academic Rigour Assistant) and NotebookLM as collaborative research tools over a 12-week period.</p>
+                            
+                            <p><strong>Where AI excelled:</strong> AI was particularly valuable for structuring my literature review and identifying thematic patterns across 45 sources. The NotebookLM citation feature meant I could trace every claim back to original sources, which was crucial for verification.</p>
+                            
+                            <p><strong>Where AI struggled:</strong> AI consistently oversimplified complex biomechanical concepts and occasionally conflated correlation with causation. I had to extensively rewrite any AI-generated discussion of research limitations, as AI tended to be overly optimistic about study quality.</p>
+                            
+                            <p><strong>Verification process:</strong> I verified every factual claim made by AI against primary sources. Approximately 30% of AI-generated claims required correction or nuance. I maintained a spreadsheet documenting this verification.</p>
+                            
+                            <p><strong>Time efficiency:</strong> AI saved approximately 20 hours in initial literature organisation and structure development. However, verification and refinement required an additional 15 hours. Net time saved: approximately 5 hours, but with substantially improved quality of critical analysis.</p>
+                            
+                            <p><strong>Ethical considerations:</strong> I was careful to ensure AI was enhancing rather than replacing my critical thinking. Regular supervisor consultations helped maintain perspective on appropriate use."</p>
+                        </blockquote>
+                    </div>
+                </div>
+
+                <div class="module">
+                    <h3>Module 5: Quality Assurance Protocols</h3>
+                    <p><span class="level-badge">Quality Control</span></p>
+                    
+                    <p>When collaborating extensively with AI, rigorous quality assurance is essential.</p>
+
+                    <h4>The Quality Assurance Checklist</h4>
+                    <p>Before submitting Level 5-6 work, verify:</p>
+                    
+                    <div class="example-box">
+                        <p><strong>Content Accuracy:</strong></p>
+                        <ul>
+                            <li>☐ Every factual claim is verified against academic sources</li>
+                            <li>☐ All statistics and percentages are correctly cited</li>
+                            <li>☐ No AI "hallucinations" remain in the text</li>
+                            <li>☐ All sources exist and are correctly referenced</li>
+                        </ul>
+                        
+                        <p><strong>Academic Integrity:</strong></p>
+                        <ul>
+                            <li>☐ The work reflects substantial personal intellectual contribution</li>
+                            <li>☐ Critical analysis is original, not AI-generated</li>
+                            <li>☐ All AI-assisted sections are clearly documented</li>
+                            <li>☐ You can defend and explain all content</li>
+                        </ul>
+                        
+                        <p><strong>Writing Quality:</strong></p>
+                        <ul>
+                            <li>☐ The text maintains a consistent academic voice</li>
+                            <li>☐ Arguments are coherent and well-structured</li>
+                            <li>☐ No jarring transitions between AI-assisted and original sections</li>
+                            <li>☐ Discipline-specific terminology is used correctly</li>
+                        </ul>
+                        
+                        <p><strong>Documentation:</strong></p>
+                        <ul>
+                            <li>☐ AI Evidence Form is complete and detailed</li>
+                            <li>☐ All major AI interactions are recorded</li>
+                            <li>☐ Reflection demonstrates critical engagement</li>
+                            <li>☐ Verification process is clearly explained</li>
+                        </ul>
+                    </div>
+
+                    <h4>The Verification Protocol</h4>
+                    <p>For any AI-generated or AI-assisted content:</p>
+                    <ol>
+                        <li><strong>Identify claims:</strong> Highlight every factual statement</li>
+                        <li><strong>Categorise:</strong> Which are general knowledge? Which need citation?</li>
+                        <li><strong>Search:</strong> Find academic sources supporting each claim</li>
+                        <li><strong>Compare:</strong> Does the source actually say what AI claimed?</li>
+                        <li><strong>Document:</strong> Record source details in your reference list</li>
+                        <li><strong>Cite:</strong> Add proper in-text citations</li>
+                    </ol>
+
+                    <h4>Red Flag Detection</h4>
+                    <div class="warning-box">
+                        <p><strong>Review your work for these warning signs:</strong></p>
+                        <ul>
+                            <li>Specific statistics without citations</li>
+                            <li>Overly confident statements ("All research shows...", "It is proven that...")</li>
+                            <li>Suspiciously perfect examples or case studies</li>
+                            <li>Technical explanations that seem too simplistic</li>
+                            <li>References that sound plausible but might not exist</li>
+                            <li>Sections where you cannot explain the content in your own words</li>
+                        </ul>
+                        <p><strong>Action:</strong> Every red flag requires verification against academic sources.</p>
+                    </div>
+
+                    <h4>Peer and Supervisor Review</h4>
+                    <p>Quality assurance should include human feedback:</p>
+                    <ul>
+                        <li><strong>Peer review:</strong> Ask a colleague to read sections and identify unclear areas</li>
+                        <li><strong>Supervisor consultations:</strong> Regular meetings to discuss progress and AI use</li>
+                        <li><strong>Writing centre:</strong> Professional feedback on structure and clarity</li>
+                        <li><strong>Discipline experts:</strong> Verify technical accuracy with lecturers</li>
+                    </ul>
+
+                    <h4>Activity 5.1: Quality Audit Practice</h4>
+                    <ol>
+                        <li>Take a section of your work that was AI-assisted</li>
+                        <li>Apply the Quality Assurance Checklist systematically</li>
+                        <li>Identify any areas requiring additional verification</li>
+                        <li>Document your quality assurance process</li>
+                        <li>Make necessary corrections</li>
+                    </ol>
+                </div>
+
+                <div class="module">
+                    <h3>Module 6: Dissertation Applications</h3>
+                    <p><span class="level-badge">Practical Application</span></p>
+                    
+                    <p>Let us apply Level 5-6 skills to dissertation components.</p>
+
+                    <h4>Literature Review (Level 5)</h4>
+                    <div class="example-box">
+                        <p><strong>Recommended workflow:</strong></p>
+                        <ol>
+                            <li><strong>Initial planning (with AI):</strong>
+                                <ul>
+                                    <li>Brainstorm themes and organisation</li>
+                                    <li>Identify key theoretical frameworks</li>
+                                    <li>Create outline structure</li>
+                                </ul>
+                            </li>
+                            <li><strong>Literature search (you):</strong>
+                                <ul>
+                                    <li>Systematic database searches</li>
+                                    <li>Find 30-50 relevant sources</li>
+                                    <li>Read and annotate all sources</li>
+                                </ul>
+                            </li>
+                            <li><strong>Synthesis (with AI support):</strong>
+                                <ul>
+                                    <li>Upload sources to NotebookLM</li>
+                                    <li>Use AI to identify patterns and themes</li>
+                                    <li>Organise sources into structure</li>
+                                </ul>
+                            </li>
+                            <li><strong>Critical writing (you):</strong>
+                                <ul>
+                                    <li>Draft sections based on your reading</li>
+                                    <li>Add critical analysis and evaluation</li>
+                                    <li>Synthesise across sources</li>
+                                </ul>
+                            </li>
+                            <li><strong>Refinement (with AI):</strong>
+                                <ul>
+                                    <li>Request feedback on coherence and flow</li>
+                                    <li>Identify gaps in coverage</li>
+                                    <li>Improve transitions</li>
+                                </ul>
+                            </li>
+                            <li><strong>Quality assurance (you):</strong>
+                                <ul>
+                                    <li>Verify all claims against sources</li>
+                                    <li>Check all citations</li>
+                                    <li>Ensure critical voice throughout</li>
+                                </ul>
+                            </li>
+                        </ol>
+                        <p><strong>Documentation:</strong> Log every AI interaction; explain role of AI versus your contribution</p>
+                    </div>
+
+                    <h4>Methodology Section (Level 5)</h4>
+                    <div class="example-box">
+                        <p><strong>Recommended workflow:</strong></p>
+                        <ol>
+                            <li><strong>Design clarity (with AI):</strong>
+                                <ul>
+                                    <li>Explain your research design to AI</li>
+                                    <li>Ask for potential limitations</li>
+                                    <li>Request structure suggestions</li>
+                                </ul>
+                            </li>
+                            <li><strong>Methodological research (you):</strong>
+                                <ul>
+                                    <li>Research methodological literature</li>
+                                    <li>Find similar study designs</li>
+                                    <li>Read methods textbooks</li>
+                                </ul>
+                            </li>
+                            <li><strong>Writing (you with AI refinement):</strong>
+                                <ul>
+                                    <li>Draft detailed methods description</li>
+                                    <li>Use AI to check clarity and completeness</li>
+                                    <li>Refine based on feedback</li>
+                                </ul>
+                            </li>
+                            <li><strong>Justification (you):</strong>
+                                <ul>
+                                    <li>Cite methodology literature</li>
+                                    <li>Explain and defend choices</li>
+                                    <li>Address limitations proactively</li>
+                                </ul>
+                            </li>
+                        </ol>
+                        <p><strong>Critical:</strong> Never use AI to invent or generate research methods you did not actually use</p>
+                    </div>
+
+                    <h4>Applied Projects (Level 5 or 6)</h4>
+                    <p>For practical projects (e.g., training programmes, coaching resources):</p>
+                    <div class="example-box">
+                        <p><strong>Workflow example:</strong></p>
+                        <ol>
+                            <li><strong>AI brainstorming:</strong> Generate initial ideas and structures</li>
+                            <li><strong>Evidence-based development (you):</strong> Research best practices and guidelines</li>
+                            <li><strong>AI design support:</strong> Help organise components and progressions</li>
+                            <li><strong>Professional verification (you):</strong> Check against professional standards</li>
+                            <li><strong>AI refinement:</strong> Improve clarity and presentation</li>
+                            <li><strong>Final quality check (you + experts):</strong> Safety and effectiveness review</li>
+                        </ol>
+                        
+                        <p><strong>For Level 6:</strong> Add comprehensive evaluation of AI's contribution</p>
+                        <ul>
+                            <li>Where did AI excel?</li>
+                            <li>Where did AI fail or need correction?</li>
+                            <li>What verification was essential?</li>
+                            <li>Would you recommend this approach to others?</li>
+                        </ul>
+                    </div>
+
+                    <h4>Final Advice for Dissertation Success</h4>
+                    <ul>
+                        <li><strong>Start early:</strong> Level 5 collaboration takes time across multiple sessions</li>
+                        <li><strong>Stay organised:</strong> Maintain detailed logs from the beginning</li>
+                        <li><strong>Consult regularly:</strong> Keep your supervisor informed of your AI use</li>
+                        <li><strong>Verify everything:</strong> Never submit AI-generated content without verification</li>
+                        <li><strong>Maintain your voice:</strong> The dissertation should still sound like you</li>
+                        <li><strong>Document thoroughly:</strong> Better too much documentation than too little</li>
+                        <li><strong>Be critical:</strong> Question AI outputs; do not accept them uncritically</li>
+                        <li><strong>Take responsibility:</strong> You are accountable for the final work, not the AI</li>
+                    </ul>
+
+                    <div class="success-box">
+                        <h4>✓ Expert Pathway Complete!</h4>
+                        <p>You have completed the Expert Pathway. You should now be able to:</p>
+                        <ul>
+                            <li>Collaborate effectively with AI on extended projects (Level 5)</li>
+                            <li>Use iterative refinement techniques</li>
+                            <li>Document AI use comprehensively</li>
+                            <li>Apply rigorous quality assurance protocols</li>
+                            <li>Verify all AI-generated content against academic sources</li>
+                            <li>Critically evaluate AI's strengths and limitations</li>
+                            <li>Apply these skills to dissertation and major projects</li>
+                        </ul>
+                        
+                        <p><strong>You are now ready to:</strong></p>
+                        <ul>
+                            <li>Use AI at the highest levels (5-6) in your assessments</li>
+                            <li>Collaborate with AI while maintaining academic integrity</li>
+                            <li>Produce high-quality work with comprehensive AI documentation</li>
+                            <li>Model best practice for other students</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="info-box">
+                    <h3>Additional Resources</h3>
+                    <ul>
+                        <li><a href="framework.html">Complete 6-level framework guide</a></li>
+                        <li><a href="development.html">Development Pathway</a> - Review Levels 3-4 if needed</li>
+                        <li><a href="resources.html">All tools and resources</a></li>
+                        <li><a href="faq.html">Frequently asked questions</a></li>
+                        <li><a href="https://tony-myers.github.io/AI-for-students" target="_blank" rel="noopener noreferrer">AI for Students comprehensive website</a></li>
+                    </ul>
+                </div>
+
+            </article>
+        </main>
+
+        <footer>
+            <p>Tony Myers 2025 | Birmingham Newman University | <a href="mailto:tony.myers@newman.ac.uk">tony.myers@newman.ac.uk</a></p>
+        </footer>
+    </div>
+
+</body>
+</html>
