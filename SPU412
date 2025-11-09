@@ -1,0 +1,556 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SPU412 Assessment Guide - AI Skills Development</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            line-height: 1.6;
+            background-color: #f4f7f6;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 1000px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+        }
+        header {
+            background: linear-gradient(135deg, #f2994a 0%, #f2c94c 100%);
+            color: white;
+            padding: 2rem 1rem;
+            margin: -20px -20px 20px -20px;
+            border-radius: 8px 8px 0 0;
+            text-align: center;
+        }
+        header h1 {
+            color: white;
+            margin: 0;
+            font-size: 2rem;
+        }
+        header p {
+            margin: 10px 0 0 0;
+            opacity: 0.95;
+        }
+        nav {
+            background-color: #ecf0f1;
+            padding: 12px;
+            border-radius: 8px;
+            text-align: center;
+            margin-bottom: 25px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+        }
+        nav a {
+            display: inline-block;
+            padding: 10px 18px;
+            text-decoration: none;
+            color: #2980b9;
+            font-weight: bold;
+            border-radius: 6px;
+            margin: 2px;
+            transition: all 0.2s ease;
+        }
+        nav a:hover {
+            background-color: #3498db;
+            color: #ffffff;
+            transform: translateY(-1px);
+        }
+        h2, h3, h4 {
+            color: #2c3e50;
+        }
+        h2 {
+            border-bottom: 2px solid #f2994a;
+            padding-bottom: 8px;
+            margin-top: 30px;
+            margin-bottom: 15px;
+        }
+        ul, ol {
+            padding-left: 25px;
+            margin: 15px 0;
+        }
+        li {
+            margin-bottom: 10px;
+        }
+        .info-box {
+            background-color: #e8f4f8;
+            border-left: 4px solid #3498db;
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 5px;
+        }
+        .warning-box {
+            background-color: #fff3cd;
+            border-left: 4px solid #f39c12;
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 5px;
+        }
+        .success-box {
+            background-color: #d4edda;
+            border-left: 4px solid #28a745;
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 5px;
+        }
+        .example-box {
+            background-color: #f9f9f9;
+            border: 2px dashed #bdc3c7;
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 5px;
+        }
+        .level-badge {
+            display: inline-block;
+            background: linear-gradient(135deg, #f2994a 0%, #f2c94c 100%);
+            color: white;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: bold;
+            margin: 5px 5px 5px 0;
+        }
+        .checklist {
+            background-color: #f8f9fa;
+            border: 2px solid #f2994a;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 20px 0;
+        }
+        .checklist-item {
+            margin: 10px 0;
+            padding: 10px;
+            background: white;
+            border-radius: 5px;
+        }
+        .checklist-item input[type="checkbox"] {
+            margin-right: 10px;
+            transform: scale(1.2);
+        }
+        code {
+            font-family: "Courier New", Courier, monospace;
+            font-size: 0.95em;
+            background-color: #ecf0f1;
+            padding: 2px 6px;
+            border-radius: 3px;
+            color: #c7254e;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 12px;
+            text-align: left;
+        }
+        th {
+            background-color: #f2994a;
+            color: white;
+        }
+        tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+        footer {
+            text-align: center;
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid #ecf0f1;
+            font-size: 0.9rem;
+            color: #7f8c8d;
+        }
+        
+        @media (max-width: 768px) {
+            .container {
+                margin: 10px;
+                padding: 15px;
+            }
+            header {
+                margin: -15px -15px 20px -15px;
+                padding: 1.5rem 1rem;
+            }
+            header h1 {
+                font-size: 1.5rem;
+            }
+            nav a {
+                display: block;
+                margin: 5px 0;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <header>
+            <h1>SPU412 Assessment Guide</h1>
+            <p>Personal Development Presentation with AI Evidence</p>
+        </header>
+
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="foundation.html">Foundation</a>
+            <a href="spu412-guide.html" style="background-color: #3498db; color: white;">SPU412 Guide</a>
+            <a href="spu514-guide.html">SPU514 Guide</a>
+            <a href="resources.html">Resources</a>
+        </nav>
+
+        <main>
+            <article>
+                <h2>SPU412: Exploring Sport, Exercise and Physical Activity</h2>
+                <p><span class="level-badge">Levels 2-3</span></p>
+                
+                <div class="info-box">
+                    <strong>Assessment Overview:</strong>
+                    <ul>
+                        <li><strong>Component:</strong> Presentation (50% of module)</li>
+                        <li><strong>Format:</strong> 5-minute presentation</li>
+                        <li><strong>Submission date:</strong> Monday, 24 November 2025</li>
+                        <li><strong>Presentation dates:</strong> 1st, 8th, and 15th December 2025</li>
+                        <li><strong>AI Levels:</strong> 2 (Idea Generation) and 3 (Editing)</li>
+                    </ul>
+                </div>
+
+                <h2>Understanding the Assessment Requirements</h2>
+
+                <p>Your SPU412 presentation focuses on personal evaluation of your independent learning, academic skills, and broader personal development. You will assess how these areas have contributed to your growth as both a learner and a professional.</p>
+
+                <h3>What You Must Submit</h3>
+                <ol>
+                    <li><strong>Initial Skills Audit</strong> (via Microsoft Forms) - Must be referenced in your presentation</li>
+                    <li><strong>AI Evidence Form</strong> (via Microsoft Forms) - Detailing ALL AI use</li>
+                    <li><strong>PowerPoint Presentation</strong> (via Moodle) - Your final slides</li>
+                    <li><strong>Deliver Presentation</strong> - In person on your scheduled date</li>
+                </ol>
+
+                <div class="warning-box">
+                    <strong>⚠️ Critical:</strong> All three supporting documents (Skills Audit, AI Evidence Form, and PowerPoint) must be submitted by the deadline. Failure to submit any component will affect your mark according to the marking criteria.
+                </div>
+
+                <h2>AI Use Requirements for SPU412</h2>
+
+                <h3>What AI Levels Mean for This Assessment</h3>
+
+                <table>
+                    <tr>
+                        <th>Level</th>
+                        <th>What You CAN Do</th>
+                        <th>What You CANNOT Do</th>
+                    </tr>
+                    <tr>
+                        <td><strong>Level 2:<br>Idea Generation</strong></td>
+                        <td>
+                            • Brainstorm presentation topics<br>
+                            • Create structure/outline<br>
+                            • Explore different angles<br>
+                            • Generate discussion points
+                        </td>
+                        <td>
+                            • Use AI-written content in slides<br>
+                            • Copy AI text directly<br>
+                            • Have AI write your reflection<br>
+                            • Use AI for your self-evaluation
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><strong>Level 3:<br>Editing</strong></td>
+                        <td>
+                            • Improve clarity of slide text<br>
+                            • Fix grammar/spelling<br>
+                            • Make text more concise<br>
+                            • Improve readability
+                        </td>
+                        <td>
+                            • Add new content via AI<br>
+                            • Change your original meaning<br>
+                            • Skip providing original version<br>
+                            • Have AI write speaker notes
+                        </td>
+                    </tr>
+                </table>
+
+                <h2>Step-by-Step: Using AI Appropriately</h2>
+
+                <h3>Step 1: Complete Your Skills Audit (No AI)</h3>
+                <p>Complete your Initial Skills Audit honestly and independently. This is a personal reflection and must be your own work.</p>
+
+                <div class="example-box">
+                    <h4>✓ Allowed: Reflecting independently on your skills</h4>
+                    <h4>✗ Not Allowed: Using AI to complete the audit</h4>
+                </div>
+
+                <h3>Step 2: Use AI for Brainstorming (Level 2)</h3>
+                <p>Use AI to help you think about what to include in your presentation, but do not use AI-generated text.</p>
+
+                <div class="example-box">
+                    <h4>Good Level 2 Prompts:</h4>
+                    <ul>
+                        <li>"What different sections could I include in a presentation about my academic development?"</li>
+                        <li>"Help me brainstorm ways to structure a 5-minute presentation on personal skills development"</li>
+                        <li>"What questions should I consider when reflecting on my independent learning skills?"</li>
+                        <li>"Suggest themes I could explore when discussing my growth as a learner"</li>
+                    </ul>
+                    
+                    <h4>Remember:</h4>
+                    <ul>
+                        <li>Note the AI suggestions</li>
+                        <li>Use them to guide your thinking</li>
+                        <li>Write your own content based on YOUR experiences</li>
+                        <li>Document this in your AI Evidence Form</li>
+                    </ul>
+                </div>
+
+                <h3>Step 3: Create Your Presentation Content (Your Own Work)</h3>
+                <p>Write your presentation content yourself, based on your actual experiences and your completed Skills Audit.</p>
+
+                <div class="warning-box">
+                    <strong>Your presentation MUST include:</strong>
+                    <ul>
+                        <li>Reference to your Skills Audit</li>
+                        <li>Evidence of your personal development</li>
+                        <li>Genuine self-evaluation</li>
+                        <li>Examples from your own experience</li>
+                    </ul>
+                    <p>These cannot be generated by AI - they must be authentic to you.</p>
+                </div>
+
+                <h3>Step 4: Use AI for Editing (Level 3)</h3>
+                <p>Once you have written your slide content, you can use AI to improve clarity.</p>
+
+                <div class="example-box">
+                    <h4>Good Level 3 Process:</h4>
+                    <ol>
+                        <li><strong>Save your original version first</strong> (take a screenshot or save a copy)</li>
+                        <li>Use AI to improve specific slides: "Please improve the clarity of this text while keeping the same meaning: [paste text]"</li>
+                        <li>Review the AI suggestions carefully</li>
+                        <li>Make sure the meaning has not changed</li>
+                        <li>Keep record of what you edited</li>
+                        <li>Document in your AI Evidence Form</li>
+                    </ol>
+                    
+                    <h4>Good Editing Prompts:</h4>
+                    <ul>
+                        <li>"Make this slide text more concise while keeping the same information"</li>
+                        <li>"Improve the clarity of this sentence"</li>
+                        <li>"Fix any grammar errors in this text"</li>
+                        <li>"Make this more professionally worded"</li>
+                    </ul>
+                </div>
+
+                <h3>Step 5: Complete the AI Evidence Form</h3>
+                <p>This is a mandatory requirement. You must document ALL your AI use.</p>
+
+                <div class="checklist">
+                    <h4>AI Evidence Form Must Include:</h4>
+                    <div class="checklist-item">
+                        <input type="checkbox" id="evidence1"> <label for="evidence1">Which AI tools you used (Microsoft Copilot, ChatGPT, NotebookLM, etc.)</label>
+                    </div>
+                    <div class="checklist-item">
+                        <input type="checkbox" id="evidence2"> <label for="evidence2">What prompts you entered</label>
+                    </div>
+                    <div class="checklist-item">
+                        <input type="checkbox" id="evidence3"> <label for="evidence3">How you refined your prompts</label>
+                    </div>
+                    <div class="checklist-item">
+                        <input type="checkbox" id="evidence4"> <label for="evidence4">What information you provided to the AI</label>
+                    </div>
+                    <div class="checklist-item">
+                        <input type="checkbox" id="evidence5"> <label for="evidence5">How you used the AI outputs (brainstorming vs editing)</label>
+                    </div>
+                    <div class="checklist-item">
+                        <input type="checkbox" id="evidence6"> <label for="evidence6">How you fact-checked or verified information</label>
+                    </div>
+                </div>
+
+                <div class="warning-box">
+                    <strong>Incomplete AI Evidence Form = Lower Mark</strong>
+                    <p>The marking criteria allocates 70% to "Evidenced Preparation and Engagement" which explicitly requires a "complete, detailed AI evidence form". An incomplete form will significantly reduce your mark.</p>
+                </div>
+
+                <h2>Example: Complete AI Workflow for SPU412</h2>
+
+                <div class="example-box">
+                    <h4>Sport Science Student Example: Sarah's Approach</h4>
+                    
+                    <p><strong>1. Skills Audit (No AI):</strong></p>
+                    <p>Sarah completed her skills audit independently, honestly assessing her strengths in data analysis but noting she needed to improve academic writing.</p>
+                    
+                    <p><strong>2. Brainstorming (Level 2):</strong></p>
+                    <p><strong>Prompt to Copilot:</strong> "I need to create a presentation about my personal development as a sport science student. What sections should I include to show my growth?"</p>
+                    <p><strong>AI Response:</strong> Suggested sections including academic skills, independent learning, professional development, and future goals.</p>
+                    <p><strong>What Sarah did:</strong> Used these suggestions to structure her presentation but wrote all content herself based on her actual experiences.</p>
+                    
+                    <p><strong>3. Creating Content (Own Work):</strong></p>
+                    <p>Sarah wrote her slides about:</p>
+                    <ul>
+                        <li>How she improved her data analysis skills using JASP</li>
+                        <li>Her growth in academic reading (using SPORTDiscus effectively)</li>
+                        <li>Development of time management skills</li>
+                        <li>Professional skills gained through practical sessions</li>
+                    </ul>
+                    <p>All examples came from her own experiences, referenced her Skills Audit.</p>
+                    
+                    <p><strong>4. Editing (Level 3):</strong></p>
+                    <p><strong>Original slide text:</strong> "I got better at using JASP this year and now I can do t-tests and ANOVAs which I couldn't do before and it has really helped me with my lab reports"</p>
+                    <p><strong>Prompt to Copilot:</strong> "Please improve the clarity of this text while keeping the same meaning"</p>
+                    <p><strong>AI-edited version:</strong> "My proficiency with JASP has significantly improved this year. I have developed competency in t-tests and ANOVAs, which has enhanced the quality of my lab report analyses."</p>
+                    <p><strong>What Sarah did:</strong> Kept the original version for reference, used the edited version in her final slides.</p>
+                    
+                    <p><strong>5. AI Evidence Form:</strong></p>
+                    <p>Sarah documented:</p>
+                    <ul>
+                        <li>Tool used: Microsoft Copilot</li>
+                        <li>Prompts used (copied exact text)</li>
+                        <li>Purpose: Brainstorming structure (Level 2) and editing for clarity (Level 3)</li>
+                        <li>No fact-checking needed as all content was her own experiences</li>
+                        <li>All AI use completed before deadline</li>
+                    </ul>
+                </div>
+
+                <h2>Common Mistakes to Avoid</h2>
+
+                <div class="warning-box">
+                    <h4>❌ Do NOT:</h4>
+                    <ul>
+                        <li>Use AI to write your reflection or self-evaluation</li>
+                        <li>Copy AI-generated content directly into your slides</li>
+                        <li>Use AI to generate fake experiences or examples</li>
+                        <li>Submit without completing the AI Evidence Form</li>
+                        <li>Forget to reference your Skills Audit in your presentation</li>
+                        <li>Exceed the 5-minute time limit</li>
+                        <li>Read directly from notes during your presentation</li>
+                    </ul>
+                </div>
+
+                <div class="success-box">
+                    <h4>✓ DO:</h4>
+                    <ul>
+                        <li>Complete your Skills Audit honestly without AI</li>
+                        <li>Use AI for brainstorming and structure ideas</li>
+                        <li>Write all content yourself based on real experiences</li>
+                        <li>Use AI only for editing clarity, not adding content</li>
+                        <li>Complete the AI Evidence Form thoroughly</li>
+                        <li>Reference your Skills Audit in your presentation</li>
+                        <li>Practice your delivery to stay within 5 minutes</li>
+                        <li>Submit all three required elements by the deadline</li>
+                    </ul>
+                </div>
+
+                <h2>Marking Criteria: How AI Use Is Assessed</h2>
+
+                <h3>Evidenced Preparation and Engagement (70%)</h3>
+                <p>This includes:</p>
+                <ul>
+                    <li>Submission of Skills Audit</li>
+                    <li><strong>Complete, detailed AI Evidence Form</strong></li>
+                    <li>Workshop attendance</li>
+                </ul>
+
+                <table>
+                    <tr>
+                        <th>Grade Band</th>
+                        <th>AI Evidence Form Requirements</th>
+                    </tr>
+                    <tr>
+                        <td>80-100%</td>
+                        <td>Complete, detailed AI evidence form submitted. All sections fully completed with specific examples.</td>
+                    </tr>
+                    <tr>
+                        <td>70-79%</td>
+                        <td>Complete AI evidence form submitted. All sections completed with good detail.</td>
+                    </tr>
+                    <tr>
+                        <td>60-69%</td>
+                        <td>All required evidence submitted. AI form may lack some detail or minor clarity.</td>
+                    </tr>
+                    <tr>
+                        <td>50-59%</td>
+                        <td>All required evidence submitted but noticeable omissions or lack of detail in AI form.</td>
+                    </tr>
+                    <tr>
+                        <td>40-49%</td>
+                        <td>AI evidence form incomplete or insufficient detail.</td>
+                    </tr>
+                    <tr>
+                        <td>0-39%</td>
+                        <td>AI evidence form fundamentally incomplete or missing.</td>
+                    </tr>
+                </table>
+
+                <h2>Final Checklist Before Submission</h2>
+
+                <div class="checklist">
+                    <h4>Complete This Checklist:</h4>
+                    <div class="checklist-item">
+                        <input type="checkbox"> Initial Skills Audit completed and submitted via Microsoft Forms
+                    </div>
+                    <div class="checklist-item">
+                        <input type="checkbox"> AI Evidence Form fully completed with ALL sections
+                    </div>
+                    <div class="checklist-item">
+                        <input type="checkbox"> Documented all prompts used
+                    </div>
+                    <div class="checklist-item">
+                        <input type="checkbox"> Documented how prompts were refined
+                    </div>
+                    <div class="checklist-item">
+                        <input type="checkbox"> Explained what information was provided to AI
+                    </div>
+                    <div class="checklist-item">
+                        <input type="checkbox"> Clarified purpose of AI use (brainstorming vs editing)
+                    </div>
+                    <div class="checklist-item">
+                        <input type="checkbox"> PowerPoint presentation completed
+                    </div>
+                    <div class="checklist-item">
+                        <input type="checkbox"> Presentation references my Skills Audit
+                    </div>
+                    <div class="checklist-item">
+                        <input type="checkbox"> Presentation contains genuine self-evaluation
+                    </div>
+                    <div class="checklist-item">
+                        <input type="checkbox"> Presentation is 5 minutes or less
+                    </div>
+                    <div class="checklist-item">
+                        <input type="checkbox"> Slides are clear and professional
+                    </div>
+                    <div class="checklist-item">
+                        <input type="checkbox"> Practiced presentation delivery
+                    </div>
+                    <div class="checklist-item">
+                        <input type="checkbox"> PowerPoint submitted via Moodle by Monday, 24 November 2025
+                    </div>
+                    <div class="checklist-item">
+                        <input type="checkbox"> Know my presentation date (1st, 8th, or 15th December)
+                    </div>
+                </div>
+
+                <h2>Need Help?</h2>
+
+                <div class="info-box">
+                    <strong>Support Resources:</strong>
+                    <ul>
+                        <li><strong>Not sure if something is allowed?</strong> Check the <a href="faq.html">FAQ page</a></li>
+                        <li><strong>Need to understand the levels better?</strong> Review the <a href="framework.html">6-level framework guide</a></li>
+                        <li><strong>New to AI?</strong> Work through the <a href="foundation.html">Foundation Pathway</a></li>
+                        <li><strong>Technical help with tools?</strong> See the <a href="resources.html">Resources page</a></li>
+                        <li><strong>Still unsure?</strong> Contact the module leader: <a href="mailto:tony.myers@newman.ac.uk">tony.myers@newman.ac.uk</a></li>
+                    </ul>
+                </div>
+
+            </article>
+        </main>
+
+        <footer>
+            <p>Tony Myers 2025 | Birmingham Newman University | <a href="mailto:tony.myers@newman.ac.uk">tony.myers@newman.ac.uk</a></p>
+        </footer>
+    </div>
+
+</body>
+</html>
