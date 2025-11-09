@@ -1,0 +1,800 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Foundation Pathway - AI Skills Development</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            line-height: 1.6;
+            background-color: #f4f7f6;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 1000px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+        }
+        header {
+            background: linear-gradient(135deg, #56ab2f 0%, #a8e063 100%);
+            color: white;
+            padding: 2rem 1rem;
+            margin: -20px -20px 20px -20px;
+            border-radius: 8px 8px 0 0;
+            text-align: center;
+        }
+        header h1 {
+            color: white;
+            margin: 0;
+            font-size: 2rem;
+        }
+        header p {
+            margin: 10px 0 0 0;
+            opacity: 0.95;
+        }
+        nav {
+            background-color: #ecf0f1;
+            padding: 12px;
+            border-radius: 8px;
+            text-align: center;
+            margin-bottom: 25px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+        }
+        nav a {
+            display: inline-block;
+            padding: 10px 18px;
+            text-decoration: none;
+            color: #2980b9;
+            font-weight: bold;
+            border-radius: 6px;
+            margin: 2px;
+            transition: all 0.2s ease;
+        }
+        nav a:hover {
+            background-color: #3498db;
+            color: #ffffff;
+            transform: translateY(-1px);
+        }
+        nav a.active {
+            background-color: #3498db;
+            color: #ffffff;
+        }
+        h2, h3, h4 {
+            color: #2c3e50;
+        }
+        h2 {
+            border-bottom: 2px solid #56ab2f;
+            padding-bottom: 8px;
+            margin-top: 30px;
+            margin-bottom: 15px;
+        }
+        h3 {
+            margin-top: 25px;
+            margin-bottom: 12px;
+        }
+        ul, ol {
+            padding-left: 25px;
+            margin: 15px 0;
+        }
+        li {
+            margin-bottom: 10px;
+        }
+        .module {
+            background-color: #fdfdfd;
+            border: 2px solid #e0e0e0;
+            border-left: 5px solid #56ab2f;
+            padding: 25px;
+            border-radius: 8px;
+            margin-bottom: 25px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+        }
+        .module h3 {
+            margin-top: 0;
+            color: #56ab2f;
+        }
+        .progress-tracker {
+            background-color: #f8f9fa;
+            border: 2px solid #56ab2f;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 20px 0;
+        }
+        .progress-item {
+            margin: 10px 0;
+            padding: 10px;
+            background: white;
+            border-radius: 5px;
+        }
+        .progress-item input[type="checkbox"] {
+            margin-right: 10px;
+            transform: scale(1.2);
+        }
+        .info-box {
+            background-color: #e8f4f8;
+            border-left: 4px solid #3498db;
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 5px;
+        }
+        .warning-box {
+            background-color: #fff3cd;
+            border-left: 4px solid #f39c12;
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 5px;
+        }
+        .success-box {
+            background-color: #d4edda;
+            border-left: 4px solid #28a745;
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 5px;
+        }
+        .example-box {
+            background-color: #f9f9f9;
+            border: 2px dashed #bdc3c7;
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 5px;
+        }
+        .example-box h4 {
+            margin-top: 0;
+            color: #7f8c8d;
+        }
+        pre {
+            background-color: #2c3e50;
+            color: #ecf0f1;
+            padding: 15px;
+            border-radius: 6px;
+            overflow-x: auto;
+        }
+        code {
+            font-family: "Courier New", Courier, monospace;
+            font-size: 0.95em;
+            background-color: #ecf0f1;
+            padding: 2px 6px;
+            border-radius: 3px;
+            color: #c7254e;
+        }
+        pre code {
+            background: none;
+            color: #ecf0f1;
+            padding: 0;
+        }
+        .level-badge {
+            display: inline-block;
+            background: linear-gradient(135deg, #56ab2f 0%, #a8e063 100%);
+            color: white;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: bold;
+            margin: 5px 5px 5px 0;
+        }
+        footer {
+            text-align: center;
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid #ecf0f1;
+            font-size: 0.9rem;
+            color: #7f8c8d;
+        }
+        
+        @media (max-width: 768px) {
+            .container {
+                margin: 10px;
+                padding: 15px;
+            }
+            header {
+                margin: -15px -15px 20px -15px;
+                padding: 1.5rem 1rem;
+            }
+            header h1 {
+                font-size: 1.5rem;
+            }
+            nav a {
+                display: block;
+                margin: 5px 0;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <header>
+            <h1>Foundation Pathway</h1>
+            <p>Building Your AI Fundamentals for Sport Students</p>
+        </header>
+
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="foundation.html" class="active">Foundation</a>
+            <a href="development.html">Development</a>
+            <a href="advanced.html">Advanced</a>
+            <a href="expert.html">Expert</a>
+            <a href="resources.html">Resources</a>
+        </nav>
+
+        <main>
+            <article>
+                <h2>Welcome to the Foundation Pathway</h2>
+                
+                <p>This pathway is designed for students who are new to AI or want to build a solid foundation. You will learn the essential concepts, understand academic integrity, and develop confidence with AI tools relevant to sport science.</p>
+
+                <div class="info-box">
+                    <strong>What You Will Learn:</strong>
+                    <ul>
+                        <li>Understanding the 6-level AI framework</li>
+                        <li>When AI cannot be used (Level 1 assessments)</li>
+                        <li>Using AI for idea generation (Level 2)</li>
+                        <li>Using AI for editing (Level 3)</li>
+                        <li>Academic integrity and avoiding plagiarism</li>
+                        <li>Setting up and using essential AI tools</li>
+                        <li>Finding quality sport science sources</li>
+                    </ul>
+                </div>
+
+                <div class="progress-tracker">
+                    <h3>Your Progress Tracker</h3>
+                    <p>Tick off modules as you complete them. You can work through these at your own pace.</p>
+                    <div class="progress-item">
+                        <input type="checkbox" id="module1"> <label for="module1"><strong>Module 1:</strong> Understanding the Framework & Academic Integrity</label>
+                    </div>
+                    <div class="progress-item">
+                        <input type="checkbox" id="module2"> <label for="module2"><strong>Module 2:</strong> Setting Up Your AI Tools</label>
+                    </div>
+                    <div class="progress-item">
+                        <input type="checkbox" id="module3"> <label for="module3"><strong>Module 3:</strong> Level 1 - When AI Cannot Be Used</label>
+                    </div>
+                    <div class="progress-item">
+                        <input type="checkbox" id="module4"> <label for="module4"><strong>Module 4:</strong> Level 2 - AI for Idea Generation</label>
+                    </div>
+                    <div class="progress-item">
+                        <input type="checkbox" id="module5"> <label for="module5"><strong>Module 5:</strong> Level 3 - AI for Editing</label>
+                    </div>
+                    <div class="progress-item">
+                        <input type="checkbox" id="module6"> <label for="module6"><strong>Module 6:</strong> Finding Sport Science Sources</label>
+                    </div>
+                    <div class="progress-item">
+                        <input type="checkbox" id="module7"> <label for="module7"><strong>Module 7:</strong> Understanding NotebookLM</label>
+                    </div>
+                    <div class="progress-item">
+                        <input type="checkbox" id="module8"> <label for="module8"><strong>Module 8:</strong> Basic Fact-Checking Skills</label>
+                    </div>
+                    <div class="progress-item">
+                        <input type="checkbox" id="module9"> <label for="module9"><strong>Module 9:</strong> Applying to Your Assessments</label>
+                    </div>
+                </div>
+
+                <div class="module">
+                    <h3>Module 1: Understanding the Framework & Academic Integrity</h3>
+                    <p><span class="level-badge">Essential Foundation</span></p>
+                    
+                    <p>Before using AI for any assessment, you must understand Birmingham Newman University's 6-level framework and what constitutes academic misconduct.</p>
+
+                    <h4>The 6-Level Framework</h4>
+                    <ul>
+                        <li><strong>Level 1: No AI</strong> - You complete the assessment entirely on your own</li>
+                        <li><strong>Level 2: Idea Generation</strong> - AI helps you brainstorm but you write everything yourself</li>
+                        <li><strong>Level 3: Editing</strong> - AI helps improve your writing, but you must include your original work</li>
+                        <li><strong>Level 4: Task Completion</strong> - AI does some tasks, you evaluate and discuss the outputs</li>
+                        <li><strong>Level 5: Collaboration</strong> - AI works alongside you throughout</li>
+                        <li><strong>Level 6: Mandatory</strong> - You must use AI and document everything you did</li>
+                    </ul>
+
+                    <div class="warning-box">
+                        <strong>⚠️ Critical:</strong> Always check your assignment brief to see which level applies. Using AI at the wrong level can result in academic misconduct proceedings.
+                    </div>
+
+                    <h4>What Is Academic Misconduct with AI?</h4>
+                    <p>Academic misconduct occurs when you:</p>
+                    <ul>
+                        <li>Use AI when the assignment specifies "Level 1: No AI"</li>
+                        <li>Submit AI-generated content as your own work (when not at Level 4, 5, or 6)</li>
+                        <li>Fail to cite AI use when required (Levels 4, 5, 6)</li>
+                        <li>Use AI beyond what the level permits (e.g., having AI write content at Level 2)</li>
+                        <li>Fail to provide required documentation (e.g., AI Evidence Form for SPU412)</li>
+                    </ul>
+
+                    <h4>Activity 1.1: Test Your Understanding</h4>
+                    <div class="example-box">
+                        <h4>Scenario Practice</h4>
+                        <p>Your assignment brief states <strong>"Level 1: No AI"</strong>. Can you:</p>
+                        <ul>
+                            <li>Use AI to help you understand a concept? <em>(No - this is still AI assistance)</em></li>
+                            <li>Use spell check in Microsoft Word? <em>(Yes - basic tools are allowed)</em></li>
+                            <li>Ask ChatGPT to explain biomechanics terminology? <em>(No - Level 1 means no AI at all)</em></li>
+                        </ul>
+                        <p><strong>Key point:</strong> Level 1 means you must complete the work using only your own knowledge and non-AI tools.</p>
+                    </div>
+
+                    <h4>Further Reading</h4>
+                    <ul>
+                        <li><a href="framework.html">Complete guide to the 6-level framework</a></li>
+                        <li><a href="https://tony-myers.github.io/AI-for-students" target="_blank" rel="noopener noreferrer">AI for Students: Academic Integrity section</a></li>
+                        <li><a href="faq.html">FAQ: Is this allowed in my assessment?</a></li>
+                    </ul>
+                </div>
+
+                <div class="module">
+                    <h3>Module 2: Setting Up Your AI Tools</h3>
+                    <p><span class="level-badge">Practical Setup</span></p>
+                    
+                    <p>In this module, you will set up the main AI tools used in your sport science programme.</p>
+
+                    <h4>Tool 1: Microsoft Copilot</h4>
+                    <ol>
+                        <li>Log in to your Birmingham Newman Microsoft 365 account</li>
+                        <li>Go to <code>copilot.microsoft.com</code></li>
+                        <li>You should see the main Copilot interface</li>
+                        <li>Add the custom agents by clicking these links:
+                            <ul>
+                                <li><a href="https://m365.cloud.microsoft:443/chat/?titleId=T_ef40e31a-faa0-5e5c-2f90-a22c14d9ed13&source=embedded-builder" target="_blank" rel="noopener noreferrer"><strong>Academic Rigour Assistant</strong></a></li>
+                                <li><a href="https://m365.cloud.microsoft:443/chat/?titleId=T_29420ced-78cb-75c9-d668-92906ac92f64&source=embedded-builder" target="_blank" rel="noopener noreferrer"><strong>Socratic Tutor</strong></a></li>
+                            </ul>
+                        </li>
+                    </ol>
+
+                    <div class="info-box">
+                        <strong>Note:</strong> The custom agents may not appear in the small Copilot pop-ups in Word or Outlook. You must use the main Copilot interface at copilot.microsoft.com.
+                    </div>
+
+                    <h4>Tool 2: NotebookLM</h4>
+                    <ol>
+                        <li>You need a Google account (use your personal email or create one)</li>
+                        <li>Go to <a href="https://notebooklm.google.com" target="_blank" rel="noopener noreferrer">notebooklm.google.com</a></li>
+                        <li>Sign in with your Google account</li>
+                        <li>You will see the main NotebookLM interface</li>
+                    </ol>
+
+                    <h4>Tool 3: Library Resources</h4>
+                    <ul>
+                        <li>Bookmark <a href="https://libguides.newman.ac.uk/home" target="_blank" rel="noopener noreferrer">Birmingham Newman Library</a></li>
+                        <li>Find <a href="https://libguides.newman.ac.uk/az.php" target="_blank" rel="noopener noreferrer">SPORTDiscus</a> in the databases list</li>
+                        <li>Save the <a href="https://libguides.newman.ac.uk/referencing/" target="_blank" rel="noopener noreferrer">referencing guide</a> for later use</li>
+                    </ul>
+
+                    <div class="success-box">
+                        <strong>✓ Checkpoint:</strong> You should now have access to Microsoft Copilot with custom agents, NotebookLM, and bookmarked library resources.
+                    </div>
+                </div>
+
+                <div class="module">
+                    <h3>Module 3: Level 1 - When AI Cannot Be Used</h3>
+                    <p><span class="level-badge">Level 1</span></p>
+                    
+                    <p>Some assessments require you to complete work entirely without AI. This is important for demonstrating your own knowledge and skills.</p>
+
+                    <h4>Why Level 1 Exists</h4>
+                    <p>Level 1 assessments ensure that:</p>
+                    <ul>
+                        <li>You can demonstrate understanding without AI assistance</li>
+                        <li>Your work reflects your personal knowledge and capabilities</li>
+                        <li>You develop essential skills that AI cannot replace</li>
+                        <li>Assessment is fair and accurately measures your learning</li>
+                    </ul>
+
+                    <h4>Common Level 1 Assessments in Sport Science</h4>
+                    <ul>
+                        <li>In-class exams and tests</li>
+                        <li>Practical assessments (coaching sessions, sports therapy demonstrations)</li>
+                        <li>Some calculations and data analysis (where you must show your working)</li>
+                        <li>Reflections on placement or practical experiences (your own authentic voice)</li>
+                    </ul>
+
+                    <div class="example-box">
+                        <h4>Sport Science Example: Biomechanics Practical</h4>
+                        <p><strong>Scenario:</strong> You are assessed on identifying muscle attachments and actions on a skeleton model.</p>
+                        <p><strong>Level 1 approach:</strong></p>
+                        <ul>
+                            <li>Study using textbooks and lecture notes</li>
+                            <li>Practice with physical models or diagrams</li>
+                            <li>Test yourself without AI assistance</li>
+                            <li>Demonstrate your knowledge in the practical exam</li>
+                        </ul>
+                        <p><strong>Why AI cannot help here:</strong> The assessment measures your ability to physically identify structures and recall information without external aids.</p>
+                    </div>
+
+                    <h4>What You CAN Use at Level 1</h4>
+                    <ul>
+                        <li>Your lecture notes and textbooks</li>
+                        <li>Basic spell check and grammar check in Word</li>
+                        <li>Calculators for numerical work (unless specifically prohibited)</li>
+                        <li>Library resources and journal articles</li>
+                        <li>Discussions with tutors and peers (for understanding, not for completing work)</li>
+                    </ul>
+                </div>
+
+                <div class="module">
+                    <h3>Module 4: Level 2 - AI for Idea Generation</h3>
+                    <p><span class="level-badge">Level 2</span></p>
+                    
+                    <p>At Level 2, you can use AI to help brainstorm ideas, create outlines, and structure your thinking. However, all actual content in your submission must be your own words.</p>
+
+                    <h4>What Level 2 Allows</h4>
+                    <ul>
+                        <li><strong>Brainstorming:</strong> Generating initial ideas for essays or presentations</li>
+                        <li><strong>Structuring:</strong> Creating outlines or frameworks for your work</li>
+                        <li><strong>Exploring topics:</strong> Identifying different angles or perspectives</li>
+                        <li><strong>Planning:</strong> Developing a logical flow for your arguments</li>
+                    </ul>
+
+                    <h4>What Level 2 Does NOT Allow</h4>
+                    <ul>
+                        <li>Having AI write any part of your final submission</li>
+                        <li>Using AI-generated sentences or paragraphs in your work</li>
+                        <li>Copying AI suggestions directly into your document</li>
+                        <li>Using AI to improve or edit your actual writing</li>
+                    </ul>
+
+                    <div class="warning-box">
+                        <strong>Key Rule:</strong> No AI content can appear in your final submission. Everything submitted must be in your own words.
+                    </div>
+
+                    <div class="example-box">
+                        <h4>Sport Science Example: Essay on Training Adaptations</h4>
+                        <p><strong>Task:</strong> Write a 2000-word essay on "Physiological adaptations to endurance training"</p>
+                        
+                        <p><strong>Level 2 AI Use (Allowed):</strong></p>
+                        <p><strong>Prompt to Copilot:</strong> "Help me brainstorm different sections I could include in an essay about physiological adaptations to endurance training"</p>
+                        
+                        <p><strong>AI Response might include:</strong></p>
+                        <ul>
+                            <li>Cardiovascular adaptations</li>
+                            <li>Respiratory system changes</li>
+                            <li>Muscular adaptations</li>
+                            <li>Metabolic changes</li>
+                            <li>Neural adaptations</li>
+                        </ul>
+                        
+                        <p><strong>What you do next:</strong></p>
+                        <ul>
+                            <li>Use this list to guide your research</li>
+                            <li>Read academic sources on each topic</li>
+                            <li>Write the entire essay in your own words</li>
+                            <li>Do not include any AI-generated text in your submission</li>
+                        </ul>
+                    </div>
+
+                    <h4>Activity 4.1: Practice Level 2 Use</h4>
+                    <p>Try using the <strong>Socratic Tutor</strong> to explore a topic:</p>
+                    <ol>
+                        <li>Open Microsoft Copilot and select the Socratic Tutor agent</li>
+                        <li>Enter: "I need to write about plyometric training. What are the main areas I should cover?"</li>
+                        <li>Note the suggestions but do not copy any text</li>
+                        <li>Use the ideas to guide your own research and writing</li>
+                    </ol>
+
+                    <h4>Good Prompts for Level 2</h4>
+                    <div class="example-box">
+                        <ul>
+                            <li>"What are the main arguments for and against [topic]?"</li>
+                            <li>"Help me create an outline for an essay on [topic]"</li>
+                            <li>"What different perspectives exist on [topic]?"</li>
+                            <li>"Suggest a logical structure for presenting information about [topic]"</li>
+                            <li>"What questions should I consider when researching [topic]?"</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="module">
+                    <h3>Module 5: Level 3 - AI for Editing</h3>
+                    <p><span class="level-badge">Level 3</span></p>
+                    
+                    <p>At Level 3, you can use AI to improve the clarity and quality of your own writing. However, you must submit both your original work (in an appendix) and the AI-edited version.</p>
+
+                    <h4>What Level 3 Allows</h4>
+                    <ul>
+                        <li><strong>Clarity improvements:</strong> Making sentences clearer and more concise</li>
+                        <li><strong>Grammar and spelling:</strong> Fixing errors and improving flow</li>
+                        <li><strong>Readability:</strong> Adjusting language for better comprehension</li>
+                        <li><strong>Structure refinement:</strong> Improving paragraph transitions</li>
+                    </ul>
+
+                    <h4>What Level 3 Does NOT Allow</h4>
+                    <ul>
+                        <li>AI generating new content or ideas</li>
+                        <li>AI adding information you did not write</li>
+                        <li>AI changing the meaning or arguments of your work</li>
+                        <li>Failing to include your original work in the appendix</li>
+                    </ul>
+
+                    <div class="warning-box">
+                        <strong>Critical Requirement:</strong> You MUST include your original, unedited work in an appendix. Without this, you cannot demonstrate that the work is fundamentally yours.
+                    </div>
+
+                    <div class="example-box">
+                        <h4>Sport Science Example: Lab Report Editing</h4>
+                        <p><strong>Your Original Writing:</strong></p>
+                        <blockquote>
+                        "In the experiment we did we found that when people do exercise their heart rate goes up a lot and it stays up for a while after they stop and this is because the body needs more oxygen when exercising."
+                        </blockquote>
+                        
+                        <p><strong>Prompt to Copilot:</strong></p>
+                        <code>"Please improve the clarity of this sentence while keeping all the same information and meaning."</code>
+                        
+                        <p><strong>AI-Edited Version (Example):</strong></p>
+                        <blockquote>
+                        "The experiment demonstrated that exercise significantly increases heart rate, which remains elevated post-exercise due to the body's increased oxygen demand during physical activity."
+                        </blockquote>
+                        
+                        <p><strong>What you submit:</strong></p>
+                        <ul>
+                            <li><strong>Main document:</strong> The AI-edited version</li>
+                            <li><strong>Appendix:</strong> Your original, unedited writing</li>
+                        </ul>
+                    </div>
+
+                    <h4>Activity 5.1: Practice Level 3 Editing</h4>
+                    <ol>
+                        <li>Write a short paragraph about a sport science concept in your own words</li>
+                        <li>Save this as your "original version"</li>
+                        <li>Use Microsoft Copilot to improve clarity: "Please improve the clarity and flow of this text while keeping the same meaning: [paste your text]"</li>
+                        <li>Compare the original and edited versions</li>
+                        <li>Ensure the meaning has not changed</li>
+                    </ol>
+
+                    <h4>Good Prompts for Level 3</h4>
+                    <div class="example-box">
+                        <ul>
+                            <li>"Improve the clarity of this text while maintaining the same meaning"</li>
+                            <li>"Fix grammar and spelling errors in this paragraph"</li>
+                            <li>"Make this text more concise without losing information"</li>
+                            <li>"Improve the academic tone of this writing"</li>
+                            <li>"Suggest better transitions between these paragraphs"</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="module">
+                    <h3>Module 6: Finding Sport Science Sources</h3>
+                    <p><span class="level-badge">Research Skills</span></p>
+                    
+                    <p>Whether or not you use AI, you need to find high-quality academic sources for your work. This module teaches you how to use library resources effectively.</p>
+
+                    <h4>Using SPORTDiscus</h4>
+                    <p>SPORTDiscus is the main database for sport science research. Access it through the <a href="https://libguides.newman.ac.uk/az.php" target="_blank" rel="noopener noreferrer">library A-Z databases</a>.</p>
+
+                    <ol>
+                        <li>Go to the Newman Library website</li>
+                        <li>Click "Databases A-Z"</li>
+                        <li>Find and click "SPORTDiscus"</li>
+                        <li>Log in with your university credentials</li>
+                        <li>Use the search box to find articles</li>
+                    </ol>
+
+                    <h4>Effective Search Strategies</h4>
+                    <ul>
+                        <li><strong>Use specific terms:</strong> Instead of "running", try "aerobic exercise" or "endurance training"</li>
+                        <li><strong>Use AND to combine concepts:</strong> "plyometric training AND injury prevention"</li>
+                        <li><strong>Use OR for similar terms:</strong> "strength training OR resistance training"</li>
+                        <li><strong>Use quotation marks for exact phrases:</strong> "interval training"</li>
+                        <li><strong>Limit to peer-reviewed:</strong> Check the "peer-reviewed" box to get quality sources</li>
+                    </ul>
+
+                    <div class="example-box">
+                        <h4>Sport Science Search Example</h4>
+                        <p><strong>Research question:</strong> How does high-intensity interval training affect cardiovascular fitness in young adults?</p>
+                        
+                        <p><strong>Search terms to try:</strong></p>
+                        <ul>
+                            <li>"high-intensity interval training" AND "cardiovascular fitness"</li>
+                            <li>HIIT AND "aerobic capacity"</li>
+                            <li>"interval training" AND VO2max AND adults</li>
+                        </ul>
+                    </div>
+
+                    <h4>Evaluating Source Quality</h4>
+                    <p>Not all sources are equal. Ask yourself:</p>
+                    <ul>
+                        <li>Is it peer-reviewed?</li>
+                        <li>Is it recent (within last 5-10 years)?</li>
+                        <li>Are the authors experts in sport science?</li>
+                        <li>Does it have clear methodology and results?</li>
+                        <li>Is it published in a reputable journal?</li>
+                    </ul>
+
+                    <h4>Activity 6.1: Find Three Quality Sources</h4>
+                    <ol>
+                        <li>Choose a sport science topic you are studying</li>
+                        <li>Log in to SPORTDiscus</li>
+                        <li>Search for peer-reviewed articles from the last 5 years</li>
+                        <li>Find three articles relevant to your topic</li>
+                        <li>Save the citation details using the <a href="https://libguides.newman.ac.uk/referencing/" target="_blank" rel="noopener noreferrer">referencing guide</a></li>
+                    </ol>
+                </div>
+
+                <div class="module">
+                    <h3>Module 7: Understanding NotebookLM</h3>
+                    <p><span class="level-badge">Essential Tool</span></p>
+                    
+                    <p>NotebookLM is a "source-grounded" AI tool that only uses documents you upload. This makes it safer and more reliable than general AI tools for academic work.</p>
+
+                    <h4>Why NotebookLM Is Different</h4>
+                    <ul>
+                        <li><strong>Source-grounded:</strong> Only uses information from your uploaded documents</li>
+                        <li><strong>Citations provided:</strong> Shows you exactly where information came from</li>
+                        <li><strong>Less likely to "hallucinate":</strong> Will not make up facts not in your sources</li>
+                        <li><strong>Audio summaries:</strong> Can create podcast-style overviews</li>
+                    </ul>
+
+                    <h4>Activity 7.1: Your First NotebookLM Experience</h4>
+                    <ol>
+                        <li>Go to <a href="https://notebooklm.google.com" target="_blank" rel="noopener noreferrer">notebooklm.google.com</a> and sign in</li>
+                        <li>Click "+ New notebook"</li>
+                        <li>Click "+ Add Source" and upload a PDF (use a journal article from SPORTDiscus or lecture notes)</li>
+                        <li>Once uploaded, click on the document name to open it</li>
+                        <li>In the chat box at the bottom, type: <code>"Generate a 5-point summary of this source"</code></li>
+                        <li>Read the summary and click on the [1] [2] [3] citation numbers to see where the information came from</li>
+                        <li>Try asking: <code>"Create a 2-minute audio overview of this source"</code></li>
+                        <li>Listen to the audio summary</li>
+                    </ol>
+
+                    <div class="example-box">
+                        <h4>Sport Science Example: Understanding a Research Article</h4>
+                        <p><strong>Scenario:</strong> You have found a complex research article on "Effects of creatine supplementation on muscle performance"</p>
+                        
+                        <p><strong>How NotebookLM can help:</strong></p>
+                        <ol>
+                            <li>Upload the article PDF to NotebookLM</li>
+                            <li>Ask: "What were the main findings of this study?"</li>
+                            <li>Ask: "What methodology did the researchers use?"</li>
+                            <li>Ask: "What are the limitations mentioned?"</li>
+                            <li>Use the responses to guide your deeper reading</li>
+                        </ol>
+                        
+                        <p><strong>Remember:</strong> NotebookLM helps you understand sources, but you still need to read and cite the original article in your work.</p>
+                    </div>
+
+                    <h4>Good NotebookLM Prompts for Sport Science</h4>
+                    <div class="example-box">
+                        <ul>
+                            <li>"What is the main research question in this study?"</li>
+                            <li>"Summarise the methodology used"</li>
+                            <li>"What were the key results?"</li>
+                            <li>"What conclusions did the authors draw?"</li>
+                            <li>"What are the practical applications mentioned?"</li>
+                            <li>"Compare the findings in these two sources" (if you have uploaded multiple documents)</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="module">
+                    <h3>Module 8: Basic Fact-Checking Skills</h3>
+                    <p><span class="level-badge">Critical Skill</span></p>
+                    
+                    <p>AI tools can make mistakes. You must always verify information before using it in your work.</p>
+
+                    <h4>Why Fact-Checking Matters</h4>
+                    <ul>
+                        <li>AI can "hallucinate" (make up information that sounds plausible but is false)</li>
+                        <li>AI might provide outdated information</li>
+                        <li>AI can misinterpret complex topics</li>
+                        <li>You are responsible for the accuracy of your work, not the AI</li>
+                    </ul>
+
+                    <h4>How to Fact-Check AI Outputs</h4>
+                    <ol>
+                        <li><strong>Check against academic sources:</strong> Search SPORTDiscus or Google Scholar for the claim</li>
+                        <li><strong>Look for citations:</strong> Does the AI provide sources? (NotebookLM does, general Copilot often does not)</li>
+                        <li><strong>Cross-reference:</strong> Do multiple reliable sources agree?</li>
+                        <li><strong>Ask the Academic Rigour Assistant:</strong> This agent is designed to provide evidence-based answers</li>
+                        <li><strong>Consult your lecturer:</strong> If unsure, ask for guidance</li>
+                    </ol>
+
+                    <div class="example-box">
+                        <h4>Fact-Checking Example</h4>
+                        <p><strong>AI claim:</strong> "Plyometric training increases muscle strength by 30-40% in 6 weeks"</p>
+                        
+                        <p><strong>Fact-checking process:</strong></p>
+                        <ol>
+                            <li>Ask: "Does this sound realistic?" (30-40% in 6 weeks seems high)</li>
+                            <li>Search SPORTDiscus: "plyometric training strength gains"</li>
+                            <li>Read actual research studies</li>
+                            <li>Discovery: Gains vary widely (5-20% is more typical) depending on training status, programme design, and measurement methods</li>
+                            <li>Conclusion: The AI claim is oversimplified and potentially misleading</li>
+                        </ol>
+                    </div>
+
+                    <h4>Red Flags: When to Be Extra Cautious</h4>
+                    <ul>
+                        <li>Specific statistics or percentages without sources</li>
+                        <li>Claims that seem too good to be true</li>
+                        <li>Information about very recent events or research</li>
+                        <li>Medical or health advice</li>
+                        <li>Anything that contradicts your lecture notes or textbooks</li>
+                    </ul>
+
+                    <h4>Activity 8.1: Practice Fact-Checking</h4>
+                    <ol>
+                        <li>Ask Microsoft Copilot a sport science question</li>
+                        <li>Note any specific claims or statistics in the response</li>
+                        <li>Search SPORTDiscus for research on the same topic</li>
+                        <li>Compare: Does the research support what the AI said?</li>
+                        <li>If there are discrepancies, which source is more reliable?</li>
+                    </ol>
+                </div>
+
+                <div class="module">
+                    <h3>Module 9: Applying to Your Assessments</h3>
+                    <p><span class="level-badge">Practical Application</span></p>
+                    
+                    <p>Now that you understand the basics, let us apply these skills to your actual assessments.</p>
+
+                    <h4>For SPU412: Personal Development Presentation</h4>
+                    <p>SPU412 uses <strong>Levels 2-3</strong> and requires an AI Evidence Form.</p>
+                    <ul>
+                        <li><strong>Level 2:</strong> Use AI to brainstorm topics for your presentation</li>
+                        <li><strong>Level 3:</strong> Use AI to improve the clarity of your slides</li>
+                        <li><strong>Required:</strong> Complete the AI Evidence Form documenting your use</li>
+                        <li><strong>See:</strong> <a href="spu412-guide.html">Complete SPU412 guide</a> for detailed instructions</li>
+                    </ul>
+
+                    <h4>For Other Level 1 Assessments</h4>
+                    <p>Remember: Some assessments prohibit all AI use. Always check your brief.</p>
+                    <ul>
+                        <li>Practical exams (coaching, sports therapy)</li>
+                        <li>In-class tests</li>
+                        <li>Some lab reports (check with your lecturer)</li>
+                    </ul>
+
+                    <h4>Decision Tree: Can I Use AI?</h4>
+                    <div class="example-box">
+                        <ol>
+                            <li><strong>Check your assignment brief:</strong> What level does it specify?</li>
+                            <li><strong>Level 1?</strong> → No AI allowed at all</li>
+                            <li><strong>Level 2?</strong> → AI for ideas only, no AI text in submission</li>
+                            <li><strong>Level 3?</strong> → AI for editing, must include original in appendix</li>
+                            <li><strong>Still unsure?</strong> → Ask your lecturer BEFORE using AI</li>
+                        </ol>
+                    </div>
+
+                    <div class="success-box">
+                        <h4>✓ Foundation Pathway Complete!</h4>
+                        <p>You have completed the Foundation Pathway. You should now:</p>
+                        <ul>
+                            <li>Understand the 6-level framework</li>
+                            <li>Know when AI can and cannot be used</li>
+                            <li>Be able to use AI at Levels 2 and 3 appropriately</li>
+                            <li>Know how to find sport science sources</li>
+                            <li>Understand basic fact-checking</li>
+                            <li>Be ready to apply these skills to SPU412 and other assessments</li>
+                        </ul>
+                        
+                        <p><strong>Next steps:</strong></p>
+                        <ul>
+                            <li>Apply these skills to your current assessments</li>
+                            <li>If you need Level 4+ skills later, move to the <a href="development.html">Development Pathway</a></li>
+                            <li>Refer back to these modules whenever you need a refresher</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="info-box">
+                    <h3>Additional Resources</h3>
+                    <ul>
+                        <li><a href="framework.html">Complete 6-level framework guide</a></li>
+                        <li><a href="spu412-guide.html">SPU412 assessment-specific guide</a></li>
+                        <li><a href="resources.html">All tools and resources</a></li>
+                        <li><a href="faq.html">Frequently asked questions</a></li>
+                        <li><a href="https://tony-myers.github.io/AI-for-students" target="_blank" rel="noopener noreferrer">AI for Students comprehensive website</a></li>
+                    </ul>
+                </div>
+
+            </article>
+        </main>
+
+        <footer>
+            <p>Tony Myers 2025 | Birmingham Newman University | <a href="mailto:tony.myers@newman.ac.uk">tony.myers@newman.ac.uk</a></p>
+        </footer>
+    </div>
+
+</body>
+</html>
