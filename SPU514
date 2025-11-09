@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SPU514 Assessment Guide - AI Skills Development</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            line-height: 1.6;
+            background-color: #f4f7f6;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 1000px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+        }
+        header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 2rem 1rem;
+            margin: -20px -20px 20px -20px;
+            border-radius: 8px 8px 0 0;
+            text-align: center;
+        }
+        header h1 {
+            color: white;
+            margin: 0;
+            font-size: 2rem;
+        }
+        header p {
+            margin: 10px 0 0 0;
+            opacity: 0.95;
+        }
+        nav {
+            background-color: #ecf0f1;
+            padding: 12px;
+            border-radius: 8px;
+            text-align: center;
+            margin-bottom: 25px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+        }
+        nav a {
+            display: inline-block;
+            padding: 10px 18px;
+            text-decoration: none;
+            color: #2980b9;
+            font-weight: bold;
+            border-radius: 6px;
+            margin: 2px;
+            transition: all 0.2s ease;
+        }
+        nav a:hover {
+            background-color: #3498db;
+            color: #ffffff;
+            transform: translateY(-1px);
+        }
+        h2, h3, h4 {
+            color: #2c3e50;
+        }
+        h2 {
+            border-bottom: 2px solid #667eea;
+            padding-bottom: 8px;
+            margin-top: 30px;
+            margin-bottom: 15px;
+        }
+        ul, ol {
+            padding-left: 25px;
+            margin: 15px 0;
+        }
+        li {
+            margin-bottom: 10px;
+        }
+        .info-box, .warning-box, .success-box, .example-box {
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 5px;
+        }
+        .info-box {
+            background-color: #e8f4f8;
+            border-left: 4px solid #3498db;
+        }
+        .warning-box {
+            background-color: #fff3cd;
+            border-left: 4px solid #f39c12;
+        }
+        .success-box {
+            background-color: #d4edda;
+            border-left: 4px solid #28a745;
+        }
+        .example-box {
+            background-color: #f9f9f9;
+            border: 2px dashed #bdc3c7;
+        }
+        .level-badge {
+            display: inline-block;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: bold;
+            margin: 5px 5px 5px 0;
+        }
+        code {
+            font-family: "Courier New", Courier, monospace;
+            font-size: 0.95em;
+            background-color: #ecf0f1;
+            padding: 2px 6px;
+            border-radius: 3px;
+            color: #c7254e;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 12px;
+            text-align: left;
+        }
+        th {
+            background-color: #667eea;
+            color: white;
+        }
+        tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+        footer {
+            text-align: center;
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid #ecf0f1;
+            font-size: 0.9rem;
+            color: #7f8c8d;
+        }
+        @media (max-width: 768px) {
+            .container {
+                margin: 10px;
+                padding: 15px;
+            }
+            header {
+                margin: -15px -15px 20px -15px;
+                padding: 1.5rem 1rem;
+            }
+            nav a {
+                display: block;
+                margin: 5px 0;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <header>
+            <h1>SPU514 Assessment Guide</h1>
+            <p>Research Proposal with Comprehensive AI Documentation</p>
+        </header>
+
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="advanced.html">Advanced</a>
+            <a href="expert.html">Expert</a>
+            <a href="spu412-guide.html">SPU412 Guide</a>
+            <a href="spu514-guide.html" style="background-color: #3498db; color: white;">SPU514 Guide</a>
+        </nav>
+
+        <main>
+            <article>
+                <h2>SPU514: Investigating Sport, Exercise and Physical Activity</h2>
+                <p><span class="level-badge">Level 6: Mandatory AI with Full Documentation</span></p>
+                
+                <div class="info-box">
+                    <strong>Assessment Overview:</strong>
+                    <ul>
+                        <li><strong>Component:</strong> Individual Oral Presentation (60% of module)</li>
+                        <li><strong>Format:</strong> 8-minute presentation + 2-minute Q&A</li>
+                        <li><strong>Submission date:</strong> Monday, 23 March 2026</li>
+                        <li><strong>Presentation dates:</strong> 13th, 20th, 27th April and 4th May 2026</li>
+                        <li><strong>AI Level:</strong> 6 - Mandatory AI use with comprehensive documentation</li>
+                        <li><strong>Optional:</strong> Preregister on Open Science Framework (OSF) for extra marks</li>
+                    </ul>
+                </div>
+
+                <h2>Understanding Level 6: Mandatory AI Use</h2>
+
+                <p>At Level 6, you <strong>must</strong> use AI tools and you <strong>must</strong> demonstrate how you used and refined outputs throughout your work. This is not optional.</p>
+
+                <h3>What Level 6 Requires</h3>
+                <ul>
+                    <li><strong>Mandatory use:</strong> You must use AI tools to support your research proposal development</li>
+                    <li><strong>Comprehensive documentation:</strong> Record every interaction with AI</li>
+                    <li><strong>Iterative refinement:</strong> Show how you improved prompts and outputs</li>
+                    <li><strong>Critical engagement:</strong> Demonstrate thoughtful use, not passive acceptance</li>
+                    <li><strong>Fact-checking:</strong> Verify all AI-generated information</li>
+                </ul>
+
+                <div class="warning-box">
+                    <strong>⚠️ Critical:</strong> Failing to use AI or failing to document your use will result in not meeting the assessment criteria. Level 6 is about demonstrating sophisticated AI collaboration skills.
+                </div>
+
+                <h2>Assessment Requirements</h2>
+
+                <h3>Your Research Proposal Must Include</h3>
+                <ul>
+                    <li><strong>Study design</strong> clearly articulated and aligned with objectives</li>
+                    <li><strong>Theoretical framework</strong> integrated seamlessly</li>
+                    <li><strong>Sampling strategy</strong> appropriate and justified</li>
+                    <li><strong>Data collection methods</strong> clearly described</li>
+                    <li><strong>Data analysis plan</strong> thoroughly detailed</li>
+                    <li><strong>Credibility strategies</strong> (qualitative) or ethical considerations</li>
+                </ul>
+
+                <h3>AI Evidence Form Must Document</h3>
+                <table>
+                    <tr>
+                        <th>Component</th>
+                        <th>Weighting</th>
+                        <th>What to Include</th>
+                    </tr>
+                    <tr>
+                        <td>Quality of Prompts</td>
+                        <td>5%</td>
+                        <td>Clear, concise, well-constructed prompts tailored to research needs</td>
+                    </tr>
+                    <tr>
+                        <td>Revised Prompts</td>
+                        <td>5%</td>
+                        <td>Show iterations and refinements that improved outputs</td>
+                    </tr>
+                    <tr>
+                        <td>Background Info to AI</td>
+                        <td>10%</td>
+                        <td>Rich, detailed context provided to AI for better responses</td>
+                    </tr>
+                    <tr>
+                        <td>Fact-Checking</td>
+                        <td>10%</td>
+                        <td>Evidence of validating AI outputs against academic sources</td>
+                    </tr>
+                    <tr>
+                        <td>Critical Integration</td>
+                        <td>5%</td>
+                        <td>Thoughtful assessment and integration of AI outputs</td>
+                    </tr>
+                </table>
+
+                <p><strong>Total AI documentation: 35% of your mark!</strong></p>
+
+                <h2>Step-by-Step Workflow</h2>
+
+                <h3>Phase 1: Topic Development with AI</h3>
+                
+                <div class="example-box">
+                    <h4>Example: Developing a Research Topic</h4>
+                    
+                    <p><strong>Initial Prompt (Good):</strong></p>
+                    <code>"I am interested in studying the effects of pre-competition routines on sports performance. Help me refine this into a specific research question for a sport psychology study."</code>
+                    
+                    <p><strong>Background Information Provided:</strong></p>
+                    <ul>
+                        <li>"I am a Level 5 sport science student"</li>
+                        <li>"I have access to university athletes"</li>
+                        <li>"I am interested in psychological factors"</li>
+                        <li>"Study must be feasible within 3 months"</li>
+                    </ul>
+                    
+                    <p><strong>AI Response might include:</strong> Several refined research questions</p>
+                    
+                    <p><strong>Refined Prompt (Better):</strong></p>
+                    <code>"Based on those suggestions, help me develop a research question specifically about pre-performance routines in university-level team sports, focusing on anxiety reduction. What established psychological theories should I consider?"</code>
+                    
+                    <p><strong>What to Document:</strong></p>
+                    <ul>
+                        <li>Both prompts (show the refinement)</li>
+                        <li>Background information you provided</li>
+                        <li>How you evaluated the responses</li>
+                        <li>Why you refined your prompt</li>
+                        <li>Which suggestions you used and why</li>
+                    </ul>
+                </div>
+
+                <h3>Phase 2: Literature Review Support</h3>
+
+                <div class="example-box">
+                    <h4>Using NotebookLM for Literature Synthesis</h4>
+                    
+                    <p><strong>Process:</strong></p>
+                    <ol>
+                        <li>Find 5-10 relevant articles from SPORTDiscus</li>
+                        <li>Upload PDFs to NotebookLM</li>
+                        <li>Use prompts like:
+                            <ul>
+                                <li>"Compare the methodologies used across these studies"</li>
+                                <li>"What are the common findings regarding [your topic]?"</li>
+                                <li>"What gaps exist in the research?"</li>
+                                <li>"What theoretical frameworks are used?"</li>
+                            </ul>
+                        </li>
+                        <li>Use Academic Rigour Assistant to verify key claims</li>
+                        <li>Cross-reference with original articles</li>
+                    </ol>
+                    
+                    <p><strong>What to Document:</strong></p>
+                    <ul>
+                        <li>Which articles you uploaded</li>
+                        <li>Prompts used</li>
+                        <li>How you refined prompts based on initial responses</li>
+                        <li>How you fact-checked the summaries</li>
+                        <li>Examples of where you found errors and corrected them</li>
+                    </ul>
+                </div>
+
+                <h3>Phase 3: Methodology Development</h3>
+
+                <div class="example-box">
+                    <h4>Using AI to Develop Research Design</h4>
+                    
+                    <p><strong>Initial Prompt:</strong></p>
+                    <code>"I want to investigate pre-performance routines and anxiety in university football players. What research design would be appropriate?"</code>
+                    
+                    <p><strong>Provide Background:</strong></p>
+                    <ul>
+                        <li>Target population details</li>
+                        <li>Access to participants</li>
+                        <li>Time constraints</li>
+                        <li>Ethical considerations</li>
+                        <li>Available equipment/measures</li>
+                    </ul>
+                    
+                    <p><strong>Refined Prompts might include:</strong></p>
+                    <ul>
+                        <li>"Considering I have access to 30 players over one season, would a within-subjects repeated measures design work?"</li>
+                        <li>"What validated anxiety measures are appropriate for this population?"</li>
+                        <li>"Help me develop a detailed data collection protocol"</li>
+                        <li>"What are the ethical considerations I need to address?"</li>
+                    </ul>
+                    
+                    <p><strong>Critical Fact-Checking:</strong></p>
+                    <ul>
+                        <li>Verify suggested measures exist and are validated</li>
+                        <li>Check sample size recommendations against published guidelines</li>
+                        <li>Confirm ethical requirements with actual university policies</li>
+                        <li>Validate statistical analysis suggestions with JASP capabilities</li>
+                    </ul>
+                </div>
+
+                <h3>Phase 4: Statistical Analysis Planning</h3>
+
+                <div class="example-box">
+                    <h4>Using AI with JASP Knowledge</h4>
+                    
+                    <p><strong>Good Prompts:</strong></p>
+                    <ul>
+                        <li>"I have repeated measures data from 30 participants across 3 time points measuring anxiety scores. What statistical test is appropriate and what assumptions must be checked?"</li>
+                        <li>"Explain how to interpret Bayes Factors in the context of repeated measures ANOVA"</li>
+                        <li>"What is an appropriate prior for a Bayesian repeated measures analysis in sport psychology?"</li>
+                    </ul>
+                    
+                    <p><strong>Fact-Checking Process:</strong></p>
+                    <ol>
+                        <li>Verify statistical advice against JASP documentation</li>
+                        <li>Check assumptions against statistics textbooks</li>
+                        <li>Confirm interpretation guidelines with published examples</li>
+                        <li>Test suggested analyses in JASP with sample data</li>
+                    </ol>
+                    
+                    <p><strong>Document:</strong></p>
+                    <ul>
+                        <li>All statistical prompts</li>
+                        <li>How you verified the advice</li>
+                        <li>Any errors you found</li>
+                        <li>How you integrated correct information</li>
+                    </ul>
+                </div>
+
+                <h2>OSF Preregistration (Optional Extra Credit)</h2>
+
+                <p>Preregistering your study on the Open Science Framework can gain you extra marks.</p>
+
+                <h3>How AI Can Help with OSF</h3>
+                <ul>
+                    <li>Understanding what information is needed</li>
+                    <li>Drafting clear hypotheses</li>
+                    <li>Specifying analysis plans precisely</li>
+                    <li>Clarifying design elements</li>
+                </ul>
+
+                <div class="example-box">
+                    <h4>Using AI for OSF Preregistration</h4>
+                    <p><strong>Prompt:</strong> "I need to preregister a study on OSF. Help me write a clear, specific hypothesis based on my research question: [your question]"</p>
+                    <p><strong>Prompt:</strong> "Convert my analysis plan into the specific format required by OSF preregistration"</p>
+                    <p><strong>Document:</strong> How AI helped clarify your preregistration, any revisions you made</p>
+                </div>
+
+                <div class="success-box">
+                    <strong>Tip:</strong> Include your OSF preregistration link in your presentation to show advanced research planning skills.
+                </div>
+
+                <h2>What Excellent AI Documentation Looks Like</h2>
+
+                <h3>For 80-100% (Outstanding)</h3>
+                <ul>
+                    <li><strong>Prompts:</strong> Precise, well-tailored, show deep understanding of both AI capabilities and research needs</li>
+                    <li><strong>Iterations:</strong> Clear progression showing sophisticated refinement</li>
+                    <li><strong>Background:</strong> Rich, detailed context that significantly improved AI responses</li>
+                    <li><strong>Fact-checking:</strong> Exceptional validation with cross-referenced sources, errors corrected</li>
+                    <li><strong>Integration:</strong> Seamless incorporation showing critical assessment and enrichment</li>
+                </ul>
+
+                <h3>For 70-79% (Excellent)</h3>
+                <ul>
+                    <li><strong>Prompts:</strong> Well-constructed, effectively guide AI to useful responses</li>
+                    <li><strong>Iterations:</strong> Noticeable improvements through thoughtful refinement</li>
+                    <li><strong>Background:</strong> Relevant, sufficient context enhancing AI accuracy</li>
+                    <li><strong>Fact-checking:</strong> Careful validation with minor errors corrected</li>
+                    <li><strong>Integration:</strong> Effective incorporation with solid critical thinking</li>
+                </ul>
+
+                <h3>Common Mistakes Leading to Lower Marks</h3>
+                <ul>
+                    <li>Vague, generic prompts</li>
+                    <li>No refinement or iteration shown</li>
+                    <li>Minimal background information provided to AI</li>
+                    <li>No fact-checking performed</li>
+                    <li>AI outputs used without critical assessment</li>
+                    <li>Incomplete documentation</li>
+                </ul>
+
+                <h2>Practical Workflow Template</h2>
+
+                <div class="example-box">
+                    <h4>Use This Structure for Your AI Evidence Form</h4>
+                    
+                    <p><strong>For Each Major Section of Your Proposal:</strong></p>
+                    
+                    <p><strong>1. Topic/Section:</strong> [e.g., "Developing sampling strategy"]</p>
+                    
+                    <p><strong>2. Initial Prompt:</strong></p>
+                    <code>[Copy exact text]</code>
+                    
+                    <p><strong>3. Background Information Provided:</strong></p>
+                    <ul>
+                        <li>[List everything you told the AI]</li>
+                    </ul>
+                    
+                    <p><strong>4. AI Response Summary:</strong></p>
+                    <p>[Brief summary of what AI suggested]</p>
+                    
+                    <p><strong>5. Refined Prompt(s):</strong></p>
+                    <code>[Copy exact text, show 2-3 refinements]</code>
+                    <p><em>Why refined:</em> [Explain your thinking]</p>
+                    
+                    <p><strong>6. Fact-Checking Process:</strong></p>
+                    <ul>
+                        <li>Sources checked: [List articles, textbooks]</li>
+                        <li>Errors found: [Any inaccuracies]</li>
+                        <li>Corrections made: [How you fixed them]</li>
+                    </ul>
+                    
+                    <p><strong>7. Final Integration:</strong></p>
+                    <p>[How you used the AI output in your actual proposal]</p>
+                </div>
+
+                <h2>Tools You Should Use</h2>
+
+                <ul>
+                    <li><strong>NotebookLM:</strong> Literature synthesis, comparing sources</li>
+                    <li><strong>Microsoft Copilot:</strong> General research advice, methodology development</li>
+                    <li><strong>Academic Rigour Assistant:</strong> Fact-checking claims, verifying evidence</li>
+                    <li><strong>Socratic Tutor:</strong> Understanding complex concepts</li>
+                    <li><strong>SPORTDiscus:</strong> Finding research articles for fact-checking</li>
+                    <li><strong>Library resources:</strong> Validating information</li>
+                </ul>
+
+                <h2>Final Checklist</h2>
+
+                <div class="warning-box">
+                    <h4>Before Submission, Ensure You Have:</h4>
+                    <ul>
+                        <li>☐ Used AI tools throughout your proposal development</li>
+                        <li>☐ Documented ALL AI interactions comprehensively</li>
+                        <li>☐ Included exact prompts used</li>
+                        <li>☐ Shown prompt refinements with explanations</li>
+                        <li>☐ Listed all background information provided to AI</li>
+                        <li>☐ Documented fact-checking process with sources</li>
+                        <li>☐ Shown how you critically integrated AI outputs</li>
+                        <li>☐ Completed OSF preregistration (if aiming for extra marks)</li>
+                        <li>☐ Included OSF link in presentation (if applicable)</li>
+                        <li>☐ Presentation is 8 minutes + prepared for 2-minute Q&A</li>
+                        <li>☐ All elements submitted by Monday, 23 March 2026</li>
+                    </ul>
+                </div>
+
+                <h2>Need Help?</h2>
+
+                <div class="info-box">
+                    <strong>Support Resources:</strong>
+                    <ul>
+                        <li><strong>New to Level 6?</strong> Work through the <a href="expert.html">Expert Pathway</a></li>
+                        <li><strong>Understanding the framework?</strong> Review <a href="framework.html">6-level guide</a></li>
+                        <li><strong>Tool help?</strong> See <a href="resources.html">Resources page</a></li>
+                        <li><strong>Research methods help?</strong> JASP guidance available on <a href="resources.html">Resources page</a></li>
+                        <li><strong>Questions about requirements?</strong> Contact: <a href="mailto:tony.myers@newman.ac.uk">tony.myers@newman.ac.uk</a></li>
+                    </ul>
+                </div>
+
+            </article>
+        </main>
+
+        <footer>
+            <p>Tony Myers 2025 | Birmingham Newman University | <a href="mailto:tony.myers@newman.ac.uk">tony.myers@newman.ac.uk</a></p>
+        </footer>
+    </div>
+
+</body>
+</html>
