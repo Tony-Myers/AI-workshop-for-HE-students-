@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Skills Development Programme - Sport Science</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            line-height: 1.6;
+            background-color: #f4f7f6;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 1000px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+        }
+        .banner-image {
+            width: calc(100% + 40px);
+            height: auto;
+            display: block;
+            margin: -20px -20px 0 -20px;
+            border-radius: 8px 8px 0 0;
+            max-width: none;
+        }
+        header {
+            background: linear-gradient(135deg, #2c3e50 0%, #3498db 100%);
+            color: white;
+            padding: 2rem 1rem;
+            margin: 0 -20px 20px -20px;
+            text-align: center;
+        }
+        header h1 {
+            color: white;
+            margin: 0;
+            font-size: 2rem;
+        }
+        header p {
+            margin: 10px 0 0 0;
+            font-size: 1.1rem;
+            opacity: 0.95;
+        }
+        nav {
+            background-color: #ecf0f1;
+            padding: 12px;
+            border-radius: 8px;
+            text-align: center;
+            margin-bottom: 25px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+        }
+        nav a {
+            display: inline-block;
+            padding: 10px 18px;
+            text-decoration: none;
+            color: #2980b9;
+            font-weight: bold;
+            border-radius: 6px;
+            margin: 2px;
+            transition: all 0.2s ease;
+        }
+        nav a:hover {
+            background-color: #3498db;
+            color: #ffffff;
+            transform: translateY(-1px);
+        }
+        nav a.active {
+            background-color: #3498db;
+            color: #ffffff;
+        }
+        h2, h3, h4 {
+            color: #2c3e50;
+        }
+        h2 {
+            border-bottom: 2px solid #3498db;
+            padding-bottom: 8px;
+            margin-top: 30px;
+            margin-bottom: 15px;
+        }
+        h3 {
+            margin-top: 25px;
+            margin-bottom: 12px;
+        }
+        ul, ol {
+            padding-left: 25px;
+            margin: 15px 0;
+        }
+        li {
+            margin-bottom: 10px;
+        }
+        .pathway-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 20px;
+            margin: 30px 0;
+        }
+        .pathway-card {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 25px;
+            border-radius: 10px;
+            text-align: center;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            text-decoration: none;
+            display: block;
+        }
+        .pathway-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 12px rgba(0,0,0,0.2);
+        }
+        .pathway-card h3 {
+            color: white;
+            margin-top: 0;
+            border: none;
+        }
+        .pathway-card.foundation {
+            background: linear-gradient(135deg, #56ab2f 0%, #a8e063 100%);
+        }
+        .pathway-card.development {
+            background: linear-gradient(135deg, #f2994a 0%, #f2c94c 100%);
+        }
+        .pathway-card.advanced {
+            background: linear-gradient(135deg, #ee0979 0%, #ff6a00 100%);
+        }
+        .pathway-card.expert {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+        .level-framework {
+            background-color: #f8f9fa;
+            border: 2px solid #3498db;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 20px 0;
+        }
+        .level-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 15px;
+            margin: 20px 0;
+        }
+        .level-box {
+            background: white;
+            border-left: 4px solid #3498db;
+            padding: 15px;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+        }
+        .level-box h4 {
+            margin: 0 0 5px 0;
+            color: #2c3e50;
+        }
+        .level-box p {
+            margin: 0;
+            font-size: 0.9rem;
+            color: #555;
+        }
+        .info-box {
+            background-color: #e8f4f8;
+            border-left: 4px solid #3498db;
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 5px;
+        }
+        .warning-box {
+            background-color: #fff3cd;
+            border-left: 4px solid #f39c12;
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 5px;
+        }
+        .assessment-links {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 15px;
+            margin: 20px 0;
+        }
+        .assessment-link {
+            background-color: #fdfdfd;
+            border: 2px solid #e0e0e0;
+            padding: 20px;
+            border-radius: 8px;
+            text-decoration: none;
+            color: #2c3e50;
+            transition: all 0.2s ease;
+            display: block;
+        }
+        .assessment-link:hover {
+            border-color: #3498db;
+            box-shadow: 0 2px 8px rgba(52, 152, 219, 0.15);
+            transform: translateY(-2px);
+        }
+        .assessment-link h4 {
+            margin: 0 0 10px 0;
+            color: #3498db;
+        }
+        .quick-links {
+            background-color: #fdfdfd;
+            border: 2px solid #e0e0e0;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 20px 0;
+        }
+        .quick-links ul {
+            margin: 10px 0;
+            padding-left: 20px;
+        }
+        footer {
+            text-align: center;
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid #ecf0f1;
+            font-size: 0.9rem;
+            color: #7f8c8d;
+        }
+        
+        @media (max-width: 768px) {
+            .container {
+                margin: 10px;
+                padding: 15px;
+            }
+            .banner-image {
+                margin: -15px -15px 0 -15px;
+                width: calc(100% + 30px);
+            }
+            header {
+                margin: 0 -15px 20px -15px;
+                padding: 1.5rem 1rem;
+            }
+            header h1 {
+                font-size: 1.5rem;
+            }
+            nav a {
+                display: block;
+                margin: 5px 0;
+            }
+            .pathway-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+        
+        @media print {
+            body {
+                background: white;
+            }
+            .container {
+                box-shadow: none;
+                max-width: 100%;
+            }
+            .banner-image {
+                display: none;
+            }
+            header {
+                background: #2c3e50;
+                color: white;
+            }
+            nav {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <img src="Al_in_HE_banner.png" alt="AI for Education: Shaping the Future of UK HE" class="banner-image">
+        
+        <header>
+            <h1>AI Skills Development Programme</h1>
+            <p>Sport Science Students | Birmingham Newman University</p>
+        </header>
+
+        <nav>
+            <a href="index.html" class="active">Home</a>
+            <a href="framework.html">6-Level Framework</a>
+            <a href="resources.html">Tools & Resources</a>
+            <a href="faq.html">FAQ</a>
+        </nav>
+
+        <main>
+            <article>
+                <h2>Welcome to Your AI Skills Development Programme</h2>
+                
+                <p>This semester-long programme is designed to help you develop essential AI skills for your sport science studies and future career. You will work through these materials at your own pace, building competencies that align with Birmingham Newman University's 6-level AI framework.</p>
+
+                <div class="info-box">
+                    <strong>How This Programme Works:</strong>
+                    <ul>
+                        <li>Attend the 2-hour introduction session to get started</li>
+                        <li>Choose your pathway based on your current AI experience</li>
+                        <li>Work through modules at your own pace throughout the semester</li>
+                        <li>Apply your skills to your actual assessments (SPU412, SPU514, and others)</li>
+                        <li>Track your progress and revisit modules as needed</li>
+                    </ul>
+                </div>
+
+                <h2>Understanding the 6-Level AI Framework</h2>
+                
+                <p>Birmingham Newman University uses a 6-level framework to define appropriate AI use in assessments. Understanding this framework is essential for using AI correctly and avoiding academic misconduct.</p>
+
+                <div class="level-framework">
+                    <div class="level-grid">
+                        <div class="level-box">
+                            <h4>Level 1: No AI</h4>
+                            <p>Assessment completed entirely without AI assistance.</p>
+                        </div>
+                        <div class="level-box">
+                            <h4>Level 2: Idea Generation</h4>
+                            <p>AI for brainstorming and structuring. No AI content in final submission.</p>
+                        </div>
+                        <div class="level-box">
+                            <h4>Level 3: Editing</h4>
+                            <p>AI for clarity improvements. Original work required in appendix.</p>
+                        </div>
+                        <div class="level-box">
+                            <h4>Level 4: Task Completion</h4>
+                            <p>AI completes tasks. You evaluate and discuss outputs. Cite AI use.</p>
+                        </div>
+                        <div class="level-box">
+                            <h4>Level 5: Collaboration</h4>
+                            <p>AI as co-pilot throughout. No need to specify AI content.</p>
+                        </div>
+                        <div class="level-box">
+                            <h4>Level 6: Mandatory AI</h4>
+                            <p>Must use AI and document how you used and refined outputs.</p>
+                        </div>
+                    </div>
+                    <p style="text-align: center; margin-top: 15px;">
+                        <strong><a href="framework.html" style="color: #3498db;">Learn more about the 6-level framework →</a></strong>
+                    </p>
+                </div>
+
+                <div class="warning-box">
+                    <strong>⚠️ Important:</strong> Different assessments require different AI levels. Always check your assessment brief before using AI. Using AI inappropriately can constitute academic misconduct.
+                </div>
+
+                <h2>Choose Your Pathway</h2>
+                
+                <p>Select the pathway that matches your current AI experience and confidence. You can switch pathways at any time if you find one too easy or too challenging.</p>
+
+                <div class="pathway-grid">
+                    <a href="foundation.html" class="pathway-card foundation">
+                        <h3>Foundation</h3>
+                        <p><strong>New to AI?</strong></p>
+                        <p>Learn the basics, understand Levels 1-3, and build confidence with essential tools.</p>
+                        <p style="margin-top: 15px; font-size: 0.9rem;">→ Start here if you have minimal AI experience</p>
+                    </a>
+
+                    <a href="development.html" class="pathway-card development">
+                        <h3>Development</h3>
+                        <p><strong>Some experience?</strong></p>
+                        <p>Master Levels 3-4, develop critical evaluation skills, and prepare for SPU412.</p>
+                        <p style="margin-top: 15px; font-size: 0.9rem;">→ Start here if you have used AI before</p>
+                    </a>
+
+                    <a href="advanced.html" class="pathway-card advanced">
+                        <h3>Advanced</h3>
+                        <p><strong>Confident user?</strong></p>
+                        <p>Focus on Levels 4-5, research skills, and SPU514 preparation.</p>
+                        <p style="margin-top: 15px; font-size: 0.9rem;">→ Start here if you use AI regularly</p>
+                    </a>
+
+                    <a href="expert.html" class="pathway-card expert">
+                        <h3>Expert</h3>
+                        <p><strong>Advanced skills?</strong></p>
+                        <p>Master Level 6, dissertation support, and sophisticated research workflows.</p>
+                        <p style="margin-top: 15px; font-size: 0.9rem;">→ Start here for Level 6 and dissertation</p>
+                    </a>
+                </div>
+
+                <h2>Assessment-Specific Support</h2>
+                
+                <p>Need help with a specific assignment? These guides provide targeted support for common sport science assessments:</p>
+
+                <div class="assessment-links">
+                    <a href="spu412-guide.html" class="assessment-link">
+                        <h4>SPU412 Presentation</h4>
+                        <p>Personal development presentation with AI Evidence Form. Levels 2-3.</p>
+                    </a>
+
+                    <a href="spu514-guide.html" class="assessment-link">
+                        <h4>SPU514 Research Proposal</h4>
+                        <p>Research proposal presentation with comprehensive AI documentation. Level 6.</p>
+                    </a>
+
+                    <a href="resources.html#lab-reports" class="assessment-link">
+                        <h4>Lab Reports & Data Analysis</h4>
+                        <p>Using AI with JASP for data analysis and interpretation.</p>
+                    </a>
+
+                    <a href="resources.html#reflective" class="assessment-link">
+                        <h4>Reflective Writing</h4>
+                        <p>Maintaining authentic voice while using AI appropriately.</p>
+                    </a>
+
+                    <a href="resources.html#presentations" class="assessment-link">
+                        <h4>Presentations & Vivas</h4>
+                        <p>Creating slides and preparing responses with AI support.</p>
+                    </a>
+
+                    <a href="resources.html#dissertation" class="assessment-link">
+                        <h4>Modified Dissertation</h4>
+                        <p>6000 words + viva + poster preparation with AI.</p>
+                    </a>
+                </div>
+
+                <h2>Quick Links & Resources</h2>
+                
+                <div class="quick-links">
+                    <h3>Essential Resources</h3>
+                    <ul>
+                        <li><strong><a href="https://tony-myers.github.io/AI-for-students" target="_blank" rel="noopener noreferrer">AI for Students Website</a></strong> - Comprehensive guidance on using AI responsibly</li>
+                        <li><strong><a href="https://libguides.newman.ac.uk/home" target="_blank" rel="noopener noreferrer">Newman Library Home</a></strong> - Access library resources and support</li>
+                        <li><strong><a href="https://libguides.newman.ac.uk/az.php" target="_blank" rel="noopener noreferrer">Library Databases A-Z</a></strong> - Including SPORTDiscus for sport science research</li>
+                        <li><strong><a href="https://libguides.newman.ac.uk/referencing/" target="_blank" rel="noopener noreferrer">Referencing Guide</a></strong> - Learn how to cite sources correctly</li>
+                        <li><strong><a href="resources.html" >AI Tools & Setup</a></strong> - Access Microsoft Copilot, NotebookLM, and other tools</li>
+                    </ul>
+                </div>
+
+                <h2>Getting Started</h2>
+                
+                <ol>
+                    <li><strong>Attend the introduction session</strong> where you will receive an overview and live demonstrations</li>
+                    <li><strong>Read the <a href="framework.html">6-Level Framework guide</a></strong> to understand the levels</li>
+                    <li><strong>Choose your pathway</strong> based on your experience (Foundation, Development, Advanced, or Expert)</li>
+                    <li><strong>Set up your tools</strong> following the <a href="resources.html">setup instructions</a></li>
+                    <li><strong>Start working through modules</strong> at your own pace throughout the semester</li>
+                    <li><strong>Apply your skills</strong> to real assessments and track your progress</li>
+                </ol>
+
+                <div class="info-box">
+                    <strong>Need Help?</strong>
+                    <ul>
+                        <li>Check the <a href="faq.html">FAQ page</a> for common questions</li>
+                        <li>Visit the <a href="https://tony-myers.github.io/AI-for-students" target="_blank" rel="noopener noreferrer">AI for Students website</a> for additional guidance</li>
+                        <li>Contact the module leader: <a href="mailto:tony.myers@newman.ac.uk">tony.myers@newman.ac.uk</a></li>
+                        <li>Book an appointment with the library for research support</li>
+                    </ul>
+                </div>
+
+            </article>
+        </main>
+
+        <footer>
+            <p>Tony Myers 2025 | Birmingham Newman University | <a href="mailto:tony.myers@newman.ac.uk">tony.myers@newman.ac.uk</a></p>
+        </footer>
+    </div>
+
+</body>
+</html>
