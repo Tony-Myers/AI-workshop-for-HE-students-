@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Resources & Tools - AI Skills Development</title>
+    <title>Resources - AI Skills Development</title>
     <style>
         body {
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
@@ -14,7 +14,7 @@
             padding: 0;
         }
         .container {
-            max-width: 1100px;
+            max-width: 1000px;
             margin: 20px auto;
             padding: 20px;
             background-color: #ffffff;
@@ -22,7 +22,7 @@
             box-shadow: 0 2px 8px rgba(0,0,0,0.08);
         }
         header {
-            background: linear-gradient(135deg, #16a085 0%, #f4d03f 100%);
+            background: linear-gradient(135deg, #3498db 0%, #2c3e50 100%);
             color: white;
             padding: 2rem 1rem;
             margin: -20px -20px 20px -20px;
@@ -32,6 +32,7 @@
         header h1 {
             color: white;
             margin: 0;
+            font-size: 2rem;
         }
         nav {
             background-color: #ecf0f1;
@@ -39,6 +40,7 @@
             border-radius: 8px;
             text-align: center;
             margin-bottom: 25px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
         }
         nav a {
             display: inline-block;
@@ -53,29 +55,47 @@
         nav a:hover {
             background-color: #3498db;
             color: #ffffff;
+            transform: translateY(-1px);
         }
-        h2, h3 {
+        nav a.active {
+            background-color: #3498db;
+            color: #ffffff;
+        }
+        h2, h3, h4 {
             color: #2c3e50;
         }
         h2 {
-            border-bottom: 2px solid #16a085;
+            border-bottom: 2px solid #3498db;
             padding-bottom: 8px;
             margin-top: 30px;
+            margin-bottom: 15px;
         }
         .resource-card {
             background-color: #fdfdfd;
             border: 2px solid #e0e0e0;
+            border-left: 5px solid #3498db;
             padding: 20px;
-            margin: 20px 0;
             border-radius: 8px;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
-        }
-        .resource-card:hover {
-            border-color: #16a085;
+            margin-bottom: 20px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.05);
         }
         .resource-card h3 {
             margin-top: 0;
-            color: #16a085;
+            color: #3498db;
+        }
+        .resource-link {
+            display: inline-block;
+            background-color: #3498db;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+            margin: 5px 5px 5px 0;
+            transition: background-color 0.2s;
+        }
+        .resource-link:hover {
+            background-color: #2980b9;
         }
         .info-box {
             background-color: #e8f4f8;
@@ -84,355 +104,258 @@
             margin: 20px 0;
             border-radius: 5px;
         }
-        .warning-box {
-            background-color: #fff3cd;
-            border-left: 4px solid #f39c12;
-            padding: 15px;
-            margin: 20px 0;
-            border-radius: 5px;
-        }
-        .btn {
-            display: inline-block;
-            padding: 12px 24px;
-            background: linear-gradient(135deg, #16a085 0%, #f4d03f 100%);
-            color: white;
-            text-decoration: none;
-            border-radius: 6px;
-            font-weight: bold;
-            margin: 5px;
-            transition: all 0.2s ease;
-        }
-        .btn:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-        }
-        code {
-            font-family: "Courier New", Courier, monospace;
-            background-color: #ecf0f1;
-            padding: 2px 6px;
-            border-radius: 3px;
-            color: #c7254e;
-        }
         footer {
             text-align: center;
             margin-top: 40px;
             padding-top: 20px;
             border-top: 1px solid #ecf0f1;
-            font-size: 0.9rem;
+            font-size: 0.9em;
             color: #7f8c8d;
+        }
+        @media (max-width: 768px) {
+            .container {
+                margin: 10px;
+                padding: 15px;
+            }
+            header {
+                margin: -15px -15px 20px -15px;
+                padding: 1.5rem 1rem;
+            }
+            header h1 {
+                font-size: 1.5rem;
+            }
+            nav a {
+                display: block;
+                margin: 5px 0;
+            }
         }
     </style>
 </head>
 <body>
+
     <div class="container">
         <header>
-            <h1>Resources & Tools</h1>
-            <p>Everything You Need for AI-Enhanced Sport Science Study</p>
+            <h1>AI Tools & Resources</h1>
         </header>
 
         <nav>
             <a href="index.html">Home</a>
-            <a href="framework.html">6-Level Framework</a>
-            <a href="resources.html" style="background-color: #3498db; color: white;">Resources</a>
-            <a href="faq.html">FAQ</a>
+            <a href="foundation.html">Foundation</a>
+            <a href="development.html">Development</a>
+            <a href="advanced.html">Advanced</a>
+            <a href="expert.html">Expert</a>
+            <a href="resources.html" class="active">Resources</a>
         </nav>
 
         <main>
-            <h2>AI Tools for Sport Science Students</h2>
-
-            <div class="resource-card">
-                <h3>Microsoft Copilot (General)</h3>
-                <p><strong>Access:</strong> <a href="https://copilot.microsoft.com" target="_blank" rel="noopener noreferrer">copilot.microsoft.com</a></p>
-                <p><strong>Login:</strong> Use your Birmingham Newman Microsoft 365 account</p>
-                <p><strong>Best for:</strong></p>
-                <ul>
-                    <li>Brainstorming ideas and topics</li>
-                    <li>Creating outlines and structures</li>
-                    <li>Editing and improving clarity</li>
-                    <li>General research assistance</li>
-                    <li>Understanding complex concepts</li>
-                </ul>
-                <p><strong>Important notes:</strong></p>
-                <ul>
-                    <li>Custom agents only work in the main Copilot interface, not in Word/Outlook pop-ups</li>
-                    <li>Always fact-check information from Copilot</li>
-                    <li>Remember which assessment level permits Copilot use</li>
-                </ul>
-            </div>
-
-            <div class="resource-card">
-                <h3>Academic Rigour Assistant (Custom Agent)</h3>
-                <p><strong>Access:</strong> <a href="https://m365.cloud.microsoft:443/chat/?titleId=T_ef40e31a-faa0-5e5c-2f90-a22c14d9ed13&source=embedded-builder" target="_blank" rel="noopener noreferrer" class="btn">Add Academic Rigour Assistant</a></p>
-                <p><strong>Purpose:</strong> Provides evidence-based, cautious responses with academic rigour</p>
-                <p><strong>Best for:</strong></p>
-                <ul>
-                    <li>Fact-checking claims and statistics</li>
-                    <li>Understanding research evidence</li>
-                    <li>Evaluating the strength of arguments</li>
-                    <li>Getting balanced, academic perspectives</li>
-                    <li>Verifying information for assignments</li>
-                </ul>
-                <p><strong>Example prompts:</strong></p>
-                <ul>
-                    <li>"What is the evidence for high-intensity interval training improving VO2max?"</li>
-                    <li>"What are the limitations of this claim?"</li>
-                    <li>"Evaluate the strength of evidence for creatine supplementation"</li>
-                </ul>
-            </div>
-
-            <div class="resource-card">
-                <h3>Socratic Tutor (Custom Agent)</h3>
-                <p><strong>Access:</strong> <a href="https://m365.cloud.microsoft:443/chat/?titleId=T_29420ced-78cb-75c9-d668-92906ac92f64&source=embedded-builder" target="_blank" rel="noopener noreferrer" class="btn">Add Socratic Tutor</a></p>
-                <p><strong>Purpose:</strong> Helps you learn through guided questions rather than direct answers</p>
-                <p><strong>Best for:</strong></p>
-                <ul>
-                    <li>Understanding difficult concepts</li>
-                    <li>Working through problems step-by-step</li>
-                    <li>Developing critical thinking</li>
-                    <li>Preparing for exams</li>
-                    <li>Exploring topics deeply</li>
-                </ul>
-                <p><strong>Example prompts:</strong></p>
-                <ul>
-                    <li>"I do not understand the difference between aerobic and anaerobic energy systems"</li>
-                    <li>"Help me understand how muscles adapt to resistance training"</li>
-                    <li>"I am confused about Bayesian statistics in JASP"</li>
-                </ul>
+            <article>
                 <div class="info-box">
-                    <strong>How it works:</strong> Instead of giving you direct answers, the Socratic Tutor will ask you questions to help you think through the problem yourself. This develops deeper understanding.
+                    <h3>Quick Navigation</h3>
+                    <p>This page contains all the AI tools and resources you need for your studies. Click on the links to access each tool.</p>
+                    <ul>
+                        <li><strong>All tools require university login</strong> - Use your Newman credentials</li>
+                        <li><strong>Custom agents work best</strong> in the main Copilot interface (not in Word/Outlook pop-ups)</li>
+                        <li><strong>Save your work regularly</strong> - AI tools do not auto-save</li>
+                    </ul>
                 </div>
-            </div>
 
-            <div class="resource-card">
-                <h3>NotebookLM (Google)</h3>
-                <p><strong>Access:</strong> <a href="https://notebooklm.google.com" target="_blank" rel="noopener noreferrer" class="btn">Go to NotebookLM</a></p>
-                <p><strong>Login:</strong> Use a Google account (personal or create one for free)</p>
-                <p><strong>Best for:</strong></p>
-                <ul>
-                    <li>Summarising research articles</li>
-                    <li>Comparing multiple sources</li>
-                    <li>Creating audio overviews for revision</li>
-                    <li>Source-grounded research (less likely to "hallucinate")</li>
-                    <li>Literature review support</li>
-                </ul>
-                <p><strong>Key advantage:</strong> Only uses documents YOU upload, provides citations showing exactly where information came from</p>
-                <p><strong>Quick start:</strong></p>
-                <ol>
-                    <li>Click "+ New notebook"</li>
-                    <li>Click "+ Add Source" and upload a PDF or paste text</li>
-                    <li>Ask questions about your sources</li>
-                    <li>Generate summaries or audio overviews</li>
-                    <li>Click citation numbers [1] [2] to see source</li>
-                </ol>
-            </div>
+                <h2>Core AI Tools</h2>
 
-            <h2>Birmingham Newman Library Resources</h2>
-
-            <div class="resource-card">
-                <h3>Library Homepage</h3>
-                <p><strong>Access:</strong> <a href="https://libguides.newman.ac.uk/home" target="_blank" rel="noopener noreferrer" class="btn">Newman Library</a></p>
-                <p><strong>Use for:</strong></p>
-                <ul>
-                    <li>Accessing all library resources</li>
-                    <li>Finding databases and journals</li>
-                    <li>Getting research help</li>
-                    <li>Booking librarian appointments</li>
-                </ul>
-            </div>
-
-            <div class="resource-card">
-                <h3>SPORTDiscus Database</h3>
-                <p><strong>Access:</strong> Via <a href="https://libguides.newman.ac.uk/az.php" target="_blank" rel="noopener noreferrer" class="btn">Library A-Z Databases</a> (search for "SPORTDiscus")</p>
-                <p><strong>Purpose:</strong> Premier database for sport science research</p>
-                <p><strong>Best for finding:</strong></p>
-                <ul>
-                    <li>Peer-reviewed sport science articles</li>
-                    <li>Exercise physiology research</li>
-                    <li>Biomechanics studies</li>
-                    <li>Sports psychology research</li>
-                    <li>Coaching and training studies</li>
-                </ul>
-                <p><strong>Search tips:</strong></p>
-                <ul>
-                    <li>Use specific terms: "plyometric training" not just "training"</li>
-                    <li>Combine concepts with AND: "strength training AND elderly"</li>
-                    <li>Use quotes for exact phrases: "maximal oxygen uptake"</li>
-                    <li>Tick "peer-reviewed" box for quality sources</li>
-                    <li>Limit by date (last 5-10 years for current research)</li>
-                </ul>
-            </div>
-
-            <div class="resource-card">
-                <h3>Referencing Guide</h3>
-                <p><strong>Access:</strong> <a href="https://libguides.newman.ac.uk/referencing/" target="_blank" rel="noopener noreferrer" class="btn">Newman Referencing Guide</a></p>
-                <p><strong>Use for:</strong></p>
-                <ul>
-                    <li>Learning how to cite sources correctly</li>
-                    <li>Understanding Harvard referencing style</li>
-                    <li>Citing books, journals, websites</li>
-                    <li>Citing AI tools (when required at Levels 4-6)</li>
-                </ul>
-                <p><strong>Citing AI:</strong></p>
-                <code>Microsoft Copilot (2025) [Large language model]. Available at: https://copilot.microsoft.com (Accessed: 10 November 2025).</code>
-            </div>
-
-            <h2 id="lab-reports">Data Analysis & Statistics</h2>
-
-            <div class="resource-card">
-                <h3>JASP Statistical Software</h3>
-                <p><strong>Download:</strong> <a href="https://jasp-stats.org/" target="_blank" rel="noopener noreferrer" class="btn">JASP Website</a></p>
-                <p><strong>Purpose:</strong> Free, user-friendly software for statistical analysis</p>
-                <p><strong>Use for:</strong></p>
-                <ul>
-                    <li>T-tests and ANOVAs</li>
-                    <li>Correlation and regression</li>
-                    <li>Bayesian statistics</li>
-                    <li>Lab report data analysis</li>
-                    <li>Research project analysis</li>
-                </ul>
-                <p><strong>Using AI with JASP:</strong></p>
-                <ul>
-                    <li><strong>Allowed:</strong> Using AI to understand which test to use</li>
-                    <li><strong>Allowed:</strong> Using AI to interpret JASP output</li>
-                    <li><strong>Check assignment brief:</strong> Some calculations may be Level 1 (no AI)</li>
-                    <li><strong>Always:</strong> Include JASP output in your report</li>
-                    <li><strong>Always:</strong> Verify AI advice against JASP documentation</li>
-                </ul>
-                <p><strong>Example AI prompts for JASP:</strong></p>
-                <ul>
-                    <li>"I have pre-test and post-test scores from 30 participants. What test should I use in JASP?"</li>
-                    <li>"How do I interpret a Bayes Factor of 3.5 in a t-test?"</li>
-                    <li>"Explain the assumptions I need to check for repeated measures ANOVA"</li>
-                </ul>
-            </div>
-
-            <h2 id="reflective">Assessment Type: Reflective Writing</h2>
-            <div class="resource-card">
-                <h3>Using AI for Reflections</h3>
-                <p><strong>Check your assignment brief first!</strong> Reflections are often Level 1 (no AI) or Level 3 (editing only)</p>
-                
-                <p><strong>If Level 1 (No AI):</strong></p>
-                <ul>
-                    <li>Write entirely in your own words</li>
-                    <li>Reflect on YOUR actual experiences</li>
-                    <li>Do not use AI at any stage</li>
-                </ul>
-                
-                <p><strong>If Level 3 (Editing):</strong></p>
-                <ul>
-                    <li>Write your reflection yourself based on real experiences</li>
-                    <li>Can use AI to improve clarity</li>
-                    <li>Must include original version in appendix</li>
-                    <li>AI cannot add content or change meaning</li>
-                </ul>
-                
-                <div class="warning-box">
-                    <strong>Never:</strong> Have AI generate fake experiences or reflections. Your reflection must be authentic to YOU.
+                <div class="resource-card">
+                    <h3>Microsoft Copilot (General)</h3>
+                    <p><strong>What it does:</strong> General-purpose AI assistant for text generation, brainstorming, and editing.</p>
+                    <p><strong>Best for:</strong> Quick questions, image generation, general writing help</p>
+                    <p><strong>Permitted at:</strong> All levels (depending on task)</p>
+                    <p><strong>Key features:</strong></p>
+                    <ul>
+                        <li>Image generation (with Dall-E)</li>
+                        <li>General Q&A</li>
+                        <li>Text drafting and editing</li>
+                        <li>Brainstorming ideas</li>
+                    </ul>
+                    <a href="https://copilot.microsoft.com" target="_blank" rel="noopener noreferrer" class="resource-link">Open Microsoft Copilot</a>
                 </div>
-            </div>
 
-            <h2 id="presentations">Assessment Type: Presentations & Vivas</h2>
-            <div class="resource-card">
-                <h3>Using AI for Presentations</h3>
-                <p><strong>Check your assignment brief!</strong> Different presentations have different AI levels.</p>
-                
-                <p><strong>For SPU412 (Levels 2-3):</strong></p>
-                <ul>
-                    <li>AI for brainstorming structure (Level 2)</li>
-                    <li>AI for editing slides (Level 3)</li>
-                    <li>Must complete AI Evidence Form</li>
-                    <li>See <a href="spu412-guide.html">SPU412 guide</a></li>
-                </ul>
-                
-                <p><strong>For SPU514 (Level 6):</strong></p>
-                <ul>
-                    <li>Must use AI throughout</li>
-                    <li>Must document everything</li>
-                    <li>See <a href="spu514-guide.html">SPU514 guide</a></li>
-                </ul>
-                
-                <p><strong>Viva preparation with AI:</strong></p>
-                <ul>
-                    <li>Practice questions with Socratic Tutor</li>
-                    <li>Anticipate potential questions about your work</li>
-                    <li>Prepare explanations of key concepts</li>
-                    <li>Remember: In the viva YOU must demonstrate understanding</li>
-                </ul>
-            </div>
+                <div class="resource-card">
+                    <h3>NotebookLM</h3>
+                    <p><strong>What it does:</strong> Source-grounded AI that works only with your uploaded documents.</p>
+                    <p><strong>Best for:</strong> Summarising academic sources, literature analysis, research organisation</p>
+                    <p><strong>Permitted at:</strong> All levels (Levels 3-6 for academic work)</p>
+                    <p><strong>Key features:</strong></p>
+                    <ul>
+                        <li>Citations to exact source locations</li>
+                        <li>No hallucinations (only uses your documents)</li>
+                        <li>Audio summary generation</li>
+                        <li>Multi-source synthesis</li>
+                    </ul>
+                    <p><strong>Why it is safer:</strong> Because it only uses YOUR documents, it cannot make up facts or cite sources that do not exist.</p>
+                    <a href="https://notebooklm.google.com" target="_blank" rel="noopener noreferrer" class="resource-link">Open NotebookLM</a>
+                </div>
 
-            <h2 id="dissertation">Assessment Type: Modified Dissertation (Level 6)</h2>
-            <div class="resource-card">
-                <h3>Dissertation Support</h3>
-                <p><strong>Format:</strong> 6000 words + Viva + Academic Poster</p>
-                <p><strong>AI Level:</strong> Varies by section - check with your supervisor</p>
-                
-                <p><strong>AI can help with:</strong></p>
-                <ul>
-                    <li>Literature review synthesis (using NotebookLM)</li>
-                    <li>Methodology development</li>
-                    <li>Data analysis planning</li>
-                    <li>Results interpretation</li>
-                    <li>Academic poster design</li>
-                    <li>Viva preparation</li>
-                </ul>
-                
-                <p><strong>Project management with AI:</strong></p>
-                <ul>
-                    <li>Create timeline and milestones</li>
-                    <li>Break down complex tasks</li>
-                    <li>Identify potential challenges</li>
-                    <li>Plan data collection</li>
-                </ul>
-                
-                <p><strong>Resources:</strong></p>
-                <ul>
-                    <li>Work through <a href="expert.html">Expert Pathway</a></li>
-                    <li>Regular supervision meetings</li>
-                    <li>Ethics approval guidance</li>
-                </ul>
-            </div>
+                <h2>Custom Copilot Agents</h2>
+                <p><strong>Important:</strong> You must add these agents before you can use them. Click each link to add to your Copilot.</p>
 
-            <h2>External Learning Resources</h2>
+                <div class="resource-card">
+                    <h3>Academic Rigour Assistant</h3>
+                    <p><strong>What it does:</strong> Provides evidence-based, carefully considered responses for academic work.</p>
+                    <p><strong>Best for:</strong> Understanding research evidence, checking accuracy, exploring limitations</p>
+                    <p><strong>Permitted at:</strong> Levels 3-6</p>
+                    <p><strong>Key features:</strong></p>
+                    <ul>
+                        <li>Evidence-first approach</li>
+                        <li>Acknowledges uncertainties and limitations</li>
+                        <li>Uses appropriate academic language</li>
+                        <li>Sport science aware</li>
+                    </ul>
+                    <p><strong>Example use:</strong> "What is the research evidence for foam rolling improving recovery?"</p>
+                    <a href="https://m365.cloud.microsoft:443/chat/?titleId=T_ef40e31a-faa0-5e5c-2f90-a22c14d9ed13&source=embedded-builder" target="_blank" rel="noopener noreferrer" class="resource-link">Add Academic Rigour Assistant</a>
+                </div>
 
-            <div class="resource-card">
-                <h3>AI for Students Comprehensive Website</h3>
-                <p><strong>Access:</strong> <a href="https://tony-myers.github.io/AI-for-students" target="_blank" rel="noopener noreferrer" class="btn">AI for Students Site</a></p>
-                <p><strong>Contains:</strong></p>
-                <ul>
-                    <li>Core concepts and setup guides</li>
-                    <li>Research and essay writing guidance</li>
-                    <li>Academic integrity principles</li>
-                    <li>Practical prompting techniques</li>
-                    <li>Verification and fact-checking methods</li>
-                </ul>
-                <p><strong>Use this as:</strong> Supplementary reading alongside your pathway work</p>
-            </div>
+                <div class="resource-card">
+                    <h3>Socratic Tutor</h3>
+                    <p><strong>What it does:</strong> Helps you learn by asking questions rather than giving answers directly.</p>
+                    <p><strong>Best for:</strong> Understanding difficult concepts, developing critical thinking</p>
+                    <p><strong>Permitted at:</strong> All levels (as a learning tool)</p>
+                    <p><strong>Key features:</strong></p>
+                    <ul>
+                        <li>Guides you to answers through questions</li>
+                        <li>Encourages active thinking</li>
+                        <li>Identifies knowledge gaps</li>
+                        <li>Builds understanding, not just answers</li>
+                    </ul>
+                    <p><strong>Example use:</strong> "I do not understand the difference between Type I and Type II muscle fibres."</p>
+                    <a href="https://m365.cloud.microsoft:443/chat/?titleId=T_29420ced-78cb-75c9-d668-92906ac92f64&source=embedded-builder" target="_blank" rel="noopener noreferrer" class="resource-link">Add Socratic Tutor</a>
+                </div>
 
-            <h2>Quick Reference: Tool Selection Guide</h2>
-            <div class="info-box">
-                <p><strong>Need to brainstorm ideas?</strong> → Use general Copilot</p>
-                <p><strong>Need to understand a concept?</strong> → Use Socratic Tutor</p>
-                <p><strong>Need to fact-check a claim?</strong> → Use Academic Rigour Assistant</p>
-                <p><strong>Need to summarise research articles?</strong> → Use NotebookLM</p>
-                <p><strong>Need to find research articles?</strong> → Use SPORTDiscus</p>
-                <p><strong>Need to analyse data?</strong> → Use JASP</p>
-                <p><strong>Need to cite sources?</strong> → Use Referencing Guide</p>
-                <p><strong>Not sure which tool?</strong> → Ask on the <a href="faq.html">FAQ page</a> or contact your lecturer</p>
-            </div>
+                <div class="resource-card">
+                    <h3>Academic Feedback Assistant</h3>
+                    <p><strong>What it does:</strong> Converts marker notes into structured, student-facing feedback.</p>
+                    <p><strong>Best for:</strong> Lecturers providing consistent, formatted feedback to students</p>
+                    <p><strong>Note:</strong> This tool is primarily for staff, not students</p>
+                    <p><strong>Key features:</strong></p>
+                    <ul>
+                        <li>Formats marker notes into professional feedback</li>
+                        <li>Adds institutional information</li>
+                        <li>Ensures consistency</li>
+                        <li>Saves administrative time</li>
+                    </ul>
+                    <a href="https://m365.cloud.microsoft:443/chat/?titleId=T_0d907d8e-7969-f76d-f5be-339ec5474aac&source=embedded-builder" target="_blank" rel="noopener noreferrer" class="resource-link">Add Academic Feedback Assistant</a>
+                </div>
 
-            <h2>Getting Additional Help</h2>
-            <ul>
-                <li><strong>Technical issues:</strong> IT Services Help Desk</li>
-                <li><strong>Library support:</strong> Book a librarian appointment via library website</li>
-                <li><strong>AI Skills:</strong> Work through appropriate <a href="index.html">pathway materials</a></li>
-                <li><strong>Academic integrity questions:</strong> Contact module leader or see <a href="faq.html">FAQ</a></li>
-                <li><strong>Assessment-specific help:</strong> See your assignment brief and module leader</li>
-            </ul>
+                <h2>Research Databases</h2>
+
+                <div class="resource-card">
+                    <h3>SPORTDiscus</h3>
+                    <p><strong>What it does:</strong> Specialist database for sport science and sport medicine research.</p>
+                    <p><strong>Best for:</strong> Finding peer-reviewed sport science research</p>
+                    <p><strong>How to access:</strong> Through the university library website (requires login)</p>
+                    <p><strong>Why use it:</strong> More reliable than general Google searches; peer-reviewed academic sources</p>
+                    <a href="https://library.newman.ac.uk" target="_blank" rel="noopener noreferrer" class="resource-link">Access via Library</a>
+                </div>
+
+                <div class="resource-card">
+                    <h3>Google Scholar</h3>
+                    <p><strong>What it does:</strong> Search engine for academic research across all disciplines.</p>
+                    <p><strong>Best for:</strong> Quick searches, finding specific articles, checking citations</p>
+                    <p><strong>How to access:</strong> Free, no login required</p>
+                    <p><strong>Tip:</strong> Use the "Cited by" feature to find more recent research on the same topic</p>
+                    <a href="https://scholar.google.com" target="_blank" rel="noopener noreferrer" class="resource-link">Open Google Scholar</a>
+                </div>
+
+                <h2>Documentation & Forms</h2>
+
+                <div class="resource-card">
+                    <h3>AI Evidence Form</h3>
+                    <p><strong>What it is:</strong> The official form for documenting your AI use in assessments.</p>
+                    <p><strong>When to use:</strong> Required for ALL assessments that permit AI use (Levels 2-6)</p>
+                    <p><strong>What to include:</strong></p>
+                    <ul>
+                        <li>Which AI tools you used</li>
+                        <li>What prompts you gave the AI</li>
+                        <li>Which sections of your work involved AI</li>
+                        <li>How you verified or modified AI outputs</li>
+                    </ul>
+                    <p><strong>Important:</strong> Incomplete forms may be treated as academic misconduct.</p>
+                    <p><em>Form available on your module's Canvas page or from your lecturer.</em></p>
+                </div>
+
+                <h2>Additional Learning Resources</h2>
+
+                <div class="resource-card">
+                    <h3>AI for Students Website</h3>
+                    <p><strong>What it is:</strong> Comprehensive guide to using AI responsibly in higher education.</p>
+                    <p><strong>Created by:</strong> Tony Myers, Birmingham Newman University</p>
+                    <p><strong>Contents:</strong></p>
+                    <ul>
+                        <li>Detailed explanations of the 6-level framework</li>
+                        <li>Discipline-specific examples</li>
+                        <li>Assessment guidance</li>
+                        <li>Academic integrity advice</li>
+                        <li>Video tutorials</li>
+                    </ul>
+                    <a href="https://tony-myers.github.io/AI-for-students" target="_blank" rel="noopener noreferrer" class="resource-link">Visit AI for Students</a>
+                </div>
+
+                <div class="resource-card">
+                    <h3>AI for Education (For Lecturers)</h3>
+                    <p><strong>What it is:</strong> Resources for teaching staff on integrating AI in education.</p>
+                    <p><strong>Note:</strong> This is primarily for staff, but students may find the background information useful.</p>
+                    <a href="https://tony-myers.github.io/AI-for-education" target="_blank" rel="noopener noreferrer" class="resource-link">Visit AI for Education</a>
+                </div>
+
+                <h2>Quick Reference: Which Tool for Which Task?</h2>
+
+                <div class="info-box">
+                    <h4>Brainstorming ideas (Level 2)</h4>
+                    <p>→ Use <strong>Microsoft Copilot</strong></p>
+
+                    <h4>Understanding difficult concepts</h4>
+                    <p>→ Use <strong>Socratic Tutor</strong></p>
+
+                    <h4>Summarising research articles (Level 3-6)</h4>
+                    <p>→ Use <strong>NotebookLM</strong></p>
+
+                    <h4>Editing your writing (Level 3)</h4>
+                    <p>→ Use <strong>Microsoft Copilot</strong></p>
+
+                    <h4>Understanding research evidence (Level 4-6)</h4>
+                    <p>→ Use <strong>Academic Rigour Assistant</strong></p>
+
+                    <h4>Literature review organisation (Level 4-6)</h4>
+                    <p>→ Use <strong>NotebookLM</strong> with multiple sources</p>
+
+                    <h4>Finding academic sources (All levels)</h4>
+                    <p>→ Use <strong>SPORTDiscus</strong> or <strong>Google Scholar</strong></p>
+
+                    <h4>Fact-checking AI claims (All levels)</h4>
+                    <p>→ Use <strong>Academic Rigour Assistant</strong> + <strong>SPORTDiscus</strong></p>
+                </div>
+
+                <h2>Contact & Support</h2>
+
+                <div class="resource-card">
+                    <h3>Need Help?</h3>
+                    <p><strong>For technical issues with tools:</strong></p>
+                    <ul>
+                        <li>Microsoft Copilot problems → IT Services</li>
+                        <li>Database access → Library Services</li>
+                    </ul>
+                    
+                    <p><strong>For guidance on AI use:</strong></p>
+                    <ul>
+                        <li>Module-specific questions → Your module lecturer</li>
+                        <li>General AI literacy support → Tony Myers: <a href="mailto:tony.myers@newman.ac.uk">tony.myers@newman.ac.uk</a></li>
+                        <li>Academic integrity concerns → Academic Skills team</li>
+                    </ul>
+                </div>
+
+            </article>
         </main>
 
         <footer>
             <p>Tony Myers 2025 | Birmingham Newman University | <a href="mailto:tony.myers@newman.ac.uk">tony.myers@newman.ac.uk</a></p>
         </footer>
     </div>
+
 </body>
 </html>
