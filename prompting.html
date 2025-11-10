@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en-GB" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AI for Students · Prompting Guide</title>
+  <meta name="description" content="Learn how to craft effective prompts and questions for AI tools to get better results and avoid confusion." />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="css/theme.css" />
+</head>
+<body class="bg-slate-50 text-slate-800">
+  <!-- Reusing same nav header (omitted here for brevity, identical to Understanding AI page header) -->
+  <header class="bg-white/90 border-b border-slate-200 sticky top-0">
+    <nav class="container mx-auto px-4 h-16 flex items-center justify-between">
+      <a href="index.html" class="text-xl font-bold text-sky-700">AI for Students</a>
+      <div class="hidden md:flex items-center gap-2">
+        <a href="index.html" class="nav-link px-3 py-2">Home</a>
+        <div class="relative" @mouseenter="openDropdown='start'" @mouseleave="openDropdown=null">
+          <button class="nav-link px-3 py-2 flex items-center gap-1">Getting Started 
+            <svg class="w-4 h-4" viewBox="0 0 20 20" fill="currentColor"><path d="M5.23 7.21a.75.75 0 011.06.02L10 10.94l3.71-3.71a.75.75 0 111.06 1.06l-4.24 4.24a.75.75 0 01-1.06 0L5.21 8.29a.75.75 0 01.02-1.08z"/></svg>
+          </button>
+          <div x-show="openDropdown==='start'" class="absolute left-0 mt-2 w-64 bg-white rounded-md shadow-lg py-2 border border-slate-200 z-40">
+            <a class="block px-4 py-2 hover:bg-sky-50" href="understanding-ai.html">Understanding AI</a>
+            <a class="block px-4 py-2 hover:bg-sky-50" href="prompting.html">Prompting Guide</a>
+          </div>
+        </div>
+        <div class="relative" @mouseenter="openDropdown='study'" @mouseleave="openDropdown=null">
+          <button class="nav-link px-3 py-2 flex items-center gap-1">Study Support 
+            <svg class="w-4 h-4" viewBox="0 0 20 20" fill="currentColor"><path d="M5.23 7.21a.75.75 0 011.06.02L10 10.94l3.71-3.71a.75.75 0 111.06 1.06l-4.24 4.24a.75.75 0 01-1.06 0L5.21 8.29a.75.75 0 01.02-1.08z"/></svg>
+          </button>
+          <div x-show="openDropdown==='study'" class="absolute left-0 mt-2 w-64 bg-white rounded-md shadow-lg py-2 border border-slate-200 z-40">
+            <a class="block px-4 py-2 hover:bg-sky-50" href="study-strategies.html">Study Strategies</a>
+            <a class="block px-4 py-2 hover:bg-sky-50" href="ai-platforms.html">AI Tools</a>
+            <a class="block px-4 py-2 hover:bg-sky-50" href="toolkit.html">Toolkit</a>
+          </div>
+        </div>
+        <div class="relative" @mouseenter="openDropdown='integrity'" @mouseleave="openDropdown=null">
+          <button class="nav-link px-3 py-2 flex items-center gap-1">Integrity & Policy 
+            <svg class="w-4 h-4" viewBox="0 0 20 20" fill="currentColor"><path d="M5.23 7.21a.75.75 0 011.06.02L10 10.94l3.71-3.71a.75.75 0 111.06 1.06l-4.24 4.24a.75.75 0 01-1.06 0L5.21 8.29a.75.75 0 01.02-1.08z"/></svg>
+          </button>
+          <div x-show="openDropdown==='integrity'" class="absolute left-0 mt-2 w-64 bg-white rounded-md shadow-lg py-2 border border-slate-200 z-40">
+            <a class="block px-4 py-2 hover:bg-sky-50" href="academic-integrity.html">Academic Integrity</a>
+            <a class="block px-4 py-2 hover:bg-sky-50" href="framework.html">6-Level Framework</a>
+            <a class="block px-4 py-2 hover:bg-sky-50" href="faq.html">FAQ</a>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main class="container mx-auto px-4 py-8">
+    <section class="bg-blue-100 text-slate-800 rounded-2xl p-6 sm:p-10 mb-8">
+      <h1 class="text-3xl md:text-4xl font-extrabold text-blue-800">AI Prompting Guide</h1>
+      <p class="mt-4 text-slate-700 max-w-3xl">
+        Asking the right question is half the task! This guide will show you how to communicate with AI tools to get the best results. Whether you’re brainstorming, editing, or researching, these tips will help you craft prompts that give you useful, relevant answers.
+      </p>
+    </section>
+
+    <section class="mb-12">
+      <h2 class="text-2xl font-bold mb-4">Why do prompts matter?</h2>
+      <p class="mb-4">
+        AI isn’t a mind-reader – it responds based on the prompt you give. A vague or overly broad prompt can lead to generic or off-target answers. A well-written prompt, on the other hand, can dramatically improve the quality of AI’s output. Essentially, <strong>better question → better answer</strong>.
+      </p>
+      <p>
+        Think of talking to AI like giving instructions to a very literal person. You usually need to provide context and be specific about what you want.
+      </p>
+    </section>
+
+    <section class="mb-12">
+      <h2 class="text-2xl font-bold mb-4">General Tips for Effective Prompts</h2>
+      <div class="info-box p-5 mb-6">
+        <ul class="list-disc list-inside space-y-2">
+          <li><strong>Be specific:</strong> If you want a summary of a journal article, mention the article or at least the topic and scope. Saying “Tell me about exercise” will yield a random broad answer, but “Summarise the key benefits of exercise on mental health” is clearer.</li>
+          <li><strong>Provide context:</strong> Let the AI know your role or what you’re working on. For example, “I am a sport science student. Help me brainstorm ideas for a nutrition project” will tailor the response better than just “Give me project ideas.”</li>
+          <li><strong>State the format:</strong> If you need the answer in a certain form (bullet points, an essay outline, a table), include that in your prompt. e.g. “List 3 bullet point ideas...” or “Give the answer in a table with pros and cons.”</li>
+          <li><strong>Break it down:</strong> For complex tasks, ask step by step. It’s often better to ask two or three smaller questions than one huge one. AI can lose focus in very long prompts.</li>
+          <li><strong>Use examples:</strong> If you have a specific style or type of answer in mind, you can prompt with an example. e.g. “Explain X in a way a 12-year-old would understand.” or “Generate a sample reference list entry for a journal article (APA style).”</li>
+          <li><strong>Double-check factual prompts:</strong> Remember that AI might bluff if it doesn’t know something [oai_citation:88‡file_00000000e2ec71f4a5ddb19c1bac8c3d](file://file_00000000e2ec71f4a5ddb19c1bac8c3d#:~:text=%3Cdiv%20class%3D%22p,your%20own%3B%20cite%20tools%20where). If you ask for a statistic or a reference, be prepared to verify it. Sometimes asking “provide sources” can help, but always cross-verify those sources.</li>
+        </ul>
+      </div>
+      <p class="mb-4">
+        Additionally, when the AI’s answer isn’t what you expected, don’t be afraid to <strong>refine and ask again</strong>. You can add details to your prompt or say “That’s not what I needed, I meant XYZ...” and the AI will usually adapt.
+      </p>
+      <p>
+        Prompting is an iterative process – it’s normal to go back and forth a bit to get a perfect answer.
+      </p>
+    </section>
+
+    <section class="mb-12">
+      <h2 class="text-2xl font-bold mb-4">Prompt Examples for Common Scenarios</h2>
+      <div class="example-box p-4 mb-6">
+        <h4 class="font-semibold text-slate-800 mb-2">1. Brainstorming Ideas (Level 2 use)</h4>
+        <p class="text-slate-800 mb-1"><em>Assignment:</em> “Find a unique sport psychology topic for an essay.”</p>
+        <p class="text-slate-800 mb-1"><em>Poor prompt:</em> “Give me an essay topic.”</p>
+        <p class="text-slate-800 mb-1"><em>Better prompt:</em> “I’m looking for unique essay topics in <strong>sport psychology</strong>, especially related to <strong>motivation techniques for young athletes</strong>. Can you suggest 3 possible research questions?”</p>
+        <p class="text-slate-800"><em>Why it’s better:</em> It provides context (sport psychology, young athletes, motivation) and what format is desired (3 research questions).</p>
+      </div>
+      <div class="example-box p-4 mb-6">
+        <h4 class="font-semibold text-slate-800 mb-2">2. Improving Writing (Level 3 use)</h4>
+        <p class="text-slate-800 mb-1"><em>Task:</em> You wrote a paragraph but it sounds awkward.</p>
+        <p class="text-slate-800 mb-1"><em>Original text:</em> “Sports is good for you. It can make people feel better. Exercise helps mental health.”</p>
+        <p class="text-slate-800 mb-1"><em>Prompt:</em> “Improve the clarity and academic tone of the following paragraph about exercise and mental health, without adding new information: [paste paragraph].”</p>
+        <p class="text-slate-800"><em>What this does:</em> It tells the AI exactly what to do (clarify and formalize), what it’s about (exercise and mental health), and importantly, not to add info (so it doesn’t hallucinate facts). This aligns with how we want to use AI at Level 3 – polishing our own words [oai_citation:89‡file_000000008a3471f4b0a93825a9a9bcc3](file://file_000000008a3471f4b0a93825a9a9bcc3#:~:text=,ul) [oai_citation:90‡file_000000008a3471f4b0a93825a9a9bcc3](file://file_000000008a3471f4b0a93825a9a9bcc3#:~:text=,ul).</p>
+      </div>
+      <div class="example-box p-4 mb-6">
+        <h4 class="font-semibold text-slate-800 mb-2">3. Research Help (Level 4 use)</h4>
+        <p class="text-slate-800 mb-1"><em>Task:</em> You need to understand current research on a topic.</p>
+        <p class="text-slate-800 mb-1"><em>Prompt:</em> “Summarise the consensus from <strong>recent research (2015-2023)</strong> on <strong>high-intensity interval training (HIIT) effects on cardiovascular fitness</strong>. Provide 3 key findings and mention the source (if possible).”</p>
+        <p class="text-slate-800"><em>Why this works:</em> It specifies a timeframe (recent research), a topic (HIIT and cardio fitness), and asks for key findings. It even asks for sources. While the AI might not always give perfect citations, this prompt encourages it to produce a focused, research-oriented summary. Remember: you’d still verify with actual articles, but it’s a good start [oai_citation:91‡file_000000008a3471f4b0a93825a9a9bcc3](file://file_000000008a3471f4b0a93825a9a9bcc3#:~:text=%3Cp%3E%3Cstrong%3EAI%20prompt%3A%3C%2Fstrong%3E%20,p).</p>
+      </div>
+      <div class="example-box p-4 mb-6">
+        <h4 class="font-semibold text-slate-800 mb-2">4. Debugging AI’s Answer</h4>
+        <p class="text-slate-800 mb-1"><em>Scenario:</em> The AI gives an answer that’s not exactly what you need.</p>
+        <p class="text-slate-800 mb-1"><em>Your follow-up prompt:</em> “The answer you gave is focusing on general fitness. Can you narrow it to <strong>focus specifically on mental health benefits</strong>, and give me an example study result?”</p>
+        <p class="text-slate-800"><em>What this does:</em> You’re guiding the AI to correct its course – specifying the angle (mental health) and asking for an example. Always feel free to correct or refine the AI like this. It’s not cheating the system; it’s collaborating to get the info you actually need.</p>
+      </div>
+    </section>
+
+    <section>
+      <h2 class="text-2xl font-bold mb-4">Wrap Up: Good Prompts Save Time</h2>
+      <p class="mb-4">
+        Learning to write good prompts might feel odd at first, but it quickly becomes second nature. By being clear and specific, you’ll spend less time fixing AI’s output and more time using the output effectively. This is a skill worth developing – not just for university, but for any time you use AI tools in the future.
+      </p>
+      <p>
+        You can always refer back to this guide if you’re stuck with an AI that isn’t giving the answers you need. A few tweaks to your question can make all the difference. Happy prompting!
+      </p>
+    </section>
+  </main>
+
+  <footer class="bg-slate-800 text-white py-6 text-center text-sm mt-12">
+    Tony Myers © 2025 | Birmingham Newman University
+  </footer>
+</body>
+</html>
