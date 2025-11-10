@@ -1,9 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-GB">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AI Ethics, Bias, and Data Privacy - AI@BNU</title>
+    <title>Ethics & Bias in AI - AI Skills Development</title>
+    <!-- This stylesheet is copied from index.html for consistency -->
     <style>
         body {
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
@@ -13,7 +14,7 @@
             margin: 0;
             padding: 0;
         }
-       .container {
+        .container {
             max-width: 1000px;
             margin: 20px auto;
             padding: 20px;
@@ -22,7 +23,8 @@
             box-shadow: 0 2px 8px rgba(0,0,0,0.08);
         }
         header {
-            background: linear-gradient(135deg, #56ab2f 0%, #a8e063 100%);
+            /* Using a warning orange gradient for this page */
+            background: linear-gradient(135deg, #e67e22 0%, #f39c12 100%);
             color: white;
             padding: 2rem 1rem;
             margin: -20px -20px 20px -20px;
@@ -37,7 +39,10 @@
         header p {
             margin: 10px 0 0 0;
             opacity: 0.95;
+            font-size: 1.1rem;
         }
+
+        /* --- NAVIGATION --- */
         nav {
             background-color: #ecf0f1;
             padding: 12px;
@@ -50,26 +55,28 @@
             display: inline-block;
             padding: 10px 18px;
             text-decoration: none;
-            color: #005c99; 
+            color: #005c99; /* Accessible Blue */
             font-weight: bold;
             border-radius: 6px;
             margin: 2px;
             transition: all 0.2s ease;
         }
         nav a:hover {
-            background-color: #003d66; 
+            background-color: #003d66; /* Accessible Hover */
             color: #ffffff;
             transform: translateY(-1px);
         }
         nav a.active {
-            background-color: #003d66; 
+            background-color: #003d66; /* Accessible Active */
             color: #ffffff;
         }
+        /* --- END NAVIGATION --- */
+
         h2, h3, h4 {
             color: #2c3e50;
         }
         h2 {
-            border-bottom: 2px solid #56ab2f;
+            border-bottom: 2px solid #e67e22;
             padding-bottom: 8px;
             margin-top: 30px;
             margin-bottom: 15px;
@@ -85,62 +92,54 @@
         li {
             margin-bottom: 10px;
         }
+        
         strong {
             font-weight: bold;
         }
         b {
             font-weight: bold;
         }
-       .module {
+
+        .module {
             background-color: #fdfdfd;
             border: 2px solid #e0e0e0;
-            border-left: 5px solid #56ab2f;
+            border-left: 5px solid #e67e22;
             padding: 25px;
             border-radius: 8px;
             margin-bottom: 25px;
             box-shadow: 0 1px 3px rgba(0,0,0,0.05);
         }
-       .module h3 {
+        .module h3 {
             margin-top: 0;
-            color: #4a9127;
+            color: #d35400;
         }
-       .info-box {
+
+        .info-box {
             background-color: #e8f4f8;
             border-left: 4px solid #3498db;
             padding: 15px;
             margin: 20px 0;
             border-radius: 5px;
         }
-       .info-box a {
-            color: #005c99; 
+        .info-box a {
+            color: #005c99;
             font-weight: bold;
         }
-       .warning-box {
-            background-color: #fff3cd;
+        .warning-box {
+            background-color: #fef9e7;
             border-left: 4px solid #f39c12;
             padding: 15px;
             margin: 20px 0;
             border-radius: 5px;
         }
-       .example-box {
-            background-color: #f9f9f9;
-            border: 2px dashed #bdc3c7;
+        .danger-box {
+            background-color: #fdebd0;
+            border-left: 4px solid #c0392b;
             padding: 15px;
-            margin: 15px 0;
+            margin: 20px 0;
             border-radius: 5px;
         }
-       .example-box h4 {
-            margin-top: 0;
-            color: #7f8c8d;
-        }
-        code {
-            font-family: "Courier New", Courier, monospace;
-            font-size: 0.95em;
-            background-color: #ecf0f1;
-            padding: 2px 6px;
-            border-radius: 3px;
-            color: #b31238; 
-        }
+        
         footer {
             text-align: center;
             margin-top: 40px;
@@ -149,8 +148,9 @@
             font-size: 0.9rem;
             color: #7f8c8d;
         }
+
         @media (max-width: 768px) {
-           .container {
+            .container {
                 margin: 10px;
                 padding: 15px;
             }
@@ -171,78 +171,122 @@
 <body>
     <div class="container">
         <header>
-            <h1>AI Literacy Support for Sport Students</h1>
-            <p>Ethics, Bias, and Data Privacy</p>
+            <h1>Ethics & Bias in AI</h1>
+            <p>Using AI responsibly, safely, and fairly.</p>
         </header>
 
         <nav>
-            <a href="foundation.html">Foundation Pathway</a>
-            <a href="development.html">Development Pathway</a>
-            <a href="advanced.html">Advanced Pathway</a>
-            <a href="expert.html">Expert Pathway</a>
-            <a href="resources.html">Tools & Resources</a>
+            <a href="index.html">Home</a>
+            <a href="foundation.html">Foundation</a>
+            <a href="development.html">Development</a>
+            <a href="advanced.html">Advanced</a>
+            <a href="expert.html">Expert</a>
+            <a href="resources.html">Resources</a>
+            <a href="ethics.html" class="active">Ethics & Bias</a>
+            <a href="citing.html">How to Cite AI</a>
             <a href="Faq.html">FAQ</a>
         </nav>
 
-        <h2>Why Ethics Matters</h2>
-        <p>Beyond the rules of academic integrity, using AI ethically means understanding its real-world impact. As a future professional, you must be aware of the key ethical challenges associated with AI, including data privacy, algorithmic bias, and accountability.</p>
+        <main>
+            <section>
+                <h2>Why Ethics Matter</h2>
+                <p>
+                    Generative AI tools are not neutral. They are created by humans and trained on vast amounts of data
+                    from the internet. This means they inherit human biases, stereotypes, and potential inaccuracies.
+                    As a student and future professional, it is your responsibility to use these tools with a critical
+                    and ethical mindset.
+                </p>
+            </section>
 
-        <div class="module">
-            <h3>Pillar 1: Data Privacy & Security</h3>
-            <p>When you use a public AI tool (like the free version of ChatGPT), your prompts can be saved, reviewed by humans, and even used to train future versions of the model. This creates a significant risk.</p>
-            
-            <div class="warning-box">
-                <h4>Professional & Ethical Warning</h4>
-                <p>You must <strong>NEVER</strong> paste sensitive, confidential, or personally identifiable information into a public AI tool. This includes:</p>
+            <div class="module">
+                <h3>1. Bias in AI</h3>
+                <p>
+                    AI models learn by identifying patterns in data. If the data they are trained on reflects historical
+                    or societal biases, the AI will learn and often amplify those biases.
+                </p>
                 <ul>
-                    <li>Research data containing participant information.</li>
-                    <li>Confidential information from a placement or workplace.</li>
-                    <li>Personal health information about yourself or anyone else.</li>
-                    <li>Unpublished research or intellectual property.</li>
+                    <li>
+                        <strong>Stereotyping:</strong> An AI might associate certain jobs with specific genders (e.g., "all nurses are female,
+                        all engineers are male") or produce culturally insensitive content.
+                    </li>
+                    <li>
+                        <strong>Lack of Representation:</strong> If an AI is trained primarily on Western data, it may fail to understand
+                        or accurately represent non-Western cultures, concepts, or contexts.
+                    </li>
+                    <li>
+                        <strong>"Average" Answers:</strong> AI tends to provide the most common or "average" answer, which can
+                        stifle novel ideas and erase minority viewpoints.
+                    </li>
                 </ul>
-                <p>Doing so is a serious data breach and a violation of professional ethics.</p>
+                <div class="info-box">
+                    <strong>Your Action:</strong> Always critically evaluate AI-generated content. Ask yourself:
+                    "Is this answer fair? Does it make assumptions? Is it missing an important perspective?"
+                    Challenge the AI by asking for alternative viewpoints.
+                </div>
+            </div>
+
+            <div class="module">
+                <h3>2. Data Privacy and Security</h3>
+                <p>
+                    Public AI tools (like the free versions of ChatGPT, Gemini, or Claude) often use your conversations
+                    to train their models. This means any information you paste into the chat could potentially be seen
+                    by researchers or used in future responses.
+                </p>
+                <div class="danger-box">
+                    <strong>NEVER input personal or sensitive information into a public AI tool.</strong>
+                    This includes:
+                    <ul>
+                        <li>Your own (or anyone else's) personal data (name, address, student ID).</li>
+                        <li>Confidential research data (e.g., interview transcripts, participant information).</li>
+                        <li>Unpublished work or sensitive intellectual property.</li>
+                    </ul>
+                    <strong>Note:</strong> University-provided tools, like <strong>Microsoft Copilot</strong> (when signed in
+                    with your university account), operate under different privacy agreements and offer greater data protection.
+                    Check the <a href="resources.html">Tools & Resources</a> page for details.
+                </div>
             </div>
             
-            <h4>Why Our University Tools are Safer</h4>
-            <p>The tools we recommend, like the <strong>Microsoft Copilot</strong> available through your university account, have enhanced data protection. Your prompts are not saved for training the public model. This is why we call this a "walled garden" approach—it's a safer environment for your academic work. However, you should still exercise caution and avoid inputting highly sensitive personal data.</p>
-        </div>
-
-        <div class="module">
-            <h3>Pillar 2: Algorithmic Bias ("Bias In, Bias Out")</h3>
-            <p>AI models are trained on vast amounts of text and images from the internet. This data, created by humans, is full of human biases, stereotypes, and historical inequalities.</p>
-            <p>The AI learns these patterns. This is what "Bias In, Bias Out" means. If the data an AI trained on under-represents women in leadership roles or associates certain sports with specific genders or races, the AI's "knowledge" will reflect and even amplify these biases.</p>
-            
-            <div class="example-box">
-                <h4>Try It Yourself</h4>
-                <p>Go to an AI image generator (like in Microsoft Copilot). Try these prompts and see what you get:</p>
+            <div class="module">
+                <h3>3. Academic Integrity and Your Thinking</h3>
+                <p>
+                    Using AI ethically also means upholding academic integrity. The goal of your education is to develop
+                    <strong>your own</strong> critical thinking, writing, and analytical skills.
+                </p>
                 <ul>
-                    <li>"A picture of a successful CEO"</li>
-                    <li>"A group of nurses"</li>
-                    <li>"A fast runner"</li>
-                    <li>"A photo of a sports scientist"</li>
+                    <li>
+                        <strong>Don't Outsource Your Brain:</strong> Using AI to write an entire essay for you is plagiarism,
+                        the same as copying from a website. It violates university policy and bypasses the entire
+                        learning process.
+                    </li>
+                    <li>
+                        <strong>You Are Responsible:</strong> You are 100% responsible for <strong>everything</strong> you submit.
+                        If an AI "hallucinates" a fake reference, makes a factual error, or produces biased content,
+                        <strong>you</strong> are accountable for that mistake.
+                    </li>
                 </ul>
-                <p>Does the output look diverse? Does it challenge or reinforce stereotypes? This is bias in action. As a sport professional, you must be critical of AI outputs that may reinforce harmful stereotypes about athletes, body types, or abilities.</p>
+                <p>
+                    Refer to the <a href="framework.html">6-Level AI Framework</a> and your module brief to understand
+                    what is permitted for each specific assessment.
+                </p>
             </div>
-        </div>
 
-        <div class="module">
-            <h3>Pillar 3: Intellectual Property & Ownership</h3>
-            <p>The law is still catching up with AI. It is not clear who "owns" AI-generated content. You cannot copyright content created solely by an AI.</p>
-            <p>This is another reason why your <strong>personal contribution, critical evaluation, and modification</strong> are essential. Your academic work must be *your* work. AI can be a collaborator (at Level 5) or a tool (Levels 2-4), but you are the author and owner of the final submission.</p>
-        </div>
-
-        <div class="module">
-            <h3>Pillar 4: Accountability & Hallucinations</h3>
-            <p>As we covered in the <code>understanding.html</code> guide, AI tools can "hallucinate"—make up facts, statistics, and even academic references.</p>
-            <div class="warning-box">
-                <h4>You Are Accountable</h4>
-                <p>If you use AI at Level 4 (Content Generation) and your final submission contains a fake statistic or a non-existent reference that the AI produced, <strong>you are 100% responsible for that error.</strong></p>
-                <p>"The AI told me" is not a valid excuse. It is the academic equivalent of "I found it on Wikipedia." Your job as a university student is to critically verify all information. This is why Level 4 requires <strong>critical evaluation and substantial modification</strong>.</p>
+            <div class="module">
+                <h3>4. Environmental Impact</h3>
+                <p>
+                    Training and running large AI models requires a significant amount of computational power, which
+                    in turn consumes a large amount of energy and water (for cooling data centres).
+                </p>
+                <p>
+                    While your individual use has a small footprint, it's important to be aware of the collective
+                    environmental cost. Be mindful with your queries—try to be specific and iterate in one
+                    conversation rather than starting dozens of new, complex queries.
+                </p>
             </div>
-        </div>
+
+        </main>
 
         <footer>
-            <p>AI Literacy Resources | Birmingham Newman University</p>
+            <p>Tony Myers 2025 | Birmingham Newman University | <a href="mailto:tony.myers@newman.ac.uk">tony.myers@newman.ac.uk</a></p>
         </footer>
     </div>
 </body>
