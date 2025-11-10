@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en-GB" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AI for Students · Study Strategies</title>
+  <meta name="description" content="Learn how to leverage AI tools for note-taking, practice, and studying effectively (and ethically) outside of assignments." />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="css/theme.css" />
+</head>
+<body class="bg-slate-50 text-slate-800">
+  <!-- Assume same nav header as other pages -->
+  <header class="bg-white/90 border-b border-slate-200 sticky top-0">
+    <nav class="container mx-auto px-4 h-16 flex items-center justify-between">
+      <a href="index.html" class="text-xl font-bold text-sky-700">AI for Students</a>
+      <div class="hidden md:flex items-center gap-2">
+        <a href="index.html" class="nav-link px-3 py-2">Home</a>
+        <div class="relative" @mouseenter="openDropdown='start'" @mouseleave="openDropdown=null">
+          <button class="nav-link px-3 py-2 flex items-center gap-1">Getting Started 
+            <svg class="w-4 h-4" viewBox="0 0 20 20" fill="currentColor"><path d="M5.23 7.21a.75.75 0 011.06.02L10 10.94l3.71-3.71a.75.75 0 111.06 1.06l-4.24 4.24a.75.75 0 01-1.06 0L5.21 8.29a.75.75 0 01.02-1.08z"/></svg>
+          </button>
+          <div x-show="openDropdown==='start'" class="absolute left-0 mt-2 w-64 bg-white rounded-md shadow-lg py-2 border border-slate-200 z-40">
+            <a class="block px-4 py-2 hover:bg-sky-50" href="understanding-ai.html">Understanding AI</a>
+            <a class="block px-4 py-2 hover:bg-sky-50" href="prompting.html">Prompting Guide</a>
+          </div>
+        </div>
+        <div class="relative" @mouseenter="openDropdown='study'" @mouseleave="openDropdown=null">
+          <button class="nav-link px-3 py-2 flex items-center gap-1">Study Support 
+            <svg class="w-4 h-4" viewBox="0 0 20 20" fill="currentColor"><path d="M5.23 7.21a.75.75 0 011.06.02L10 10.94l3.71-3.71a.75.75 0 111.06 1.06l-4.24 4.24a.75.75 0 01-1.06 0L5.21 8.29a.75.75 0 01.02-1.08z"/></svg>
+          </button>
+          <div x-show="openDropdown==='study'" class="absolute left-0 mt-2 w-64 bg-white rounded-md shadow-lg py-2 border border-slate-200 z-40">
+            <a class="block px-4 py-2 hover:bg-sky-50" href="study-strategies.html">Study Strategies</a>
+            <a class="block px-4 py-2 hover:bg-sky-50" href="ai-platforms.html">AI Tools</a>
+            <a class="block px-4 py-2 hover:bg-sky-50" href="toolkit.html">Toolkit</a>
+          </div>
+        </div>
+        <div class="relative" @mouseenter="openDropdown='integrity'" @mouseleave="openDropdown=null">
+          <button class="nav-link px-3 py-2 flex items-center gap-1">Integrity & Policy 
+            <svg class="w-4 h-4" viewBox="0 0 20 20" fill="currentColor"><path d="M5.23 7.21a.75.75 0 011.06.02L10 10.94l3.71-3.71a.75.75 0 111.06 1.06l-4.24 4.24a.75.75 0 01-1.06 0L5.21 8.29a.75.75 0 01.02-1.08z"/></svg>
+          </button>
+          <div x-show="openDropdown==='integrity'" class="absolute left-0 mt-2 w-64 bg-white rounded-md shadow-lg py-2 border border-slate-200 z-40">
+            <a class="block px-4 py-2 hover:bg-sky-50" href="academic-integrity.html">Academic Integrity</a>
+            <a class="block px-4 py-2 hover:bg-sky-50" href="framework.html">6-Level Framework</a>
+            <a class="block px-4 py-2 hover:bg-sky-50" href="faq.html">FAQ</a>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main class="container mx-auto px-4 py-8">
+    <section class="bg-emerald-100 text-slate-800 rounded-2xl p-6 sm:p-10 mb-8">
+      <h1 class="text-3xl md:text-4xl font-extrabold text-emerald-800">Study Strategies with AI</h1>
+      <p class="mt-4 text-slate-700 max-w-3xl">
+        Discover how you can use AI as a learning partner outside of your assignments. From summarizing notes to practicing exam questions, here are ways to leverage AI tools to study smarter – while still doing the critical thinking yourself.
+      </p>
+    </section>
+
+    <section class="mb-12">
+      <h2 class="text-2xl font-bold mb-3">AI as Your Personal Tutor</h2>
+      <p class="mb-4">
+        Ever wished you had a tutor on call 24/7? AI tools can’t replace your lecturer or textbooks, but they can act as an <strong>on-demand tutor or study buddy</strong>:
+      </p>
+      <ul class="list-disc list-inside space-y-2 mb-4">
+        <li><strong>Clarifying concepts:</strong> If you’re confused about a term or theory from class, you can ask an AI to explain it in simple terms. For example: “Explain the stretch-shortening cycle in plyometric exercise in simple terms.” The AI’s explanation can give you a starting point, which you can then check against your lecture notes or textbook.</li>
+        <li><strong>Generating examples:</strong> You can prompt AI to give you examples or analogies. e.g., “Give me an example of how classical conditioning works in a sports context.” Sometimes a fresh example can make a concept click.</li>
+        <li><strong>Socratic Tutor mode:</strong> Our <em>Socratic Tutor</em> in Microsoft Copilot (see <a href="resources.html">Resources</a>) is designed to ask you questions instead of just giving answers. This can test your understanding. Try explaining a concept to it – it will probe your explanation with questions, helping you find gaps in your knowledge.</li>
+      </ul>
+      <div class="warning-box p-4">
+        <strong>Note:</strong> Using AI to help you understand course material is <em>not</em> against any rule – it’s like consulting another resource. However, copying an AI’s explanation word-for-word into an assignment **would** be (that would violate Level 1 or 2 rules). Use AI to learn, then put answers in your own words when it comes to assessed work.
+      </div>
+    </section>
+
+    <section class="mb-12">
+      <h2 class="text-2xl font-bold mb-3">Using AI for Notes & Summaries</h2>
+      <p class="mb-4">
+        Struggling with a dense reading? AI can help break it down:
+      </p>
+      <ul class="list-disc list-inside space-y-2 mb-4">
+        <li><strong>Summarizing articles or PDFs:</strong> If you have a PDF of a research paper, you can use NotebookLM or other tools to summarize it [oai_citation:95‡cte.ku.edu](https://cte.ku.edu/ethical-use-ai-writing-assignments#:~:text=,to%20help%20students%20throughout%20the) [oai_citation:96‡cte.ku.edu](https://cte.ku.edu/ethical-use-ai-writing-assignments#:~:text=visualizations.%20,Then). (With NotebookLM, you upload the PDF and ask questions like “What are the key findings?”) This gives you a quick overview <em>but</em> you should still skim the paper to ensure nothing important is missed.</li>
+        <li><strong>Creating study notes:</strong> After a lecture, you could input your raw notes and ask AI to “generate a summary of the key points about [topic].” This can help organize your thoughts. Just be sure to double-check the summary against your notes – AI might omit nuance if your notes were unclear.</li>
+        <li><strong>Flashcards and quizzes:</strong> You can ask AI to create practice questions. e.g., “Make 5 quiz questions (with answers) to test me on the principles of sports biomechanics.” Use these to test yourself. Remember, if any answer seems odd, verify it – AI’s answer accuracy is about as good as the info it was trained on.</li>
+      </ul>
+      <p>
+        Many students find that having AI rephrase or quiz them on material helps with understanding and recall. It’s like studying with a friend – one who happens to have read a million books.
+      </p>
+    </section>
+
+    <section class="mb-12">
+      <h2 class="text-2xl font-bold mb-3">Planning and Time Management</h2>
+      <p class="mb-4">
+        You can even use AI to help with study strategies themselves:
+      </p>
+      <ul class="list-disc list-inside space-y-2 mb-4">
+        <li><strong>Study schedules:</strong> Try asking, “Help me create a 2-week study plan for my exercise physiology exam, covering topics A, B, C.” AI can draft a schedule (e.g., Week 1 covers topic A & B review, Week 2 practice questions, etc.). You should adjust it to fit your actual schedule, but it’s a quick way to get a structured plan.</li>
+        <li><strong>Finding resources:</strong> Need more practice on something? Ask, “What are some free online resources to practice biomechanics calculations?” AI might point you to websites or tools (always vet the suggestions; prefer known sites or those our library recommends).</li>
+        <li><strong>Getting unstuck:</strong> If you’re not sure how to approach an assignment (before any writing happens), you could ask for general guidance: “What are the typical sections in a sports science lab report?” or “How might one approach researching topic X?” AI can offer a starting outline or approach. This isn’t your final work, just tips to get you unstuck and moving in the right direction.</li>
+      </ul>
+      <p>
+        Remember, these uses of AI are *private and preparatory*. You’re using them to enhance your learning process, which is completely fine. It’s similar to googling things – just with more conversational guidance.
+      </p>
+    </section>
+
+    <section>
+      <h2 class="text-2xl font-bold mb-3">Final Advice: Be an Active Learner</h2>
+      <p class="mb-4">
+        AI can definitely make studying more efficient and even more fun. But it works best when you’re actively engaged. For example, when AI gives you a summary, use it as a springboard: delve back into the material to see if you agree. When AI poses questions (Socratic method), try to answer them yourself before asking for the solution.
+      </p>
+      <p class="mb-4">
+        Always remind yourself: <strong>the goal is to learn</strong>. If an AI tool did all your flashcards and you just read the answers without thinking, it wouldn’t stick. Use these tools to complement proven study techniques (writing your own notes, practicing retrieval, etc.), not replace them.
+      </p>
+      <p>
+        If you’re ever unsure whether using AI in a certain way is allowed or wise, feel free to ask your lecturer or check the <a href="faq.html" class="text-emerald-700 hover:underline">FAQ</a>. We’re here to help you learn responsibly in the age of AI. Happy studying!
+      </p>
+    </section>
+  </main>
+
+  <footer class="bg-slate-800 text-white py-6 text-center text-sm mt-12">
+    Tony Myers © 2025 | Birmingham Newman University
+  </footer>
+</body>
+</html>
