@@ -1,3 +1,195 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tools & Resources - AI Skills Development</title>
+  <style>
+    /* 
+      This is the full, combined stylesheet from your other pages,
+      now including the.card and.card-grid styles from index.html
+      to ensure the layout renders correctly.
+    */
+    body {
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+        line-height: 1.6;
+        background-color: #f4f7f6;
+        color: #333;
+        margin: 0;
+        padding: 0;
+    }
+  .container {
+        max-width: 1000px;
+        margin: 20px auto;
+        padding: 20px;
+        background-color: #ffffff;
+        border-radius: 8px;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    }
+    header {
+        background: linear-gradient(135deg, #56ab2f 0%, #a8e063 100%);
+        color: white;
+        padding: 2rem 1rem;
+        margin: -20px -20px 20px -20px;
+        border-radius: 8px 8px 0 0;
+        text-align: center;
+    }
+    header h1 {
+        color: white;
+        margin: 0;
+        font-size: 2rem;
+    }
+    header p {
+        margin: 10px 0 0 0;
+        opacity: 0.95;
+    }
+
+    /* --- NAVIGATION: ACCESSIBILITY FIX --- */
+    nav {
+        background-color: #ecf0f1;
+        padding: 12px;
+        border-radius: 8px;
+        text-align: center;
+        margin-bottom: 25px;
+        box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    }
+    nav a {
+        display: inline-block;
+        padding: 10px 18px;
+        text-decoration: none;
+        color: #005c99; 
+        font-weight: bold;
+        border-radius: 6px;
+        margin: 2px;
+        transition: all 0.2s ease;
+    }
+    nav a:hover {
+        background-color: #003d66; 
+        color: #ffffff;
+        transform: translateY(-1px);
+    }
+    nav a.active {
+        background-color: #003d66; 
+        color: #ffffff;
+    }
+    /* --- END NAVIGATION FIX --- */
+
+    h2, h3, h4 {
+        color: #2c3e50;
+    }
+    h2 {
+        border-bottom: 2px solid #56ab2f;
+        padding-bottom: 8px;
+        margin-top: 30px;
+        margin-bottom: 15px;
+    }
+    h3 {
+        margin-top: 25px;
+        margin-bottom: 12px;
+    }
+    ul, ol {
+        padding-left: 25px;
+        margin: 15px 0;
+    }
+    li {
+        margin-bottom: 10px;
+    }
+    
+    strong {
+        font-weight: bold;
+    }
+    b {
+        font-weight: bold;
+    }
+
+    /* --- CARD STYLES (from index.html) --- */
+   .card-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 20px;
+      margin-top: 20px;
+    }
+   .card {
+      background-color: #fdfdfd;
+      border: 1px solid #e0e0e0;
+      border-radius: 8px;
+      padding: 20px;
+      box-shadow: 0 1px 4px rgba(0,0,0,0.06);
+      display: flex;
+      flex-direction: column;
+    }
+   .card h3 {
+      margin-top: 0;
+      color: #4a9127; /* Green from module style */
+      font-size: 1.25rem;
+    }
+   .card p,.card ul {
+      flex-grow: 1;
+      font-size: 0.95rem;
+    }
+   .card ul {
+      padding-left: 20px; /* Indent lists inside cards */
+    }
+   .card a {
+      display: inline-block;
+      background-color: #005c99;
+      color: #ffffff;
+      text-decoration: none;
+      padding: 10px 15px;
+      border-radius: 6px;
+      font-weight: bold;
+      text-align: center;
+      margin-top: 15px;
+      transition: background-color 0.2s;
+    }
+   .card a:hover {
+      background-color: #003d66;
+    }
+    /* --- END CARD STYLES --- */
+    
+    /* Other module styles (for fallback) */
+  .module {
+        background-color: #fdfdfd;
+        border: 2px solid #e0e0e0;
+        border-left: 5px solid #56ab2f;
+        padding: 25px;
+        border-radius: 8px;
+        margin-bottom: 25px;
+        box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+    }
+  .module h3 {
+        margin-top: 0;
+        color: #4a9127;
+    }
+
+    footer {
+        text-align: center;
+        margin-top: 40px;
+        padding-top: 20px;
+        border-top: 1px solid #ecf0f1;
+        font-size: 0.9rem;
+        color: #7f8c8d;
+    }
+
+    @media (max-width: 768px) {
+      .container {
+            margin: 10px;
+            padding: 15px;
+        }
+        header {
+            margin: -15px -15px 20px -15px;
+            padding: 1.5rem 1rem;
+        }
+        header h1 {
+            font-size: 1.5rem;
+        }
+        nav a {
+            display: block;
+            margin: 5px 0;
+        }
+    }
+</style>
+</head>
 <body>
     <div class="container">
         <header>
@@ -16,96 +208,127 @@
             <a href="Faq.html">FAQ</a>
         </nav>
 
-        <h2>Key Conceptual Guides</h2>
-        <p>Before using AI tools, it is essential to understand the core concepts of ethical use, academic integrity, and proper citation.</p>
-        
-        <div class="module">
-            <h3><a href="ethics.html">Ethics, Bias, and Data Privacy</a></h3>
-            <p>A critical guide to the real-world implications of using AI. This page covers data privacy, how AI can be biased, and your professional responsibilities when handling data.</p>
-        </div>
-        
-        <div class="module">
-            <h3><a href="citing.html">A Practical Guide to Citing AI</a></h3>
-            <p>This guide explains the difference between documenting your AI use (for your marker) and citing it (for your reader). It provides clear, "how-to" examples for APA 7th Edition.</p>
-        </div>
+        <main>
+            <section>
+                <h2>Key Conceptual Guides</h2>
+                <p>Before using AI tools, it is essential to understand the core concepts of ethical use, academic integrity, and proper citation.</p>
+                
+                <div class="card-grid">
+                    <div class="card">
+                        <h3><a href="framework.html" style="background:none; color:#4a9127; padding:0; text-align:left;">The 6-Level AI Framework</a></h3>
+                        <p>The official university policy. This page explains what each level (1-6) means and what is permitted for your assessments.</p>
+                        <a href="framework.html">View Framework</a>
+                    </div>
+                    
+                    <div class="card">
+                        <h3><a href="ethics.html" style="background:none; color:#4a9127; padding:0; text-align:left;">Ethics, Bias, and Data Privacy</a></h3>
+                        <p>A critical guide to the real-world implications of using AI, including data privacy, algorithmic bias, and your professional responsibilities.</p>
+                        <a href="ethics.html">Read Ethics Guide</a>
+                    </div>
+                    
+                    <div class="card">
+                        <h3><a href="citing.html" style="background:none; color:#4a9127; padding:0; text-align:left;">A Practical Guide to Citing AI</a></h3>
+                        <p>This guide explains *when* to cite AI and provides clear "how-to" examples for formatting references using the <strong>Newman Harvard</strong> style.</p>
+                        <a href="citing.html">Read Citing Guide</a>
+                    </div>
+                </div>
+            </section>
 
-        <h2>Core AI Tools (University Recommended)</h2>
-        <p>These are the primary, university-approved tools for your academic work. They are free to use with your university login and offer enhanced data protection.</p>
+            <section>
+                <h2>Core AI Tools (University Recommended)</h2>
+                <p>These are the primary, university-approved tools for your academic work. They are free to use with your university login and offer enhanced data protection.</p>
 
-        <div class="module">
-            <h3>Microsoft Copilot (General)</h3>
-            <ul>
-                <li><strong>What it does:</strong> A general-purpose AI assistant for text generation, brainstorming, and editing.</li>
-                <li><strong>Best for:</strong> Quick questions, image generation, and general writing help.</li>
-                <li><strong>Permitted at:</strong> All levels (depending on the task).</li>
-            </ul>
-        </div>
+                <div class="card-grid">
+                    <div class="card">
+                        <h3>Microsoft Copilot (General)</h3>
+                        <p>A general-purpose AI assistant for text generation, brainstorming, and editing.</p>
+                        <ul>
+                            <li><strong>Best for:</strong> Quick questions, image generation, and general writing help.</li>
+                            <li><strong>Permitted at:</strong> All levels (depending on the task).</li>
+                        </ul>
+                    </div>
 
-        <div class="module">
-            <h3>NotebookLM (from Google)</h3>
-            <ul>
-                <li><strong>What it does:</strong> A source-grounded AI that only works with documents you upload.</li>
-                <li><strong>Best for:</strong> Summarising academic sources, literature analysis, and research organisation.</li>
-                <li><strong>Why it's safer:</strong> Because it is source-grounded, it only uses *your* documents. It cannot "hallucinate" facts or cite sources that do not exist.</li>
-                <li><strong>Permitted at:</strong> All levels (Levels 3-6 for academic work).</li>
-            </ul>
-        </div>
+                    <div class="card">
+                        <h3>NotebookLM (from Google)</h3>
+                        <p>A source-grounded AI that only works with documents you upload. It is safer because it cannot "hallucinate" facts or cite sources that do not exist.</p>
+                        <ul>
+                            <li><strong>Best for:</strong> Summarising academic sources, literature analysis, and research organisation.</li>
+                            <li><strong>Permitted at:</strong> Levels 3-6 for academic work.</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
 
-        <h2>Custom Copilot Agents</h2>
-        <p>These are specialized AI agents that must be added to the main Copilot interface for best use.</p>
+            <section>
+                <h2>Custom Copilot Agents</h2>
+                <p>These are specialized AI agents, created by your tutors, that must be added to the main Copilot interface for best use.</p>
 
-        <div class="module">
-            <h3>Academic Rigour Assistant</h3>
-            <ul>
-                <li><strong>What it does:</strong> Provides evidence-based, carefully considered responses for academic work.</li>
-                <li><strong>Best for:</strong> Understanding research evidence, checking accuracy, and exploring limitations.</li>
-                <li><strong>Perm---itted at:</strong> Levels 3-6.</li>
-            </ul>
-        </div>
+                <div class="card-grid">
+                    <div class="card">
+                        <h3>Academic Rigour Assistant</h3>
+                        <p>Provides evidence-based, carefully considered responses for academic work.</p>
+                        <ul>
+                            <li><strong>Best for:</strong> Understanding research evidence, checking accuracy, and exploring limitations.</li>
+                            <li><strong>Permitted at:</strong> Levels 3-6.</li>
+                        </ul>
+                    </div>
 
-        <div class="module">
-            <h3>Socratic Tutor</h3>
-            <ul>
-                <li><strong>What it does:</strong> Helps you learn by asking you questions, rather than giving direct answers.</li>
-                <li><strong>Best for:</strong> Understanding difficult concepts and developing critical thinking.</li>
-                <li><strong>Permitted at:</strong> All levels (as a learning tool).</li>
-            </ul>
-        </div>
+                    <div class="card">
+                        <h3>Socratic Tutor</h3>
+                        <p>Helps you learn by asking you questions, rather than giving direct answers.</p>
+                        <ul>
+                            <li><strong>Best for:</strong> Understanding difficult concepts and developing critical thinking.</li>
+                            <li><strong>Permitted at:</strong> All levels (as a learning tool).</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
 
-        <h2>Research & Verification Databases</h2>
-        <p>AI can generate content, but only these sources can verify it. You must use these to find high-quality academic sources.</p>
+            <section>
+                <h2>Research & Verification Databases</h2>
+                <p>AI can generate content, but only these sources can verify it. You must use these to find high-quality academic sources.</p>
 
-        <div class="module">
-            <h3>SPORTDiscus</h3>
-            <ul>
-                <li><strong>What it does:</strong> A specialist database for sport science and sport medicine research.</li>
-                <li><strong>Best for:</strong> Finding peer-reviewed sport science research.</li>
-                <li><strong>Access:</strong> Through the university library website.</li>
-            </ul>
-        </div>
+                <div class="card-grid">
+                    <div class="card">
+                        <h3>SPORTDiscus</h3>
+                        <p>A specialist database for sport science and sport medicine research.</p>
+                        <ul>
+                            <li><strong>Best for:</strong> Finding peer-reviewed sport science research.</li>
+                            <li><strong>Access:</strong> Through the university library website.</li>
+                        </ul>
+                    </div>
 
-        <div class="module">
-            <h3>Google Scholar</h3>
-            <ul>
-                <li><strong>What it does:</strong> A broad search engine for academic research.</li>
-                <li><strong>Best for:</strong> Quick searches, finding specific articles, and checking citations.</li>
-                <li><strong>Access:</strong> Free, no login required.</li>
-            </ul>
-        </div>
-        
-        <h2>Documentation & Forms</h2>
-        
-        <div class="module">
-            <h3>AI Evidence Form</h3>
-            <ul>
-                <li><strong>What it is:</strong> The official form for documenting AI use in your assessments.</li>
-                <li><strong>When to use:</strong> <strong>Required</strong> for ALL assessments that permit AI use (Levels 2-6).</li>
-                <li><strong>Availability:</strong> Form available on your module's Canvas page or from your lecturer.</li>
-            </ul>
-        </div>
+                    <div class="card">
+                        <h3>Google Scholar</h3>
+                        <p>A broad search engine for academic research. Good for quick searches and checking citations.</p>
+                        <ul>
+                            <li><strong>Best for:</strong> Quick searches, finding specific articles, and checking citations.</li>
+                            <li><strong>Access:</strong> Free, no login required.</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+            
+            <section>
+                <h2>Documentation & Forms</h2>
+                <p>This is the official form for documenting your AI use in any assessment.</p>
+                <div class="card-grid">
+                    <div class="card">
+                        <h3>AI Evidence Form</h3>
+                        <p>The official form for documenting AI use in your assessments.</p>
+                        <ul>
+                            <li><strong>What it is:</strong> The official form for documenting AI use in your assessments.</li>
+                            <li><strong>When to use:</strong> <strong>Required</strong> for ALL assessments that permit AI use (Levels 2-6).</li>
+                            <li><strong>Availability:</strong> On your module's Canvas page or from your lecturer.</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+        </main>
 
         <footer>
             <p>AI Literacy Resources | Birmingham Newman University</p>
         </footer>
     </div>
 </body>
+</html>
