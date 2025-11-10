@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en-GB" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AI for Students · Understanding AI</title>
+  <meta name="description" content="Learn what AI is, how generative AI works, and why it’s important to use it carefully and responsibly." />
+  <!-- Tailwind CSS and theme -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="css/theme.css" />
+</head>
+<body class="bg-slate-50 text-slate-800">
+  <!-- Header / Navigation -->
+  <header class="bg-white/90 backdrop-blur-md border-b border-slate-200 sticky top-0 z-50" x-data="{ openMenu:false, openDropdown:null }">
+    <nav class="container mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+      <!-- Brand -->
+      <a href="index.html" class="text-xl font-bold text-sky-700">AI for Students</a>
+      <!-- Desktop nav -->
+      <div class="hidden md:flex items-center gap-2">
+        <a href="index.html" class="nav-link px-3 py-2">Home</a>
+        <!-- Getting Started dropdown -->
+        <div class="relative" @mouseenter="openDropdown='start'" @mouseleave="openDropdown=null">
+          <button class="nav-link px-3 py-2 flex items-center gap-1" aria-expanded="false">
+            Getting Started
+            <svg class="w-4 h-4" viewBox="0 0 20 20" fill="currentColor"><path d="M5.23 7.21a.75.75 0 011.06.02L10 10.94l3.71-3.71a.75.75 0 111.06 1.06l-4.24 4.24a.75.75 0 01-1.06 0L5.21 8.29a.75.75 0 01.02-1.08z"/></svg>
+          </button>
+          <div x-show="openDropdown==='start'" x-transition class="absolute left-0 mt-2 w-64 bg-white rounded-md shadow-lg py-2 border border-slate-200 z-40">
+            <a class="block px-4 py-2 hover:bg-sky-50" href="understanding-ai.html">Understanding AI</a>
+            <a class="block px-4 py-2 hover:bg-sky-50" href="prompting.html">Prompting Guide</a>
+          </div>
+        </div>
+        <!-- Study Support dropdown -->
+        <div class="relative" @mouseenter="openDropdown='study'" @mouseleave="openDropdown=null">
+          <button class="nav-link px-3 py-2 flex items-center gap-1" aria-expanded="false">
+            Study Support
+            <svg class="w-4 h-4" viewBox="0 0 20 20" fill="currentColor"><path d="M5.23 7.21a.75.75 0 011.06.02L10 10.94l3.71-3.71a.75.75 0 111.06 1.06l-4.24 4.24a.75.75 0 01-1.06 0L5.21 8.29a.75.75 0 01.02-1.08z"/></svg>
+          </button>
+          <div x-show="openDropdown==='study'" x-transition class="absolute left-0 mt-2 w-64 bg-white rounded-md shadow-lg py-2 border border-slate-200 z-40">
+            <a class="block px-4 py-2 hover:bg-sky-50" href="study-strategies.html">Study Strategies</a>
+            <a class="block px-4 py-2 hover:bg-sky-50" href="ai-platforms.html">AI Tools</a>
+            <a class="block px-4 py-2 hover:bg-sky-50" href="toolkit.html">Toolkit</a>
+          </div>
+        </div>
+        <!-- Integrity & Policy dropdown -->
+        <div class="relative" @mouseenter="openDropdown='integrity'" @mouseleave="openDropdown=null">
+          <button class="nav-link px-3 py-2 flex items-center gap-1" aria-expanded="false">
+            Integrity & Policy
+            <svg class="w-4 h-4" viewBox="0 0 20 20" fill="currentColor"><path d="M5.23 7.21a.75.75 0 011.06.02L10 10.94l3.71-3.71a.75.75 0 111.06 1.06l-4.24 4.24a.75.75 0 01-1.06 0L5.21 8.29a.75.75 0 01.02-1.08z"/></svg>
+          </button>
+          <div x-show="openDropdown==='integrity'" x-transition class="absolute left-0 mt-2 w-64 bg-white rounded-md shadow-lg py-2 border border-slate-200 z-40">
+            <a class="block px-4 py-2 hover:bg-sky-50" href="academic-integrity.html">Academic Integrity</a>
+            <a class="block px-4 py-2 hover:bg-sky-50" href="framework.html">6-Level Framework</a>
+            <a class="block px-4 py-2 hover:bg-sky-50" href="faq.html">FAQ</a>
+          </div>
+        </div>
+      </div>
+      <!-- (Mobile nav omitted for brevity; assume similar structure with dropdown toggles) -->
+    </nav>
+  </header>
+
+  <main class="container mx-auto px-4 py-8">
+    <!-- Hero/Intro Section -->
+    <section class="bg-sky-100 text-slate-800 rounded-2xl p-6 sm:p-10 mb-8">
+      <h1 class="text-3xl md:text-4xl font-extrabold text-sky-800">Understanding AI: The Basics</h1>
+      <p class="mt-4 text-slate-700 max-w-3xl">
+        Welcome! This page will help you understand what AI tools (like ChatGPT or Microsoft Copilot) really are, how they work, and why it’s important to use them carefully. By the end, you’ll know why we have a 6-level framework for AI use and how AI can be both helpful and misleading.
+      </p>
+    </section>
+
+    <!-- What is AI -->
+    <section class="mb-12">
+      <h2 class="text-2xl font-bold mb-3">What do we mean by “AI” here?</h2>
+      <p class="mb-4">
+        In this context, <strong>AI</strong> refers to <strong>generative artificial intelligences</strong> – especially large language models and similar tools. These are computer programs (like <strong>ChatGPT</strong>, <strong>Bing Chat</strong>, <strong>Google Bard</strong>, or our university’s <strong>Microsoft 365 Copilot</strong>) that can produce human-like text, solve problems, or create content <em>based on patterns</em> learned from vast amounts of data.
+      </p>
+      <p class="mb-4">
+        Think of these AI tools as very advanced <em>prediction machines</em>. They try to predict the best answer or sentence based on what you ask. They don’t “think” or “understand” the way humans do – but they have read (trained on) millions of webpages, books, and articles. This is why they can be so useful, but it’s also why they can sometimes go wrong (more on that below).
+      </p>
+      <div class="info-box p-5 rounded-lg border-l-4 border-sky-500 bg-sky-50 text-slate-800 mb-6">
+        <h3 class="font-semibold mb-2">AI in simple terms:</h3>
+        <ul class="list-disc list-inside space-y-1">
+          <li><strong>Trained on data:</strong> AI models learn from huge collections of text (and/or images). They find patterns in how language is used.</li>
+          <li><strong>Generative:</strong> They create new responses by combining patterns – for example, writing an answer to a question by predicting likely sentences.</li>
+          <li><strong>No human understanding:</strong> The AI doesn’t truly “know” if something is true or false; it only knows what text <em>usually</em> looks like based on its training.</li>
+        </ul>
+      </div>
+      <p>
+        In summary, generative AI is very powerful at producing content that sounds human-made. It’s like an extremely knowledgeable parrot: it can repeat and remix information impressively, but it doesn’t have original thoughts or a grounding in truth.
+      </p>
+    </section>
+
+    <!-- Why AI can be wrong or biased -->
+    <section class="mb-12">
+      <h2 class="text-2xl font-bold mb-3">AI is useful <em>but</em> not perfect</h2>
+      <p class="mb-4">
+        Because AI tools generate answers from patterns, they can make mistakes – sometimes big ones. You need to be aware of these tendencies:
+      </p>
+      <ul class="list-disc list-inside mb-4 space-y-2">
+        <li><strong>AI can “hallucinate” false info:</strong> AI might give you an answer that sounds correct but is completely made up. For instance, it might invent a reference or a fact that wasn’t in its data. <em>It doesn’t lie on purpose</em>; it’s predicting what “could” be an answer, even if it’s not real.</li>
+        <li><strong>AI has no sense of truth or context:</strong> If you ask a poorly framed question, you might get a misleading answer. AI won’t say “I don’t know” – it often gives an answer regardless, even if the question has no good answer.</li>
+        <li><strong>Bias in, bias out:</strong> AI learns from human-created data, so it can reflect biases in that data. For example, if most content about “engineers” were about men, an AI might rarely mention female engineers unless prompted. It’s not intentionally biased, but it mirrors the biases of its training material [oai_citation:78‡file_00000000e2ec71f4a5ddb19c1bac8c3d](file://file_00000000e2ec71f4a5ddb19c1bac8c3d#:~:text=%3Cdiv%20class%3D%22p,your%20own%3B%20cite%20tools%20where).</li>
+      </ul>
+      <div class="example-box border border-slate-200 bg-white p-4 rounded-lg mb-4">
+        <h4 class="font-semibold mb-2 text-slate-800">Example: A Hallucinated Reference</h4>
+        <p class="text-slate-700">
+          Suppose you ask an AI, “Give me two academic references on the impact of exercise on mental health.” It might produce something that looks like a journal article citation. It <em>looks</em> legitimate. But there’s a chance one or both references are <strong>fabricated</strong> – the journal might exist, but the article title or author could be made up. Unless you check the library or Google Scholar, you wouldn’t know! [oai_citation:79‡file_00000000e2ec71f4a5ddb19c1bac8c3d](file://file_00000000e2ec71f4a5ddb19c1bac8c3d#:~:text=%3Cul%20class%3D%22list,div)
+        </p>
+      </div>
+      <p class="mb-4">
+        This is why our guidance often says <strong>“verify facts and citations”</strong> and to use AI for ideas or drafting but <strong>not to trust it blindly</strong>. As a student, always double-check important information an AI tool gives you – use your textbook, library sources, or ask a human expert (like your tutor).
+      </p>
+      <p>
+        Despite these flaws, AI is extremely <em>useful when used wisely</em>. It can save you time in brainstorming, help you improve writing, and answer questions at any hour. The key is to <strong>use AI as a helper, not an infallible oracle</strong>.
+      </p>
+    </section>
+
+    <!-- Why the 6-Level Framework -->
+    <section class="mb-12">
+      <h2 class="text-2xl font-bold mb-3">Why do we have rules for AI use?</h2>
+      <p class="mb-4">
+        By now, you might understand that AI is powerful but needs careful handling. Birmingham Newman University’s <a href="framework.html" class="text-sky-600 font-medium hover:underline">6-level framework</a> is there to:
+      </p>
+      <ul class="list-disc list-inside space-y-2 mb-4">
+        <li><strong>Ensure fairness:</strong> Everyone in the class follows the same rules. If one student had AI write their whole essay and others wrote it themselves, that wouldn’t be fair. The framework levels make sure AI use is transparent and limited appropriately [oai_citation:80‡thesify.ai](https://www.thesify.ai/blog/gen-ai-policies-of-the-worlds-top-universities#:~:text=13,generated%20content%20and%20cite%20sources).</li>
+        <li><strong>Protect learning:</strong> University is about developing your skills. Some tasks (especially at lower levels) are designed for <em>your own brain</em> to tackle. Using AI too much could hinder your learning of fundamentals [oai_citation:81‡genai.uchicago.edu](https://genai.uchicago.edu/en/resources/faculty-and-instructors/strategies-for-designing-ai-resistant-assignments#:~:text=Remind%20students%20that%20relying%20on,Students%20may%20be). The rules help you use AI as a tool without missing out on learning opportunities.</li>
+        <li><strong>Maintain integrity:</strong> Just as you shouldn’t plagiarize from another student or a book, you shouldn’t present AI’s work as your own. The framework and the requirement to cite or log AI usage help uphold academic honesty [oai_citation:82‡thesify.ai](https://www.thesify.ai/blog/gen-ai-policies-of-the-worlds-top-universities#:~:text=17.%20Columbia%20University%20,AI%20use%20and%20cite%20sources).</li>
+        <li><strong>Encourage skill development:</strong> At higher levels, the university actually <em>wants</em> you to use AI – but skillfully. By Level 5–6, part of what you’re learning is how to collaborate with AI and critically evaluate it. This is a valuable skill for your future, since AI is becoming common in many fields [oai_citation:83‡cte.ku.edu](https://cte.ku.edu/ethical-use-ai-writing-assignments#:~:text=Generative%20AI%20as%20a%20writing,assistant).</li>
+      </ul>
+      <p>
+        In short, the framework is there to make sure that you get the benefits of AI <strong>without</strong> the downsides. By following it, you’ll avoid academic misconduct and develop strong AI literacy over time.
+      </p>
+    </section>
+
+    <!-- Tips callout -->
+    <section class="bg-sky-50 border border-sky-200 rounded-xl p-5 mb-8">
+      <h3 class="font-semibold text-sky-800 mb-2">Key Takeaways:</h3>
+      <ul class="list-disc list-inside text-slate-800 space-y-1">
+        <li>AI tools are powerful assistants but don’t actually “understand” truth. Always apply your own judgment.</li>
+        <li>Use AI for inspiration, not for final answers. Verify anything important through reliable sources.</li>
+        <li>Be mindful of privacy – don’t paste sensitive info into public AI tools (see <a href="academic-integrity.html#protect" class="text-sky-600 hover:underline">Protect your data</a>).</li>
+        <li>Follow the assignment’s AI level. When in doubt, assume Level 1 (no AI) and ask your lecturer if you can use a tool [oai_citation:84‡file_00000000cd68724690676265bc41e30c](file://file_00000000cd68724690676265bc41e30c#:~:text=%3Cdiv%20class%3D%22faq,div).</li>
+      </ul>
+    </section>
+
+    <!-- Next steps / links -->
+    <section>
+      <h2 class="text-2xl font-bold mb-3">Next Steps</h2>
+      <p class="mb-4">Now that you understand the basics of AI, you can explore:</p>
+      <ul class="list-none space-y-2">
+        <li>👉 <a href="prompting.html" class="text-sky-600 font-medium hover:underline">Effective Prompting Guide:</a> Learn how to ask AI the right way to get good results.</li>
+        <li>👉 <a href="foundation.html" class="text-sky-600 font-medium hover:underline">Foundation Pathway:</a> If you’re new to using AI in coursework, start here to see what’s allowed at Levels 1–3 and how to do it responsibly.</li>
+        <li>👉 <a href="academic-integrity.html" class="text-sky-600 font-medium hover:underline">Academic Integrity & AI Policy:</a> Review what the university expects when you use AI in your assignments.</li>
+      </ul>
+    </section>
+  </main>
+
+  <footer class="bg-slate-800 text-white py-6 text-center text-sm mt-12">
+    Tony Myers © 2025 | Birmingham Newman University
+  </footer>
+</body>
+</html>
