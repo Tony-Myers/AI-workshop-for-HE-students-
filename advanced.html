@@ -21,24 +21,28 @@
         border-radius: 8px;
         box-shadow: 0 2px 8px rgba(0,0,0,0.08);
     }
+    
+    /* --- NEW HEADER STYLE --- */
     header {
-        /* Kept original gradient as text is white on dark */
-        background: linear-gradient(135deg, #56ab2f 0%, #a8e063 100%);
+        background-color: #2c3e50; /* Solid dark color from theme */
         color: white;
-        padding: 2rem 1rem;
-        margin: -20px -20px 20px -20px;
-        border-radius: 8px 8px 0 0;
+        padding: 2.5rem 1.5rem; /* Padding like target file */
+        margin: 0 0 25px 0; /* Contained within .container */
+        border-radius: 8px; /* Fully rounded */
         text-align: center;
     }
     header h1 {
         color: white;
-        margin: 0;
+        margin: 0 0 10px 0;
         font-size: 2rem;
+        border-bottom: none; /* Remove underline */
     }
     header p {
-        margin: 10px 0 0 0;
+        margin: 0;
         opacity: 0.95;
+        font-size: 1.1rem;
     }
+    /* --- END NEW HEADER STYLE --- */
 
     /* --- NAVIGATION: ACCESSIBILITY FIX --- */
     nav {
@@ -119,6 +123,35 @@
         /* UPDATED: Accessible Green - Ratio 4.51:1 */
         color: #4a9127;
     }
+    
+    /* Adding Task Box and Challenge Box styles */
+    .task-box {
+        background-color: #fdfdfd;
+        border: 1px solid #e0e0e0;
+        border-left: 5px solid #3498db; /* Blue for tasks */
+        padding: 20px;
+        border-radius: 8px;
+        margin-bottom: 20px;
+        box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+    }
+    .task-box h3 {
+        margin-top: 0;
+        color: #2980b9;
+    }
+    .challenge {
+        background-color: #fdfdfd;
+        border: 1px solid #e0e0e0;
+        border-left: 5px solid #c0392b; /* Red for challenges */
+        padding: 20px;
+        border-radius: 8px;
+        margin-bottom: 20px;
+        box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+    }
+    .challenge h3 {
+        margin-top: 0;
+        color: #c0392b;
+    }
+    
    .progress-tracker {
         background-color: #f8f9fa;
         border: 2px solid #56ab2f;
@@ -219,13 +252,18 @@
             margin: 10px;
             padding: 15px;
         }
+        
+        /* --- UPDATED HEADER MEDIA QUERY --- */
         header {
-            margin: -15px -15px 20px -15px;
-            padding: 1.5rem 1rem;
+            margin: 0 0 20px 0; /* No negative margins */
+            padding: 2rem 1rem;
+            border-radius: 8px; /* Keep rounded on mobile */
         }
         header h1 {
             font-size: 1.5rem;
         }
+        /* --- END UPDATED HEADER --- */
+        
         nav a {
             display: block;
             margin: 5px 0;
