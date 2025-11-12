@@ -21,28 +21,24 @@
         border-radius: 8px;
         box-shadow: 0 2px 8px rgba(0,0,0,0.08);
     }
-    
-    /* --- NEW HEADER STYLE --- */
     header {
-        background-color: #2c3e50; /* Solid dark color from theme */
+        /* Kept original gradient as text is white on dark */
+        background: linear-gradient(135deg, #56ab2f 0%, #a8e063 100%);
         color: white;
-        padding: 2.5rem 1.5rem; /* Padding like target file */
-        margin: 0 0 25px 0; /* Contained within .container */
-        border-radius: 8px; /* Fully rounded */
+        padding: 2rem 1rem;
+        margin: -20px -20px 20px -20px;
+        border-radius: 8px 8px 0 0;
         text-align: center;
     }
     header h1 {
         color: white;
-        margin: 0 0 10px 0;
+        margin: 0;
         font-size: 2rem;
-        border-bottom: none; /* Remove underline */
     }
     header p {
-        margin: 0;
+        margin: 10px 0 0 0;
         opacity: 0.95;
-        font-size: 1.1rem;
     }
-    /* --- END NEW HEADER STYLE --- */
 
     /* --- NAVIGATION: ACCESSIBILITY FIX --- */
     nav {
@@ -57,4 +53,895 @@
         display: inline-block;
         padding: 10px 18px;
         text-decoration: none;
-        /* UPDATED: Accessible Blue - Ratio 5.76:1
+        /* UPDATED: Accessible Blue - Ratio 5.76:1 */
+        color: #005c99; 
+        font-weight: bold;
+        border-radius: 6px;
+        margin: 2px;
+        transition: all 0.2s ease;
+    }
+    nav a:hover {
+        /* UPDATED: Accessible Hover State - Ratio 8.14:1 */
+        background-color: #003d66; 
+        color: #ffffff;
+        transform: translateY(-1px);
+    }
+    nav a.active {
+        /* UPDATED: Accessible Active State - Ratio 8.14:1 */
+        background-color: #003d66; 
+        color: #ffffff;
+    }
+    /* --- END NAVIGATION FIX --- */
+
+    h2, h3, h4 {
+        color: #2c3e50;
+    }
+    h2 {
+        border-bottom: 2px solid #56ab2f;
+        padding-bottom: 8px;
+        margin-top: 30px;
+        margin-bottom: 15px;
+    }
+    h3 {
+        margin-top: 25px;
+        margin-bottom: 12px;
+    }
+    ul, ol {
+        padding-left: 25px;
+        margin: 15px 0;
+    }
+    li {
+        margin-bottom: 10px;
+    }
+    
+    /* --- SEMANTIC HTML FIX --- */
+    /* Ensure <strong> is consistently bold for semantic emphasis */
+    strong {
+        font-weight: bold;
+    }
+    /* <b> tag is for stylistic offset, not importance */
+    b {
+        font-weight: bold;
+    }
+    /* --- END SEMANTIC HTML FIX --- */
+
+   .module {
+        background-color: #fdfdfd;
+        border: 2px solid #e0e0e0;
+        border-left: 5px solid #56ab2f;
+        padding: 25px;
+        border-radius: 8px;
+        margin-bottom: 25px;
+        box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+    }
+   .module h3 {
+        margin-top: 0;
+        /* UPDATED: Accessible Green - Ratio 4.51:1 */
+        color: #4a9127;
+    }
+   .progress-tracker {
+        background-color: #f8f9fa;
+        border: 2px solid #56ab2f;
+        border-radius: 8px;
+        padding: 20px;
+        margin: 20px 0;
+    }
+   .progress-item {
+        margin: 10px 0;
+        padding: 10px;
+        background: white;
+        border-radius: 5px;
+    }
+   .progress-item input[type="checkbox"] {
+        margin-right: 10px;
+        transform: scale(1.2);
+    }
+   .info-box {
+        background-color: #e8f4f8;
+        border-left: 4px solid #3498db;
+        padding: 15px;
+        margin: 20px 0;
+        border-radius: 5px;
+    }
+    /* Fix for links inside info boxes */
+   .info-box a {
+        /* UPDATED: Accessible Blue - Ratio 5.09:1 */
+        color: #005c99; 
+        font-weight: bold;
+    }
+   .warning-box {
+        background-color: #fff3cd;
+        border-left: 4px solid #f39c12;
+        padding: 15px;
+        margin: 20px 0;
+        border-radius: 5px;
+    }
+   .success-box {
+        background-color: #d4edda;
+        border-left: 4px solid #28a745;
+        padding: 15px;
+        margin: 20px 0;
+        border-radius: 5px;
+    }
+   .example-box {
+        background-color: #f9f9f9;
+        border: 2px dashed #bdc3c7;
+        padding: 15px;
+        margin: 15px 0;
+        border-radius: 5px;
+    }
+   .example-box h4 {
+        margin-top: 0;
+        color: #7f8c8d;
+    }
+    pre {
+        background-color: #2c3e50;
+        color: #ecf0f1;
+        padding: 15px;
+        border-radius: 6px;
+        overflow-x: auto;
+    }
+    code {
+        font-family: "Courier New", Courier, monospace;
+        font-size: 0.95em;
+        background-color: #ecf0f1;
+        padding: 2px 6px;
+        border-radius: 3px;
+        /* UPDATED: Accessible Red - Ratio 4.86:1 */
+        color: #b31238; 
+    }
+    pre code {
+        background: none;
+        color: #ecf0f1;
+        padding: 0;
+    }
+   .level-badge {
+        display: inline-block;
+        background: linear-gradient(135deg, #56ab2f 0%, #a8e063 100%);
+        color: white;
+        padding: 5px 15px;
+        border-radius: 20px;
+        font-size: 0.9rem;
+        font-weight: bold;
+        margin: 5px 5px 5px 0;
+    }
+    footer {
+        text-align: center;
+        margin-top: 40px;
+        padding-top: 20px;
+        border-top: 1px solid #ecf0f1;
+        font-size: 0.9rem;
+        color: #7f8c8d;
+    }
+
+    @media (max-width: 768px) {
+       .container {
+            margin: 10px;
+            padding: 15px;
+        }
+        header {
+            margin: -15px -15px 20px -15px;
+            padding: 1.5rem 1rem;
+        }
+        header h1 {
+            font-size: 1.5rem;
+        }
+        nav a {
+            display: block;
+            margin: 5px 0;
+        }
+    }
+</style>
+</head>
+<body>
+
+    <div class="container">
+        <header>
+            <h1>Development Pathway</h1>
+            <p>Levels 3-4: AI Editing &amp; Task Completion with Critical Evaluation</p>
+        </header>
+
+<nav>
+    <a href="foundation.html">Foundation Pathway</a>
+    <a href="development.html">Development Pathway</a>
+    <a href="advanced.html">Advanced Pathway</a>
+    <a href="expert.html">Expert Pathway</a>
+    <a href="resources.html" class="active">Tools & Resources</a>
+    <a href="ethics.html">Ethics & Bias</a>
+    <a href="citing.html">How to Cite AI</a>
+    <a href="Faq.html">FAQ</a>
+</nav>
+
+        <main>
+            <article>
+                <div class="info-box">
+                    <h3>📍 You are here: Development Pathway</h3>
+                    <p><strong>Who this is for:</strong> Students who have completed the Foundation Pathway and need to develop Level 3-4 skills for their assessments.</p>
+                    <p><strong>What you will learn:</strong></p>
+                    <ul>
+                        <li>How to use AI to edit and improve your academic writing (Level 3)</li>
+                        <li>How to critically evaluate AI-generated content (Level 4)</li>
+                        <li>Advanced research strategies using AI tools</li>
+                        <li>How to document your AI use comprehensively</li>
+                    </ul>
+                    <p><strong>Time required:</strong> Approximately 90-120 minutes</p>
+                </div>
+
+                <div class="progress-tracker">
+                    <h3>Your Progress</h3>
+                    <p>Track your progress through this pathway:</p>
+                    <div class="progress-item">
+                        <input type="checkbox" id="mod1"> <label for="mod1">Module 1: Understanding Levels 3-4</label>
+                    </div>
+                    <div class="progress-item">
+                        <input type="checkbox" id="mod2"> <label for="mod2">Module 2: Advanced AI Editing Techniques</label>
+                    </div>
+                    <div class="progress-item">
+                        <input type="checkbox" id="mod3"> <label for="mod3">Module 3: Critical Evaluation of AI Outputs</label>
+                    </div>
+                    <div class="progress-item">
+                        <input type="checkbox" id="mod4"> <label for="mod4">Module 4: Advanced Research with NotebookLM</label>
+                    </div>
+                    <div class="progress-item">
+                        <input type="checkbox" id="mod5"> <label for="mod5">Module 5: Using the Academic Rigour Assistant</label>
+                    </div>
+                    <div class="progress-item">
+                        <input type="checkbox" id="mod6"> <label for="mod6">Module 6: Documentation Requirements</label>
+                    </div>
+                    <div class="progress-item">
+                        <input type="checkbox" id="mod7"> <label for="mod7">Module 7: Applying to Your Assessments</label>
+                    </div>
+                </div>
+
+                <div class="warning-box">
+                    <h4>⚠️ Prerequisites</h4>
+                    <p>Before starting this pathway, you should have:</p>
+                    <ul>
+                        <li>Completed the <a href="foundation.html">Foundation Pathway</a>, or</li>
+                        <li>Already understand the 6-level framework and Levels 1-3</li>
+                        <li>Have basic experience using Microsoft Copilot and NotebookLM</li>
+                    </ul>
+                    <p>If you have not done these, please start with the <a href="foundation.html">Foundation Pathway</a>.</p>
+                </div>
+
+                <div class="module">
+                    <h3>Module 1: Understanding Levels 3-4</h3>
+                    <p><span class="level-badge">Core Knowledge</span></p>
+                    
+                    <p>Let us review what Levels 3 and 4 mean and how they differ from earlier levels.</p>
+
+                    <h4>Level 3: AI-Assisted Editing</h4>
+                    <p><strong>What you can do:</strong></p>
+                    <ul>
+                        <li>Use AI to improve the <strong>clarity, structure, and grammar</strong> of text you have already written</li>
+                        <li>The original ideas and content must be yours</li>
+                        <li>AI is used only to refine your expression</li>
+                    </ul>
+                    
+                    <p><strong>Documentation required:</strong></p>
+                    <ul>
+                        <li>Submit your <strong>original unedited version</strong> in an appendix</li>
+                        <li>Complete the AI Evidence Form showing what you asked the AI to do</li>
+                        <li>Your submission should clearly show the improvements you made</li>
+                    </ul>
+
+                    <div class="example-box">
+                        <h4>Level 3 Example: Essay Editing</h4>
+                        <p><strong>Original text (written by you):</strong></p>
+                        <p><em>"Plyometric training is when you do jumping exercises and it helps athletes get more powerful and jump higher and run faster because of the stretch-shortening cycle which makes muscles work better."</em></p>
+                        
+                        <p><strong>AI prompt:</strong> "Improve the clarity and academic tone of this paragraph while keeping my ideas intact."</p>
+                        
+                        <p><strong>AI-edited text:</strong></p>
+                        <p><em>"Plyometric training involves ballistic exercises that exploit the stretch-shortening cycle to enhance athletic power output. Research indicates that systematic plyometric programming can improve vertical jump performance and sprint velocity through neuromuscular adaptations."</em></p>
+                        
+                        <p><strong>What you submit:</strong> The edited version, plus the original in appendix, plus AI Evidence Form.</p>
+                    </div>
+
+                    <h4>Level 4: AI-Generated Content with Critical Evaluation</h4>
+                    <p><strong>What you can do:</strong></p>
+                    <ul>
+                        <li>Ask AI to <strong>generate initial content</strong> for your work</li>
+                        <li>You must then <strong>critically evaluate, verify, and substantially modify</strong> this content</li>
+                        <li>Your final submission should show significant intellectual engagement</li>
+                        <li>You cannot simply copy-paste AI output</li>
+                    </ul>
+                    
+                    <p><strong>Documentation required:</strong></p>
+                    <ul>
+                        <li>Complete AI Evidence Form showing all prompts used</li>
+                        <li>Explain how you evaluated the AI's suggestions</li>
+                        <li>Show what changes you made and why</li>
+                        <li>Include proper citations for any facts used</li>
+                    </ul>
+
+                    <div class="example-box">
+                        <h4>Level 4 Example: Literature Review Section</h4>
+                        <p><strong>AI prompt:</strong> "Summarise the current research consensus on the effects of high-intensity interval training (HIIT) on VO2max improvements in untrained adults."</p>
+                        
+                        <p><strong>Your process:</strong></p>
+                        <ol>
+                            <li>Receive AI's initial response</li>
+                            <li>Search SPORTDiscus for actual research studies on HIIT and VO2max</li>
+                            <li>Read at least 5-6 primary research articles</li>
+                            <li>Compare AI's claims against the actual research</li>
+                            <li>Identify where AI was accurate, oversimplified, or incorrect</li>
+                            <li>Rewrite the section in your own words using actual sources</li>
+                            <li>Cite all sources properly</li>
+                        </ol>
+                        
+                        <p><strong>What you submit:</strong> Your critically evaluated and rewritten section, plus AI Evidence Form documenting your process.</p>
+                    </div>
+
+                    <h4>Key Differences Between Levels</h4>
+                    <table border="1" cellpadding="10" cellspacing="0" style="width:100%; border-collapse: collapse; margin: 20px 0;">
+                        <tr style="background-color: #f8f9fa;">
+                            <th>Level</th>
+                            <th>What AI Does</th>
+                            <th>What You Do</th>
+                            <th>Documentation</th>
+                        </tr>
+                        <tr>
+                            <td><strong>Level 2</strong></td>
+                            <td>Generates ideas/topics</td>
+                            <td>You write everything yourself</td>
+                            <td>AI Evidence Form only</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Level 3</strong></td>
+                            <td>Edits your existing text</td>
+                            <td>You wrote the original; AI refines it</td>
+                            <td>Original + AI Evidence Form</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Level 4</strong></td>
+                            <td>Generates initial content</td>
+                            <td>You critically evaluate and rewrite</td>
+                            <td>Detailed AI Evidence Form</td>
+                        </tr>
+                    </table>
+
+                    <div class="warning-box">
+                        <h4>⚠️ Common Mistakes to Avoid</h4>
+                        <ul>
+                            <li><strong>Level 3:</strong> Using AI to write new content (not just edit)</li>
+                            <li><strong>Level 3:</strong> Forgetting to include your original unedited version</li>
+                            <li><strong>Level 4:</strong> Copying AI output without critical evaluation</li>
+                            <li><strong>Level 4:</strong> Not verifying AI claims against actual sources</li>
+                            <li><strong>Both levels:</strong> Incomplete documentation of AI use</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="module">
+                    <h3>Module 2: Advanced AI Editing Techniques (Level 3)</h3>
+                    <p><span class="level-badge">Practical Skills</span></p>
+                    
+                    <p>Now let us develop your Level 3 editing skills with practical techniques.</p>
+
+                    <h4>Step-by-Step Process for AI-Assisted Editing</h4>
+                    <ol>
+                        <li><strong>Write your original draft yourself</strong> (no AI involvement)</li>
+                        <li><strong>Save a copy</strong> as your "original version" for the appendix</li>
+                        <li><strong>Identify specific editing needs:</strong>
+                            <ul>
+                                <li>Clarity and readability</li>
+                                <li>Academic tone</li>
+                                <li>Grammar and punctuation</li>
+                                <li>Paragraph structure</li>
+                                <li>Flow and transitions</li>
+                            </ul>
+                        </li>
+                        <li><strong>Create targeted prompts</strong> for each editing need</li>
+                        <li><strong>Review AI suggestions carefully</strong> - do not accept everything</li>
+                        <li><strong>Make final decisions</strong> about which changes to keep</li>
+                        <li><strong>Document the process</strong> in your AI Evidence Form</li>
+                    </ol>
+
+                    <h4>Effective Editing Prompts for Sport Science Writing</h4>
+                    <div class="example-box">
+                        <p><strong>For clarity:</strong></p>
+                        <code>"Improve the clarity of this paragraph about muscle fibre types while keeping my original meaning and ideas."</code>
+                        
+                        <p><strong>For academic tone:</strong></p>
+                        <code>"Revise this paragraph to use a more formal academic tone suitable for a Level 4 sport science essay, without changing the content."</code>
+                        
+                        <p><strong>For structure:</strong></p>
+                        <code>"Improve the logical flow and paragraph structure of this section on training adaptations, keeping all my original points."</code>
+                        
+                        <p><strong>For grammar:</strong></p>
+                        <code>"Check this paragraph for grammar, punctuation, and spelling errors. List the corrections needed."</code>
+                    </div>
+
+                    <h4>Activity 2.1: Practice AI Editing</h4>
+                    <ol>
+                        <li>Take a paragraph from one of your current assignments (that allows Level 3)</li>
+                        <li>Save the original version in a separate document</li>
+                        <li>Use Microsoft Copilot with one of the editing prompts above</li>
+                        <li>Compare the AI's suggestions to your original</li>
+                        <li>Decide which suggestions to accept and which to reject</li>
+                        <li>Document your process</li>
+                    </ol>
+
+                    <div class="example-box">
+                        <h4>Sport Science Editing Example</h4>
+                        <p><strong>Original (your writing):</strong></p>
+                        <p><em>"Carbohydrate loading is important before endurance events because it increases glycogen stores in muscles which means athletes have more energy available during long races and do not hit the wall as quickly."</em></p>
+                        
+                        <p><strong>Prompt:</strong> "Improve the academic tone and clarity of this sentence about carbohydrate loading."</p>
+                        
+                        <p><strong>AI suggestion:</strong></p>
+                        <p><em>"Carbohydrate loading protocols are essential for optimising pre-competition preparation in endurance athletes, as this dietary strategy enhances intramuscular glycogen storage capacity, thereby improving substrate availability and delaying the onset of fatigue during prolonged aerobic exercise."</em></p>
+                        
+                        <p><strong>Your evaluation:</strong></p>
+                        <ul>
+                            <li>✓ Better academic tone</li>
+                            <li>✓ More precise terminology</li>
+                            <li>? Perhaps too complex for the assignment level</li>
+                            <li>Decision: Accept most changes but simplify "substrate availability" to "energy availability" for clarity</li>
+                        </ul>
+                    </div>
+
+                    <h4>Tips for Effective AI Editing</h4>
+                    <ul>
+                        <li><strong>Be specific:</strong> Tell AI exactly what aspect to improve</li>
+                        <li><strong>Edit in stages:</strong> Focus on one aspect at a time (clarity, then tone, then grammar)</li>
+                        <li><strong>Keep your voice:</strong> Make sure the final text still sounds like you</li>
+                        <li><strong>Do not over-rely:</strong> Your critical judgement is essential</li>
+                        <li><strong>Document everything:</strong> Keep records of your prompts and decisions</li>
+                    </ul>
+                </div>
+
+                <div class="module">
+                    <h3>Module 3: Critical Evaluation of AI Outputs (Level 4)</h3>
+                    <p><span class="level-badge">Critical Thinking</span></p>
+                    
+                    <p>Level 4 requires you to think critically about AI-generated content. Here is how to evaluate AI outputs effectively.</p>
+
+                    <h4>The Critical Evaluation Framework</h4>
+                    <p>When AI generates content, ask yourself these questions:</p>
+                    
+                    <ol>
+                        <li><strong>Accuracy:</strong>
+                            <ul>
+                                <li>Are the facts correct?</li>
+                                <li>Can I verify this information in academic sources?</li>
+                                <li>Are any statistics or percentages cited with sources?</li>
+                            </ul>
+                        </li>
+                        <li><strong>Currency:</strong>
+                            <ul>
+                                <li>Is this information up to date?</li>
+                                <li>Does recent research contradict these claims?</li>
+                                <li>Are there more recent findings I should include?</li>
+                            </ul>
+                        </li>
+                        <li><strong>Completeness:</strong>
+                            <ul>
+                                <li>Has AI oversimplified complex topics?</li>
+                                <li>What important nuances or limitations are missing?</li>
+                                <li>What contradictory evidence exists?</li>
+                            </ul>
+                        </li>
+                        <li><strong>Bias:</strong>
+                            <ul>
+                                <li>Does this present a balanced view?</li>
+                                <li>Are alternative perspectives acknowledged?</li>
+                                <li>Does this align with the consensus in sport science literature?</li>
+                            </ul>
+                        </li>
+                        <li><strong>Relevance:</strong>
+                            <ul>
+                                <li>Does this directly answer my question?</li>
+                                <li>Is this appropriate for my assignment level?</li>
+                                <li>Does this fit with my argument?</li>
+                            </ul>
+                        </li>
+                    </ol>
+
+                    <h4>Activity 3.1: Practice Critical Evaluation</h4>
+                    <ol>
+                        <li>Ask Microsoft Copilot: <code>"What are the benefits of beetroot juice supplementation for endurance performance?"</code></li>
+                        <li>Read the AI's response carefully</li>
+                        <li>Now search SPORTDiscus for research on beetroot juice and endurance</li>
+                        <li>Compare: What did the AI get right? What did it oversimplify? What did it miss?</li>
+                        <li>Identify any claims that need verification</li>
+                    </ol>
+
+                    <div class="example-box">
+                        <h4>Critical Evaluation Example</h4>
+                        <p><strong>AI claim:</strong> "Beetroot juice supplementation improves endurance performance by increasing nitric oxide production, which enhances blood flow and reduces oxygen cost of exercise. Studies show improvements of 1-3% in time trial performance."</p>
+                        
+                        <p><strong>Your critical evaluation:</strong></p>
+                        <ul>
+                            <li>✓ Mechanism (nitric oxide) is correct</li>
+                            <li>? "1-3% improvement" - needs verification with specific studies</li>
+                            <li>✗ Missing: Individual variation in response</li>
+                            <li>✗ Missing: Dosage and timing protocols</li>
+                            <li>✗ Missing: That not all studies show benefits</li>
+                        </ul>
+                        
+                        <p><strong>Your action:</strong></p>
+                        <ol>
+                            <li>Search for recent systematic reviews on beetroot supplementation</li>
+                            <li>Find 3-4 primary studies with specific performance data</li>
+                            <li>Note the range of responses and protocols used</li>
+                            <li>Rewrite the section with proper citations and nuance</li>
+                        </ol>
+                    </div>
+
+                    <h4>Red Flags: When AI Output Needs Verification</h4>
+                    <div class="warning-box">
+                        <ul>
+                            <li>Specific percentages or statistics without source citations</li>
+                            <li>Claims that seem too definitive (e.g., "always", "never", "all studies show")</li>
+                            <li>Oversimplified explanations of complex physiological processes</li>
+                            <li>Recommendations that contradict your lecture notes</li>
+                            <li>Information about very recent research or events</li>
+                            <li>Medical or supplementation advice without caveats</li>
+                        </ul>
+                    </div>
+
+                    <h4>The Verification Process</h4>
+                    <p>For Level 4 work, you must verify AI claims:</p>
+                    <ol>
+                        <li><strong>Search academic databases:</strong> SPORTDiscus, PubMed, Google Scholar</li>
+                        <li><strong>Find primary sources:</strong> Look for original research studies, not just summaries</li>
+                        <li><strong>Read critically:</strong> Check methods, sample sizes, limitations</li>
+                        <li><strong>Compare multiple sources:</strong> Do several studies agree?</li>
+                        <li><strong>Cite properly:</strong> Reference the actual studies, not the AI</li>
+                    </ol>
+                </div>
+
+                <div class="module">
+                    <h3>Module 4: Advanced Research with NotebookLM</h3>
+                    <p><span class="level-badge">Research Skills</span></p>
+                    
+                    <p>NotebookLM becomes more powerful when you use it for sophisticated research tasks.</p>
+
+                    <h4>Advanced NotebookLM Techniques</h4>
+                    
+                    <p><strong>1. Multi-Source Synthesis</strong></p>
+                    <p>Upload multiple research articles to NotebookLM and ask it to compare and synthesise:</p>
+                    <div class="example-box">
+                        <p><strong>Upload:</strong> 3-4 research articles on the same topic (e.g., sleep and athletic performance)</p>
+                        <p><strong>Prompts:</strong></p>
+                        <ul>
+                            <li><code>"Compare the methodologies used across these studies"</code></li>
+                            <li><code>"What are the main points of agreement between these sources?"</code></li>
+                            <li><code>"Where do these studies disagree or show conflicting results?"</code></li>
+                            <li><code>"What are the limitations mentioned in each study?"</code></li>
+                        </ul>
+                        <p><strong>Use for:</strong> Literature reviews, critically comparing research approaches</p>
+                    </div>
+
+                    <p><strong>2. Identifying Research Gaps</strong></p>
+                    <div class="example-box">
+                        <p><strong>Prompt:</strong> <code>"Based on the limitations sections of these studies, what future research questions do the authors suggest?"</code></p>
+                        <p><strong>Use for:</strong> Identifying areas for further investigation in your discipline</p>
+                    </div>
+
+                    <p><strong>3. Concept Mapping</strong></p>
+                    <div class="example-box">
+                        <p><strong>Prompt:</strong> <code>"Create a hierarchical outline of the main concepts discussed across all uploaded sources"</code></p>
+                        <p><strong>Use for:</strong> Organising complex information for essays or presentations</p>
+                    </div>
+
+                    <p><strong>4. Critical Analysis Preparation</strong></p>
+                    <div class="example-box">
+                        <p><strong>Prompts:</strong></p>
+                        <ul>
+                            <li><code>"What are the theoretical frameworks used in these studies?"</code></li>
+                            <li><code>"How do the sample characteristics compare across studies?"</code></li>
+                            <li><code>"What are the strengths and weaknesses of each study's methodology?"</code></li>
+                        </ul>
+                        <p><strong>Use for:</strong> Preparing for critical appraisal assignments</p>
+                    </div>
+
+                    <h4>Activity 4.1: Advanced Literature Analysis</h4>
+                    <ol>
+                        <li>Find 3 research articles on a topic relevant to your current studies</li>
+                        <li>Upload all 3 to a new NotebookLM notebook</li>
+                        <li>Use the prompts above to analyse and compare them</li>
+                        <li>Create a one-page synthesis showing:
+                            <ul>
+                                <li>Main findings from each study</li>
+                                <li>Points of agreement and disagreement</li>
+                                <li>Methodological differences</li>
+                                <li>Gaps for future research</li>
+                            </ul>
+                        </li>
+                    </ol>
+
+                    <div class="success-box">
+                        <h4>Why NotebookLM is Valuable for Level 4 Work</h4>
+                        <p>NotebookLM is particularly useful for Level 4 because:</p>
+                        <ul>
+                            <li>It shows you exactly where information comes from (citations)</li>
+                            <li>It only uses your uploaded sources (no hallucination)</li>
+                            <li>It helps you identify patterns across multiple sources</li>
+                            <li>It supports critical analysis rather than just summarisation</li>
+                        </ul>
+                        <p><strong>Remember:</strong> NotebookLM helps you analyse sources, but you still need to write your own synthesis with proper citations.</p>
+                    </div>
+                </div>
+
+                <div class="module">
+                    <h3>Module 5: Using the Academic Rigour Assistant</h3>
+                    <p><span class="level-badge">Quality Control</span></p>
+                    
+                    <p>The Academic Rigour Assistant is a custom Copilot agent designed to provide evidence-based, carefully considered responses for academic work.</p>
+
+                    <h4>What Makes the Academic Rigour Assistant Different?</h4>
+                    <ul>
+                        <li><strong>Evidence-first approach:</strong> Focuses on research evidence and theoretical frameworks</li>
+                        <li><strong>Cautious language:</strong> Uses appropriate academic hedging (e.g., "research suggests", "evidence indicates")</li>
+                        <li><strong>Acknowledges limitations:</strong> Explicitly discusses what is not known or uncertain</li>
+                        <li><strong>Discipline-appropriate:</strong> Understands sport science contexts and terminology</li>
+                    </ul>
+
+                    <h4>When to Use the Academic Rigour Assistant</h4>
+                    <ul>
+                        <li>Checking the accuracy of claims before including them in your work</li>
+                        <li>Understanding the evidence base for a topic</li>
+                        <li>Exploring the limitations of current research</li>
+                        <li>Developing your critical thinking about sport science topics</li>
+                    </ul>
+
+                    <h4>Accessing the Academic Rigour Assistant</h4>
+                    <ol>
+                        <li>Log in to Microsoft 365 with your university account</li>
+                        <li>Go to <code>copilot.microsoft.com</code> or open Copilot in Teams</li>
+                        <li>Click this link to add the agent: <a href="https://m365.cloud.microsoft:443/chat/?titleId=T_ef40e31a-faa0-5e5c-2f90-a22c14d9ed13&source=embedded-builder" target="_blank" rel="noopener noreferrer"><strong>Add Academic Rigour Assistant</strong></a></li>
+                        <li>Select it from your list of agents before asking questions</li>
+                    </ol>
+
+                    <h4>Example Prompts for the Academic Rigour Assistant</h4>
+                    <div class="example-box">
+                        <p><strong>For understanding evidence:</strong></p>
+                        <ul>
+                            <li><code>"What is the research evidence for foam rolling improving recovery?"</code></li>
+                            <li><code>"What are the main theories explaining the acute effects of static stretching on performance?"</code></li>
+                        </ul>
+                        
+                        <p><strong>For exploring limitations:</strong></p>
+                        <ul>
+                            <li><code>"What are the limitations of current research on mental imagery in sport?"</code></li>
+                            <li><code>"What is still uncertain about caffeine supplementation and endurance performance?"</code></li>
+                        </ul>
+                        
+                        <p><strong>For fact-checking:</strong></p>
+                        <ul>
+                            <li><code>"Is it accurate to say that high-intensity training always improves VO2max?"</code></li>
+                            <li><code>"How reliable is heart rate variability as a measure of recovery status?"</code></li>
+                        </ul>
+                    </div>
+
+                    <h4>Activity 5.1: Compare Responses</h4>
+                    <ol>
+                        <li>Ask standard Microsoft Copilot: <code>"Does ice bathing improve recovery after exercise?"</code></li>
+                        <li>Note the response style and content</li>
+                        <li>Now ask the <strong>Academic Rigour Assistant</strong> the same question</li>
+                        <li>Compare the responses:
+                            <ul>
+                                <li>Which is more nuanced?</li>
+                                <li>Which acknowledges limitations?</li>
+                                <li>Which would be more useful for Level 4 academic work?</li>
+                            </ul>
+                        </li>
+                    </ol>
+
+                    <div class="info-box">
+                        <h4>Using the Academic Rigour Assistant in Your Workflow</h4>
+                        <p><strong>Step 1:</strong> Ask the Academic Rigour Assistant about your topic to understand the evidence base</p>
+                        <p><strong>Step 2:</strong> Use the response to guide your literature search (what terms to search, what studies to look for)</p>
+                        <p><strong>Step 3:</strong> Find and read the actual research studies</p>
+                        <p><strong>Step 4:</strong> Write your work based on the primary sources, not the AI</p>
+                        <p><strong>Remember:</strong> The Academic Rigour Assistant is a research guide, not a substitute for reading actual research.</p>
+                    </div>
+                </div>
+
+                <div class="module">
+                    <h3>Module 6: Documentation Requirements for Levels 3-4</h3>
+                    <p><span class="level-badge">Essential Compliance</span></p>
+                    
+                    <p>Comprehensive documentation is crucial for Levels 3 and 4. Here is exactly what you need to provide.</p>
+
+                    <h4>Level 3 Documentation Checklist</h4>
+                    <div class="example-box">
+                        <p><strong>You must submit:</strong></p>
+                        <ol>
+                            <li><strong>Your final edited work</strong> (the main submission)</li>
+                            <li><strong>Your original unedited version</strong> in an appendix</li>
+                            <li><strong>Completed AI Evidence Form</strong> including:
+                                <ul>
+                                    <li>Exact prompts you used for editing</li>
+                                    <li>Which sections were edited with AI</li>
+                                    <li>What type of editing was requested (clarity, grammar, tone, etc.)</li>
+                                    <li>Which AI tool you used (e.g., Microsoft Copilot)</li>
+                                </ul>
+                            </li>
+                        </ol>
+                    </div>
+
+                    <h4>Level 4 Documentation Checklist</h4>
+                    <div class="example-box">
+                        <p><strong>You must submit:</strong></p>
+                        <ol>
+                            <li><strong>Your final work</strong> with proper citations</li>
+                            <li><strong>Completed AI Evidence Form</strong> including:
+                                <ul>
+                                    <li>All prompts used to generate initial content</li>
+                                    <li>Description of how you evaluated the AI output</li>
+                                    <li>Explanation of what you changed and why</li>
+                                    <li>List of academic sources you used to verify AI claims</li>
+                                    <li>Reflection on the AI's strengths and limitations for this task</li>
+                                </ul>
+                            </li>
+                        </ol>
+                    </div>
+
+                    <h4>Example Documentation: Level 3</h4>
+                    <div class="example-box">
+                        <p><strong>AI Evidence Form Extract:</strong></p>
+                        <p><strong>Section edited:</strong> Literature Review, paragraphs 3-5</p>
+                        <p><strong>AI tool used:</strong> Microsoft Copilot</p>
+                        <p><strong>Prompts used:</strong></p>
+                        <ol>
+                            <li>"Improve the academic tone of this paragraph about muscle adaptations"</li>
+                            <li>"Improve the logical flow between these three paragraphs"</li>
+                            <li>"Check this section for grammar and punctuation errors"</li>
+                        </ol>
+                        <p><strong>Changes accepted:</strong> Improved transition sentences between paragraphs, corrected three grammar errors, replaced informal language with academic equivalents</p>
+                        <p><strong>Changes rejected:</strong> AI suggestion to use overly complex terminology that would reduce clarity</p>
+                    </div>
+
+                    <h4>Example Documentation: Level 4</h4>
+                    <div class="example-box">
+                        <p><strong>AI Evidence Form Extract:</strong></p>
+                        <p><strong>Task:</strong> Literature review section on protein supplementation timing</p>
+                        <p><strong>AI tool used:</strong> Microsoft Copilot (Academic Rigour Assistant)</p>
+                        <p><strong>Initial prompt:</strong> "What does research say about protein timing for muscle protein synthesis?"</p>
+                        <p><strong>Evaluation process:</strong></p>
+                        <ol>
+                            <li>AI provided an overview suggesting timing is crucial</li>
+                            <li>Searched SPORTDiscus: "protein timing muscle protein synthesis"</li>
+                            <li>Found and read 6 recent studies and 2 systematic reviews</li>
+                            <li>Discovered AI oversimplified: recent research shows timing less important than total daily protein</li>
+                            <li>Rewrote section to reflect actual research consensus</li>
+                            <li>Included citations to: Schoenfeld et al. (2017), Morton et al. (2018), and others</li>
+                        </ol>
+                        <p><strong>Final outcome:</strong> Used AI as initial orientation but final content based entirely on primary sources</p>
+                    </div>
+
+                    <div class="warning-box">
+                        <h4>⚠️ Documentation Failures</h4>
+                        <p>Incomplete documentation may be treated as academic misconduct. Common failures include:</p>
+                        <ul>
+                            <li>Not submitting the original unedited version (Level 3)</li>
+                            <li>Vague descriptions of AI use (e.g., "used AI to help with writing")</li>
+                            <li>Not listing all prompts used</li>
+                            <li>Not explaining how you evaluated AI output (Level 4)</li>
+                            <li>Submitting work that is too close to AI output without sufficient modification</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="module">
+                    <h3>Module 7: Applying to Your Assessments</h3>
+                    <p><span class="level-badge">Practical Application</span></p>
+                    
+                    <p>Let us apply these Level 3-4 skills to your actual assessments.</p>
+
+                    <h4>Which Assessments Use Levels 3-4?</h4>
+                    <p>Check your assignment briefs. Common examples include:</p>
+                    <ul>
+                        <li><strong>Level 3:</strong> Essays, reports, reflective writing where editing is permitted</li>
+                        <li><strong>Level 4:</strong> Literature reviews, research proposals, case study analyses</li>
+                    </ul>
+
+                    <h4>Level 3 Workflow: Essay Editing</h4>
+                    <div class="example-box">
+                        <p><strong>Step-by-step process:</strong></p>
+                        <ol>
+                            <li><strong>Write your full first draft</strong> (no AI - just you)</li>
+                            <li><strong>Save this as "Original_Draft.docx"</strong></li>
+                            <li><strong>Identify sections needing editing</strong> (unclear paragraphs, awkward phrasing)</li>
+                            <li><strong>Create specific editing prompts</strong></li>
+                            <li><strong>Use Copilot</strong> to get editing suggestions</li>
+                            <li><strong>Review each suggestion</strong> - accept, reject, or modify</li>
+                            <li><strong>Document your process</strong> in the AI Evidence Form</li>
+                            <li><strong>Submit:</strong> Final essay + Original_Draft in appendix + AI Evidence Form</li>
+                        </ol>
+                    </div>
+
+                    <h4>Level 4 Workflow: Literature Review</h4>
+                    <div class="example-box">
+                        <p><strong>Step-by-step process:</strong></p>
+                        <ol>
+                            <li><strong>Use Academic Rigour Assistant</strong> to understand the topic</li>
+                            <li><strong>Search academic databases</strong> for primary sources</li>
+                            <li><strong>Upload sources to NotebookLM</strong> for analysis</li>
+                            <li><strong>Read and annotate</strong> the actual research articles</li>
+                            <li><strong>Create an outline</strong> of your review structure</li>
+                            <li><strong>Write your review</strong> based on the sources (not AI)</li>
+                            <li><strong>Use AI</strong> only for editing (Level 3) if needed</li>
+                            <li><strong>Document comprehensively</strong> in AI Evidence Form</li>
+                            <li><strong>Submit:</strong> Review with citations + detailed AI Evidence Form</li>
+                        </ol>
+                    </div>
+
+                    <h4>Quick Decision Guide</h4>
+                    <div class="example-box">
+                        <p><strong>Should I use Level 3 or Level 4 for this task?</strong></p>
+                        <ul>
+                            <li><strong>Use Level 3 if:</strong> You have already written the content and just need editing help</li>
+                            <li><strong>Use Level 4 if:</strong> You need help generating initial content but will critically evaluate and rewrite it</li>
+                            <li><strong>Use neither if:</strong> The assignment brief specifies Level 1 (no AI) or Level 2 (ideas only)</li>
+                        </ul>
+                        <p><strong>When in doubt:</strong> Ask your lecturer before submission</p>
+                    </div>
+
+                    <h4>Activity 7.1: Plan Your Next Assessment</h4>
+                    <ol>
+                        <li>Choose one of your upcoming assessments that permits Level 3 or 4</li>
+                        <li>Write down:
+                            <ul>
+                                <li>Which level the assignment allows</li>
+                                <li>Which specific tasks you will use AI for</li>
+                                <li>How you will document your use</li>
+                                <li>What sources you will use to verify AI outputs</li>
+                            </ul>
+                        </li>
+                        <li>Create a timeline showing when you will:
+                            <ul>
+                                <li>Write your original draft (Level 3) or conduct research (Level 4)</li>
+                                <li>Use AI tools</li>
+                                <li>Verify and edit</li>
+                                <li>Complete documentation</li>
+                            </ul>
+                        </li>
+                    </ol>
+
+                    <div class="success-box">
+                        <h4>✓ Development Pathway Complete!</h4>
+                        <p>You have completed the Development Pathway. You should now be able to:</p>
+                        <ul>
+                            <li>Use AI to edit your writing effectively (Level 3)</li>
+                            <li>Critically evaluate AI-generated content (Level 4)</li>
+                            <li>Use advanced research techniques with NotebookLM</li>
+                            <li>Use the Academic Rigour Assistant for evidence-based guidance</li>
+                            <li>Document your AI use comprehensively</li>
+                            <li>Apply these skills to your Level 4 assessments</li>
+                        </ul>
+                        
+                        <p><strong>Next steps:</strong></p>
+                        <ul>
+                            <li>Apply these skills to your current assessments</li>
+                            <li>If you need Level 5-6 skills, move to the <a href="expert.html">Expert Pathway</a></li>
+                            <li>Refer back to these modules whenever you need support</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="info-box">
+                    <h3>Additional Resources</h3>
+                    <ul>
+                        <li><a href="framework.html">Complete 6-level framework guide</a></li>
+                        <li><a href="foundation.html">Foundation Pathway</a> - Review basic skills if needed</li>
+                        <li><a href="resources.html">All tools and resources</a></li>
+                        <li><a href="faq.html">Frequently asked questions</a></li>
+                        <li><a href="https://tony-myers.github.io/AI-for-students" target="_blank" rel="noopener noreferrer">AI for Students comprehensive website</a></li>
+                    </ul>
+                </div>
+
+            </article>
+        </main>
+
+        <footer>
+            <p>Tony Myers 2025 | Birmingham Newman University | <a href="mailto:tony.myers@newman.ac.uk">tony.myers@newman.ac.uk</a></p>
+        </footer>
+    </div>
+
+</body>
+</html>
